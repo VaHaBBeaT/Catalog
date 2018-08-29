@@ -18,6 +18,7 @@ namespace Catalog
     {
         public static string fileName = @".\Bookshelf.xml";
         form_Debug fd = null;
+        private int imageNumber = 1;
 
         public Catalog()
         {
@@ -46,10 +47,23 @@ namespace Catalog
 
         private void Catalog_Load(object sender, EventArgs e)
         {
-            /*Form formDebug = new form_Debug();
-            formDebug.Show();*/
-
             TreeViewCreate();
+        }
+
+        private void LoadNextImage()
+        {
+            if (imageNumber == 4)
+            {
+                imageNumber = 1;
+            }
+
+            picBox_BookPreview.ImageLocation = string.Format(@".\Pics\TI_0{0}.jpg", imageNumber);
+            imageNumber++;
+        }
+
+        private void timer_BookPreview_Tick(object sender, EventArgs e)
+        {
+            LoadNextImage();
         }
 
         private void TreeViewCreate()
@@ -143,9 +157,10 @@ namespace Catalog
         private void tw_Book_AfterSelect(object sender, TreeViewEventArgs e)
         {
             List<Book> bk = FileOPs.ParseXml(fileName);
+
             if (e.Node.IsExpanded) e.Node.Collapse();
             else e.Node.Expand();
-
+            
             try
             {
                 txtbox_ID.Text = bk.Find(b => b.Author == e.Node.Parent.Parent.Text && b.Name == e.Node.Text).ID.ToString();

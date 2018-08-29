@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Catalog));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +63,9 @@
             this.tc_Info = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BookInfo = new System.Windows.Forms.GroupBox();
+            this.picBox_BookPreview = new System.Windows.Forms.PictureBox();
+            this.lbl_Series = new System.Windows.Forms.Label();
+            this.txtbox_Series = new System.Windows.Forms.TextBox();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Author = new System.Windows.Forms.Label();
             this.lbl_MajorSeries = new System.Windows.Forms.Label();
@@ -74,12 +78,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.FilmInfo = new System.Windows.Forms.GroupBox();
             this.tw_Film = new System.Windows.Forms.TreeView();
-            this.txtbox_Series = new System.Windows.Forms.TextBox();
-            this.lbl_Series = new System.Windows.Forms.Label();
+            this.imgLst_BookPreview = new System.Windows.Forms.ImageList(this.components);
+            this.timer_BookPreview = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.tc_Info.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.BookInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_BookPreview)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +98,7 @@
             this.debugToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(628, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(865, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -327,10 +332,11 @@
             // 
             this.tc_Info.Controls.Add(this.tabPage1);
             this.tc_Info.Controls.Add(this.tabPage2);
-            this.tc_Info.Location = new System.Drawing.Point(13, 28);
+            this.tc_Info.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tc_Info.Location = new System.Drawing.Point(0, 24);
             this.tc_Info.Name = "tc_Info";
             this.tc_Info.SelectedIndex = 0;
-            this.tc_Info.Size = new System.Drawing.Size(603, 399);
+            this.tc_Info.Size = new System.Drawing.Size(865, 467);
             this.tc_Info.TabIndex = 1;
             // 
             // tabPage1
@@ -340,13 +346,14 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(595, 373);
+            this.tabPage1.Size = new System.Drawing.Size(857, 441);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Книги";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // BookInfo
             // 
+            this.BookInfo.Controls.Add(this.picBox_BookPreview);
             this.BookInfo.Controls.Add(this.lbl_Series);
             this.BookInfo.Controls.Add(this.txtbox_Series);
             this.BookInfo.Controls.Add(this.lbl_Name);
@@ -359,15 +366,40 @@
             this.BookInfo.Controls.Add(this.txtbox_ID);
             this.BookInfo.Location = new System.Drawing.Point(210, 7);
             this.BookInfo.Name = "BookInfo";
-            this.BookInfo.Size = new System.Drawing.Size(378, 360);
+            this.BookInfo.Size = new System.Drawing.Size(647, 434);
             this.BookInfo.TabIndex = 1;
             this.BookInfo.TabStop = false;
             this.BookInfo.Text = "Информация о книге";
             // 
+            // picBox_BookPreview
+            // 
+            this.picBox_BookPreview.Location = new System.Drawing.Point(6, 22);
+            this.picBox_BookPreview.Name = "picBox_BookPreview";
+            this.picBox_BookPreview.Size = new System.Drawing.Size(150, 200);
+            this.picBox_BookPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox_BookPreview.TabIndex = 15;
+            this.picBox_BookPreview.TabStop = false;
+            // 
+            // lbl_Series
+            // 
+            this.lbl_Series.AutoSize = true;
+            this.lbl_Series.Location = new System.Drawing.Point(226, 135);
+            this.lbl_Series.Name = "lbl_Series";
+            this.lbl_Series.Size = new System.Drawing.Size(36, 13);
+            this.lbl_Series.TabIndex = 14;
+            this.lbl_Series.Text = "Series";
+            // 
+            // txtbox_Series
+            // 
+            this.txtbox_Series.Location = new System.Drawing.Point(268, 132);
+            this.txtbox_Series.Name = "txtbox_Series";
+            this.txtbox_Series.Size = new System.Drawing.Size(100, 20);
+            this.txtbox_Series.TabIndex = 4;
+            // 
             // lbl_Name
             // 
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(91, 146);
+            this.lbl_Name.Location = new System.Drawing.Point(227, 108);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(35, 13);
             this.lbl_Name.TabIndex = 13;
@@ -376,7 +408,7 @@
             // lbl_Author
             // 
             this.lbl_Author.AutoSize = true;
-            this.lbl_Author.Location = new System.Drawing.Point(88, 119);
+            this.lbl_Author.Location = new System.Drawing.Point(224, 81);
             this.lbl_Author.Name = "lbl_Author";
             this.lbl_Author.Size = new System.Drawing.Size(38, 13);
             this.lbl_Author.TabIndex = 12;
@@ -385,7 +417,7 @@
             // lbl_MajorSeries
             // 
             this.lbl_MajorSeries.AutoSize = true;
-            this.lbl_MajorSeries.Location = new System.Drawing.Point(64, 92);
+            this.lbl_MajorSeries.Location = new System.Drawing.Point(200, 54);
             this.lbl_MajorSeries.Name = "lbl_MajorSeries";
             this.lbl_MajorSeries.Size = new System.Drawing.Size(62, 13);
             this.lbl_MajorSeries.TabIndex = 11;
@@ -394,7 +426,7 @@
             // lbl_ID
             // 
             this.lbl_ID.AutoSize = true;
-            this.lbl_ID.Location = new System.Drawing.Point(108, 65);
+            this.lbl_ID.Location = new System.Drawing.Point(244, 27);
             this.lbl_ID.Name = "lbl_ID";
             this.lbl_ID.Size = new System.Drawing.Size(18, 13);
             this.lbl_ID.TabIndex = 10;
@@ -402,28 +434,28 @@
             // 
             // txtbox_Name
             // 
-            this.txtbox_Name.Location = new System.Drawing.Point(132, 143);
+            this.txtbox_Name.Location = new System.Drawing.Point(268, 105);
             this.txtbox_Name.Name = "txtbox_Name";
             this.txtbox_Name.Size = new System.Drawing.Size(100, 20);
             this.txtbox_Name.TabIndex = 3;
             // 
             // txtbox_Author
             // 
-            this.txtbox_Author.Location = new System.Drawing.Point(132, 116);
+            this.txtbox_Author.Location = new System.Drawing.Point(268, 78);
             this.txtbox_Author.Name = "txtbox_Author";
             this.txtbox_Author.Size = new System.Drawing.Size(100, 20);
             this.txtbox_Author.TabIndex = 2;
             // 
             // txtbox_MajorSeries
             // 
-            this.txtbox_MajorSeries.Location = new System.Drawing.Point(132, 89);
+            this.txtbox_MajorSeries.Location = new System.Drawing.Point(268, 51);
             this.txtbox_MajorSeries.Name = "txtbox_MajorSeries";
             this.txtbox_MajorSeries.Size = new System.Drawing.Size(100, 20);
             this.txtbox_MajorSeries.TabIndex = 1;
             // 
             // txtbox_ID
             // 
-            this.txtbox_ID.Location = new System.Drawing.Point(132, 62);
+            this.txtbox_ID.Location = new System.Drawing.Point(268, 24);
             this.txtbox_ID.Name = "txtbox_ID";
             this.txtbox_ID.Size = new System.Drawing.Size(100, 20);
             this.txtbox_ID.TabIndex = 0;
@@ -432,7 +464,7 @@
             // 
             this.tw_Book.Location = new System.Drawing.Point(4, 7);
             this.tw_Book.Name = "tw_Book";
-            this.tw_Book.Size = new System.Drawing.Size(200, 360);
+            this.tw_Book.Size = new System.Drawing.Size(200, 434);
             this.tw_Book.TabIndex = 0;
             this.tw_Book.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tw_Book_AfterSelect);
             // 
@@ -443,7 +475,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(595, 373);
+            this.tabPage2.Size = new System.Drawing.Size(857, 441);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Фильмы";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -464,27 +496,23 @@
             this.tw_Film.Size = new System.Drawing.Size(200, 360);
             this.tw_Film.TabIndex = 2;
             // 
-            // txtbox_Series
+            // imgLst_BookPreview
             // 
-            this.txtbox_Series.Location = new System.Drawing.Point(132, 170);
-            this.txtbox_Series.Name = "txtbox_Series";
-            this.txtbox_Series.Size = new System.Drawing.Size(100, 20);
-            this.txtbox_Series.TabIndex = 4;
+            this.imgLst_BookPreview.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imgLst_BookPreview.ImageSize = new System.Drawing.Size(16, 16);
+            this.imgLst_BookPreview.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // lbl_Series
+            // timer_BookPreview
             // 
-            this.lbl_Series.AutoSize = true;
-            this.lbl_Series.Location = new System.Drawing.Point(90, 173);
-            this.lbl_Series.Name = "lbl_Series";
-            this.lbl_Series.Size = new System.Drawing.Size(36, 13);
-            this.lbl_Series.TabIndex = 14;
-            this.lbl_Series.Text = "Series";
+            this.timer_BookPreview.Enabled = true;
+            this.timer_BookPreview.Interval = 2000;
+            this.timer_BookPreview.Tick += new System.EventHandler(this.timer_BookPreview_Tick);
             // 
             // Catalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 439);
+            this.ClientSize = new System.Drawing.Size(865, 491);
             this.Controls.Add(this.tc_Info);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Catalog";
@@ -496,6 +524,7 @@
             this.tabPage1.ResumeLayout(false);
             this.BookInfo.ResumeLayout(false);
             this.BookInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_BookPreview)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -551,6 +580,9 @@
         private System.Windows.Forms.TextBox txtbox_ID;
         private System.Windows.Forms.TextBox txtbox_Series;
         private System.Windows.Forms.Label lbl_Series;
+        private System.Windows.Forms.PictureBox picBox_BookPreview;
+        private System.Windows.Forms.ImageList imgLst_BookPreview;
+        private System.Windows.Forms.Timer timer_BookPreview;
     }
 }
 
