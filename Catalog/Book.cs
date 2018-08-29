@@ -14,8 +14,8 @@ namespace Catalog
         public string MajorSeries;
         public string Author;
         public string Name;
-        /*public string Series;
-        public int NumberInSeries;
+        public string Series;
+        /*public int NumberInSeries;
         public string Genre;
         public int NumOfPages;
         public string Publisher;
@@ -26,12 +26,13 @@ namespace Catalog
         public string Artist;
         public string Notes;*/
 
-        public Book(int id, string majorseries, string author, string name)
+        public Book(int id, string majorseries, string author, string name, string series)
         {
             ID = id;
             MajorSeries = majorseries;
             Author = author;
             Name = name;
+            Series = series;
         }
 
         public Book() { }

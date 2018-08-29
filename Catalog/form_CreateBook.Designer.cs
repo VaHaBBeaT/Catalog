@@ -40,6 +40,8 @@
             this.tssl_StatusBookCreate = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.txtbox_Name = new System.Windows.Forms.TextBox();
+            this.txtbox_Series = new System.Windows.Forms.TextBox();
+            this.lbl_Series = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +95,7 @@
             // 
             // btn_SaveBook
             // 
-            this.btn_SaveBook.Location = new System.Drawing.Point(111, 142);
+            this.btn_SaveBook.Location = new System.Drawing.Point(111, 170);
             this.btn_SaveBook.Name = "btn_SaveBook";
             this.btn_SaveBook.Size = new System.Drawing.Size(75, 23);
             this.btn_SaveBook.TabIndex = 8;
@@ -103,7 +105,7 @@
             // 
             // btn_Close
             // 
-            this.btn_Close.Location = new System.Drawing.Point(192, 142);
+            this.btn_Close.Location = new System.Drawing.Point(192, 170);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(75, 23);
             this.btn_Close.TabIndex = 9;
@@ -143,11 +145,29 @@
             this.txtbox_Name.Size = new System.Drawing.Size(198, 20);
             this.txtbox_Name.TabIndex = 3;
             // 
+            // txtbox_Series
+            // 
+            this.txtbox_Series.Location = new System.Drawing.Point(72, 120);
+            this.txtbox_Series.Name = "txtbox_Series";
+            this.txtbox_Series.Size = new System.Drawing.Size(198, 20);
+            this.txtbox_Series.TabIndex = 4;
+            // 
+            // lbl_Series
+            // 
+            this.lbl_Series.AutoSize = true;
+            this.lbl_Series.Location = new System.Drawing.Point(30, 123);
+            this.lbl_Series.Name = "lbl_Series";
+            this.lbl_Series.Size = new System.Drawing.Size(36, 13);
+            this.lbl_Series.TabIndex = 101;
+            this.lbl_Series.Text = "Series";
+            // 
             // form_CreateBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 218);
+            this.Controls.Add(this.lbl_Series);
+            this.Controls.Add(this.txtbox_Series);
             this.Controls.Add(this.txtbox_Name);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.statusStrip1);
@@ -181,5 +201,7 @@
         private System.Windows.Forms.ToolStripStatusLabel tssl_StatusBookCreate;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.TextBox txtbox_Name;
+        private System.Windows.Forms.TextBox txtbox_Series;
+        private System.Windows.Forms.Label lbl_Series;
     }
 }

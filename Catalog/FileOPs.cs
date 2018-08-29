@@ -20,7 +20,8 @@ namespace Catalog
                 select new XElement("Book", new XAttribute ("ID", b.ID),
                                                 new XElement("MajorSeries", b.MajorSeries),
                                                 new XElement("Author", b.Author),
-                                                new XElement("Name", b.Name)));
+                                                new XElement("Name", b.Name),
+                                                new XElement("Series", b.Series)));
 
             //SaveFileDialog saveFileDialog = new SaveFileDialog();
             //saveFileDialog.Filter = "Xml files(*.xml)|*.xml|All files(*.*)|*.*";
@@ -63,7 +64,8 @@ namespace Catalog
             XElement newElement = new XElement("Book", new XAttribute("ID", bookAppend.ID),
                                                             new XElement("MajorSeries", bookAppend.MajorSeries),
                                                             new XElement("Author", bookAppend.Author),
-                                                            new XElement("Name", bookAppend.Name));
+                                                            new XElement("Name", bookAppend.Name),
+                                                            new XElement("Series", bookAppend.Series));
             // Добавить к объекту XDocument в памяти.
             bookDoc.Descendants("Bookshelf").First().Add(newElement);
 
@@ -84,8 +86,8 @@ namespace Catalog
                 ID = int.Parse(b.Attribute("ID").Value),
                 MajorSeries = b.Element("MajorSeries").Value.ToString(),
                 Author = b.Element("Author").Value.ToString(),
-                Name = b.Element("Name").Value.ToString()
-
+                Name = b.Element("Name").Value.ToString(),
+                Series = b.Element("Series").Value.ToString()
             }).ToList();
             
 

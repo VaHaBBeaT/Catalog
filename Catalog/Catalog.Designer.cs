@@ -62,11 +62,20 @@
             this.tc_Info = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BookInfo = new System.Windows.Forms.GroupBox();
-            this.rtbBookInfo = new System.Windows.Forms.RichTextBox();
+            this.lbl_Name = new System.Windows.Forms.Label();
+            this.lbl_Author = new System.Windows.Forms.Label();
+            this.lbl_MajorSeries = new System.Windows.Forms.Label();
+            this.lbl_ID = new System.Windows.Forms.Label();
+            this.txtbox_Name = new System.Windows.Forms.TextBox();
+            this.txtbox_Author = new System.Windows.Forms.TextBox();
+            this.txtbox_MajorSeries = new System.Windows.Forms.TextBox();
+            this.txtbox_ID = new System.Windows.Forms.TextBox();
             this.tw_Book = new System.Windows.Forms.TreeView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.FilmInfo = new System.Windows.Forms.GroupBox();
             this.tw_Film = new System.Windows.Forms.TreeView();
+            this.txtbox_Series = new System.Windows.Forms.TextBox();
+            this.lbl_Series = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tc_Info.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -338,7 +347,16 @@
             // 
             // BookInfo
             // 
-            this.BookInfo.Controls.Add(this.rtbBookInfo);
+            this.BookInfo.Controls.Add(this.lbl_Series);
+            this.BookInfo.Controls.Add(this.txtbox_Series);
+            this.BookInfo.Controls.Add(this.lbl_Name);
+            this.BookInfo.Controls.Add(this.lbl_Author);
+            this.BookInfo.Controls.Add(this.lbl_MajorSeries);
+            this.BookInfo.Controls.Add(this.lbl_ID);
+            this.BookInfo.Controls.Add(this.txtbox_Name);
+            this.BookInfo.Controls.Add(this.txtbox_Author);
+            this.BookInfo.Controls.Add(this.txtbox_MajorSeries);
+            this.BookInfo.Controls.Add(this.txtbox_ID);
             this.BookInfo.Location = new System.Drawing.Point(210, 7);
             this.BookInfo.Name = "BookInfo";
             this.BookInfo.Size = new System.Drawing.Size(378, 360);
@@ -346,14 +364,69 @@
             this.BookInfo.TabStop = false;
             this.BookInfo.Text = "Информация о книге";
             // 
-            // rtbBookInfo
+            // lbl_Name
             // 
-            this.rtbBookInfo.Location = new System.Drawing.Point(28, 57);
-            this.rtbBookInfo.Name = "rtbBookInfo";
-            this.rtbBookInfo.Size = new System.Drawing.Size(322, 262);
-            this.rtbBookInfo.TabIndex = 0;
-            this.rtbBookInfo.Text = "";
-            this.rtbBookInfo.TextChanged += new System.EventHandler(this.rtbBookInfo_TextChanged);
+            this.lbl_Name.AutoSize = true;
+            this.lbl_Name.Location = new System.Drawing.Point(91, 146);
+            this.lbl_Name.Name = "lbl_Name";
+            this.lbl_Name.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Name.TabIndex = 13;
+            this.lbl_Name.Text = "Name";
+            // 
+            // lbl_Author
+            // 
+            this.lbl_Author.AutoSize = true;
+            this.lbl_Author.Location = new System.Drawing.Point(88, 119);
+            this.lbl_Author.Name = "lbl_Author";
+            this.lbl_Author.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Author.TabIndex = 12;
+            this.lbl_Author.Text = "Author";
+            // 
+            // lbl_MajorSeries
+            // 
+            this.lbl_MajorSeries.AutoSize = true;
+            this.lbl_MajorSeries.Location = new System.Drawing.Point(64, 92);
+            this.lbl_MajorSeries.Name = "lbl_MajorSeries";
+            this.lbl_MajorSeries.Size = new System.Drawing.Size(62, 13);
+            this.lbl_MajorSeries.TabIndex = 11;
+            this.lbl_MajorSeries.Text = "MajorSeries";
+            // 
+            // lbl_ID
+            // 
+            this.lbl_ID.AutoSize = true;
+            this.lbl_ID.Location = new System.Drawing.Point(108, 65);
+            this.lbl_ID.Name = "lbl_ID";
+            this.lbl_ID.Size = new System.Drawing.Size(18, 13);
+            this.lbl_ID.TabIndex = 10;
+            this.lbl_ID.Text = "ID";
+            // 
+            // txtbox_Name
+            // 
+            this.txtbox_Name.Location = new System.Drawing.Point(132, 143);
+            this.txtbox_Name.Name = "txtbox_Name";
+            this.txtbox_Name.Size = new System.Drawing.Size(100, 20);
+            this.txtbox_Name.TabIndex = 3;
+            // 
+            // txtbox_Author
+            // 
+            this.txtbox_Author.Location = new System.Drawing.Point(132, 116);
+            this.txtbox_Author.Name = "txtbox_Author";
+            this.txtbox_Author.Size = new System.Drawing.Size(100, 20);
+            this.txtbox_Author.TabIndex = 2;
+            // 
+            // txtbox_MajorSeries
+            // 
+            this.txtbox_MajorSeries.Location = new System.Drawing.Point(132, 89);
+            this.txtbox_MajorSeries.Name = "txtbox_MajorSeries";
+            this.txtbox_MajorSeries.Size = new System.Drawing.Size(100, 20);
+            this.txtbox_MajorSeries.TabIndex = 1;
+            // 
+            // txtbox_ID
+            // 
+            this.txtbox_ID.Location = new System.Drawing.Point(132, 62);
+            this.txtbox_ID.Name = "txtbox_ID";
+            this.txtbox_ID.Size = new System.Drawing.Size(100, 20);
+            this.txtbox_ID.TabIndex = 0;
             // 
             // tw_Book
             // 
@@ -391,6 +464,22 @@
             this.tw_Film.Size = new System.Drawing.Size(200, 360);
             this.tw_Film.TabIndex = 2;
             // 
+            // txtbox_Series
+            // 
+            this.txtbox_Series.Location = new System.Drawing.Point(132, 170);
+            this.txtbox_Series.Name = "txtbox_Series";
+            this.txtbox_Series.Size = new System.Drawing.Size(100, 20);
+            this.txtbox_Series.TabIndex = 4;
+            // 
+            // lbl_Series
+            // 
+            this.lbl_Series.AutoSize = true;
+            this.lbl_Series.Location = new System.Drawing.Point(90, 173);
+            this.lbl_Series.Name = "lbl_Series";
+            this.lbl_Series.Size = new System.Drawing.Size(36, 13);
+            this.lbl_Series.TabIndex = 14;
+            this.lbl_Series.Text = "Series";
+            // 
             // Catalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +495,7 @@
             this.tc_Info.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.BookInfo.ResumeLayout(false);
+            this.BookInfo.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -450,8 +540,17 @@
         private System.Windows.Forms.GroupBox FilmInfo;
         private System.Windows.Forms.TreeView tw_Film;
         private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
-        private System.Windows.Forms.RichTextBox rtbBookInfo;
         private System.Windows.Forms.TreeView tw_Book;
+        private System.Windows.Forms.Label lbl_Name;
+        private System.Windows.Forms.Label lbl_Author;
+        private System.Windows.Forms.Label lbl_MajorSeries;
+        private System.Windows.Forms.Label lbl_ID;
+        private System.Windows.Forms.TextBox txtbox_Name;
+        private System.Windows.Forms.TextBox txtbox_Author;
+        private System.Windows.Forms.TextBox txtbox_MajorSeries;
+        private System.Windows.Forms.TextBox txtbox_ID;
+        private System.Windows.Forms.TextBox txtbox_Series;
+        private System.Windows.Forms.Label lbl_Series;
     }
 }
 

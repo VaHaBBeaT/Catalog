@@ -17,6 +17,7 @@ namespace Catalog
     public partial class Catalog : Form
     {
         public static string fileName = @".\Bookshelf.xml";
+        form_Debug fd = null;
 
         public Catalog()
         {
@@ -45,8 +46,8 @@ namespace Catalog
 
         private void Catalog_Load(object sender, EventArgs e)
         {
-            Form formDebug = new form_Debug();
-            formDebug.Show();
+            /*Form formDebug = new form_Debug();
+            formDebug.Show();*/
 
             TreeViewCreate();
         }
@@ -56,22 +57,30 @@ namespace Catalog
             XDocument xDoc = XDocument.Load(fileName);
             tw_Book.Nodes.Clear();
             tw_Book.Nodes.Add(new TreeNode(xDoc.Root.Name.ToString()));
-            TreeNode rootNode = new TreeNode();
-            rootNode = tw_Book.Nodes[0];
-            //AddNode(xmlDoc.DocumentElement, rootNode);
-            List<Book> parse = FileOPs.ParseXml(fileName);
+            /*TreeNode rootNode = new TreeNode();
+            rootNode = tw_Book.Nodes[0];*/
 
+            List<Book> parse = FileOPs.ParseXml(fileName);
             List<Book> noDupesAuthor = parse.GroupBy(a => a.Author).Select(grp => grp.FirstOrDefault()).OrderBy(a => a.Author).ToList();
 
             foreach (Book nDA in noDupesAuthor)
             {
                 tw_Book.Nodes[0].Nodes.Add(nDA.Author);
-                List<Book> bookName = parse.FindAll(x => x.Author.Equals(nDA.Author));
-                foreach (Book bn in bookName)
+                List<Book> bookSeries = noDupesAuthor.FindAll(x => x.Author.Contains(nDA.Author));
+
+                foreach (Book bs in bookSeries)
                 {
-                    tw_Book.Nodes[0].Nodes[noDupesAuthor.IndexOf(nDA)].Nodes.Add(bn.Name);
+                    tw_Book.Nodes[0].Nodes[noDupesAuthor.IndexOf(nDA)].Nodes.Add(bs.Series);
+                    List<Book> bookName = parse.FindAll(x => x.Author.Equals(nDA.Author));
+
+                    foreach (Book bn in bookName)
+                    {
+                        tw_Book.Nodes[0].Nodes[noDupesAuthor.IndexOf(nDA)].Nodes[bookSeries.IndexOf(bs)].Nodes.Add(bn.Name);
+                    }
                 }
+                
             }
+
             tw_Book.ExpandAll();
         }
         
@@ -82,7 +91,8 @@ namespace Catalog
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            List<Book> book = new List<Book>() { new Book(1, "AsD", "Pehov", "Veter"), new Book(2, "sDf", "Rice", "Pugalo") };
+            List<Book> book = new List<Book>() { new Book(1, "AsD", "Pehov", "Veter", "Veter Polyni"),
+                                                 new Book(2, "sDf", "Rice", "Pugalo", "Strazh") };
 
             FileOPs.SaveXml(book, fileName);
         }
@@ -92,28 +102,59 @@ namespace Catalog
             Application.Exit();
         }
 
-        private void rtbBookInfo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formCreate = new form_CreateBook();
-            formCreate.Show();
-            tw_Book.Refresh();
-            //rtbBookInfo.Text = FileOPs.LoadXml(fileName).ToString();
+            formCreate.Show();            
         }
 
         private void debugToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Form formDebug = new form_Debug();
-            formDebug.Show();*/
+            if (fd == null || fd.Text == "")
+            {
+                fd = new form_Debug();
+                //fd.MdiParent = this;
+                fd.Dock = DockStyle.Fill;
+                fd.Show();
+            }
+
+            else if (CheckOpened(fd.Text))
+            {
+                fd.WindowState = FormWindowState.Normal;
+                fd.Dock = DockStyle.Fill;
+                fd.Show();
+                fd.Focus();
+            }
+            
+        }
+
+        private bool CheckOpened (string name)
+        {
+            FormCollection fc = Application.OpenForms;
+
+            foreach (Form frm in fc)
+            {
+                if (frm.Text == name) return true;
+            }
+
+            return false;
         }
 
         private void tw_Book_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            List<Book> bk = FileOPs.ParseXml(fileName);
+            if (e.Node.IsExpanded) e.Node.Collapse();
+            else e.Node.Expand();
 
+            try
+            {
+                txtbox_ID.Text = bk.Find(b => b.Author == e.Node.Parent.Parent.Text && b.Name == e.Node.Text).ID.ToString();
+                txtbox_MajorSeries.Text = bk.Find(b => b.Author == e.Node.Parent.Parent.Text && b.Name == e.Node.Text).MajorSeries;
+                txtbox_Author.Text = e.Node.Parent.Parent.Text;
+                txtbox_Name.Text = e.Node.Text;
+                txtbox_Series.Text = bk.Find(b => b.Author == e.Node.Parent.Parent.Text && b.Name == e.Node.Text).Series;
+            }
+            catch (Exception) { }
         }
     }
 }

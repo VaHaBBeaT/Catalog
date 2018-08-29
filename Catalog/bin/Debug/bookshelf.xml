@@ -4,95 +4,36 @@
     <MajorSeries>AsD</MajorSeries>
     <Author>Pehov</Author>
     <Name>Veter</Name>
+    <Series>Veter Polyni</Series>
   </Book>
   <Book ID="2">
     <MajorSeries>sDf</MajorSeries>
     <Author>Rice</Author>
-    <Name>Pugalo</Name>
+    <Name>Lestat</Name>
+    <Series>Chronicle</Series>
   </Book>
-  <Book ID="3">
-    <MajorSeries>авор</MajorSeries>
-    <Author>Belyaev</Author>
-    <Name>Aasdf</Name>
-  </Book>
-  <Book ID="4">
-    <MajorSeries>redf</MajorSeries>
-    <Author>Stoker</Author>
-    <Name>FGbj</Name>
-  </Book>
-  <Book ID="5">
-    <MajorSeries>asd</MajorSeries>
+<Book ID="3">
+    <MajorSeries>AsD</MajorSeries>
     <Author>Pehov</Author>
-    <Name>Veter 2</Name>
+    <Name>Veter2</Name>
+    <Series>Veter Polyni</Series>
   </Book>
-  <Book ID="6">
-    <MajorSeries>qwe</MajorSeries>
+<Book ID="4">
+    <MajorSeries>AsD</MajorSeries>
     <Author>Pehov</Author>
     <Name>Veter 3</Name>
+    <Series>Veter Polyni</Series>
   </Book>
-  <Book ID="7">
-    <MajorSeries>zxc</MajorSeries>
-    <Author>Belyaev</Author>
-    <Name>Goroh</Name>
-  </Book>
-  <Book ID="8">
-    <MajorSeries>ясчм</MajorSeries>
+<Book ID="5">
+    <MajorSeries>sDf</MajorSeries>
     <Author>Rice</Author>
-    <Name>Lestat</Name>
+    <Name>Lestat 2</Name>
+    <Series>Chronicle</Series>
   </Book>
-  <Book ID="9">
-    <MajorSeries>zxc</MajorSeries>
+<Book ID="6">
+    <MajorSeries>sDf</MajorSeries>
     <Author>Rice</Author>
-    <Name>Queen</Name>
-  </Book>
-  <Book ID="10">
-    <MajorSeries>qwe</MajorSeries>
-    <Author>Stoker</Author>
-    <Name>Dracula</Name>
-  </Book>
-  <Book ID="11">
-    <MajorSeries>йцу</MajorSeries>
-    <Author>Stoker</Author>
-    <Name>New Dracula</Name>
-  </Book>
-  <Book ID="12">
-    <MajorSeries>йфцу</MajorSeries>
-    <Author>Stoker</Author>
-    <Name>Dracula 2</Name>
-  </Book>
-  <Book ID="13">
-    <MajorSeries>вап</MajorSeries>
-    <Author>Stoker</Author>
-    <Name>Dracula 3</Name>
-  </Book>
-  <Book ID="14">
-    <MajorSeries>йфцу</MajorSeries>
-    <Author>Belyaev</Author>
-    <Name>Skiminok</Name>
-  </Book>
-  <Book ID="15">
-    <MajorSeries>фва</MajorSeries>
-    <Author>Belyaev</Author>
-    <Name>Skiminok 2</Name>
-  </Book>
-  <Book ID="16">
-    <MajorSeries>dsf</MajorSeries>
-    <Author>Belyaev</Author>
-    <Name>Skiminok 3</Name>
-  </Book>
-  <Book ID="17">
-    <MajorSeries>фва</MajorSeries>
-    <Author>Rice</Author>
-    <Name>Memnoh</Name>
-  </Book>
-  <Book ID="18">
-    <MajorSeries>ыва</MajorSeries>
-    <Author>Rice</Author>
-    <Name>Memnoh 2</Name>
-  </Book>
-  <Book ID="19">
-    <MajorSeries>цк</MajorSeries>
-    <Author>Rice</Author>
-    <Name>Ancient Gold</Name>
+    <Name>Lestat 3</Name>
+    <Series>Chronicle</Series>
   </Book>
 </Bookshelf>

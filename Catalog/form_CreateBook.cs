@@ -19,8 +19,8 @@ namespace Catalog
 
         private void btn_SaveBook_Click(object sender, EventArgs e)
         {
-            Book bookAppend = new Book(int.Parse(txtbox_ID.Text), txtbox_MajorSeries.Text, txtbox_Author.Text, txtbox_Name.Text);
-
+            Book bookAppend = new Book(int.Parse(txtbox_ID.Text), txtbox_MajorSeries.Text, txtbox_Author.Text, txtbox_Name.Text, txtbox_Series.Text);
+            
             try
             {
                 FileOPs.AppendXml(bookAppend, Catalog.fileName);
@@ -29,6 +29,7 @@ namespace Catalog
                 txtbox_MajorSeries.Clear();
                 txtbox_Author.Clear();
                 txtbox_Name.Clear();
+                txtbox_Series.Clear();
                 tssl_StatusBookCreate.Text = "Success!";
             }
 
