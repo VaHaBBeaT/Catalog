@@ -5,35 +5,33 @@
     <Author>Pehov</Author>
     <Name>Veter</Name>
     <Series>Veter Polyni</Series>
+    <NumberInSeries>1</NumberInSeries>
+    <Genre>Fantasy</Genre>
+    <PagesCount>343</PagesCount>
+    <Publisher>Armada</Publisher>
+    <PrintYear>2015</PrintYear>
+    <PrintCity>Moscow</PrintCity>
+    <ISBN>1234567890</ISBN>
+    <Translator>Pavlov</Translator>
+    <Artist>Bondar</Artist>
+    <Notes>Presented by Toh</Notes>
+    <picPath>@.\Pics\TI1\TI_01.jpg@.\Pics\TI1\TI_02.jpg@.\Pics\TI1\TI_03.jpg</picPath>
   </Book>
   <Book ID="2">
     <MajorSeries>sDf</MajorSeries>
-    <Author>Rice</Author>
-    <Name>Lestat</Name>
-    <Series>Chronicle</Series>
-  </Book>
-<Book ID="3">
-    <MajorSeries>AsD</MajorSeries>
     <Author>Pehov</Author>
-    <Name>Veter2</Name>
+    <Name>Veter 2</Name>
     <Series>Veter Polyni</Series>
-  </Book>
-<Book ID="4">
-    <MajorSeries>AsD</MajorSeries>
-    <Author>Pehov</Author>
-    <Name>Veter 3</Name>
-    <Series>Veter Polyni</Series>
-  </Book>
-<Book ID="5">
-    <MajorSeries>sDf</MajorSeries>
-    <Author>Rice</Author>
-    <Name>Lestat 2</Name>
-    <Series>Chronicle</Series>
-  </Book>
-<Book ID="6">
-    <MajorSeries>sDf</MajorSeries>
-    <Author>Rice</Author>
-    <Name>Lestat 3</Name>
-    <Series>Chronicle</Series>
+    <NumberInSeries>2</NumberInSeries>
+    <Genre>Fantasy</Genre>
+    <PagesCount>355</PagesCount>
+    <Publisher>Armada</Publisher>
+    <PrintYear>2016</PrintYear>
+    <PrintCity>Moscow</PrintCity>
+    <ISBN>3210987654321</ISBN>
+    <Translator>Pavlov</Translator>
+    <Artist>Bondar</Artist>
+    <Notes>Presented by Toh</Notes>
+    <picPath>@.\Pics\TI2\TI_03.jpg@.\Pics\TI2\TI_02.jpg@.\Pics\TI2\TI_01.jpg</picPath>
   </Book>
 </Bookshelf>

@@ -47,37 +47,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="FileOPs.cs" />
-    <Compile Include="Film.cs" />
-    <Compile Include="Catalog.cs">
+    <Compile Include="Classes\Book.cs" />
+    <Compile Include="Classes\FileOPs.cs" />
+    <Compile Include="Classes\Film.cs" />
+    <Compile Include="Forms\form_Catalog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catalog.Designer.cs">
-      <DependentUpon>Catalog.cs</DependentUpon>
+    <Compile Include="Forms\form_Catalog.Designer.cs">
+      <DependentUpon>form_Catalog.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_Debug.cs">
+    <Compile Include="Forms\form_About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_Debug.Designer.cs">
+    <Compile Include="Forms\form_About.Designer.cs">
+      <DependentUpon>form_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\form_Debug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\form_Debug.Designer.cs">
       <DependentUpon>form_Debug.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_CreateBook.cs">
+    <Compile Include="Forms\form_CreateBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_CreateBook.Designer.cs">
+    <Compile Include="Forms\form_CreateBook.Designer.cs">
       <DependentUpon>form_CreateBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TreeViewOPs.cs" />
-    <EmbeddedResource Include="Catalog.resx">
-      <DependentUpon>Catalog.cs</DependentUpon>
+    <Compile Include="Classes\TreeViewOPs.cs" />
+    <EmbeddedResource Include="Forms\form_Catalog.resx">
+      <DependentUpon>form_Catalog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_Debug.resx">
+    <EmbeddedResource Include="Forms\form_About.resx">
+      <DependentUpon>form_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\form_Debug.resx">
       <DependentUpon>form_Debug.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_CreateBook.resx">
+    <EmbeddedResource Include="Forms\form_CreateBook.resx">
       <DependentUpon>form_CreateBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
