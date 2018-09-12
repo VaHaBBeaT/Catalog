@@ -2,7 +2,6 @@ D:\Мое\Projects\Catalog\Catalog\bin\Release\Catalog.exe.config
 D:\Мое\Projects\Catalog\Catalog\bin\Release\Catalog.exe
 D:\Мое\Projects\Catalog\Catalog\bin\Release\Catalog.pdb
 D:\Мое\Projects\Catalog\Catalog\obj\Release\Catalog.csprojAssemblyReference.cache
-D:\Мое\Projects\Catalog\Catalog\obj\Release\Catalog.Catalog.resources
 D:\Мое\Projects\Catalog\Catalog\obj\Release\Catalog.form_Debug.resources
 D:\Мое\Projects\Catalog\Catalog\obj\Release\Catalog.form_CreateBook.resources
 D:\Мое\Projects\Catalog\Catalog\obj\Release\Catalog.Properties.Resources.resources
@@ -24,3 +23,4 @@ D:\Projects\Catalog\Catalog\obj\Release\Catalog.csproj.GenerateResource.cache
 D:\Projects\Catalog\Catalog\obj\Release\Catalog.csproj.CoreCompileInputs.cache
 D:\Projects\Catalog\Catalog\obj\Release\Catalog.exe
 D:\Projects\Catalog\Catalog\obj\Release\Catalog.pdb
+D:\Мое\Projects\Catalog\Catalog\obj\Release\Catalog.form_Catalog.resources

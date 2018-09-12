@@ -45,7 +45,7 @@
             this.CancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отменадействияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.CutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -61,7 +61,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tc_Info = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage_Book = new System.Windows.Forms.TabPage();
             this.grpbox_BookInfo = new System.Windows.Forms.GroupBox();
             this.msktxtbox_ISBN = new System.Windows.Forms.MaskedTextBox();
             this.lbl_Notes = new System.Windows.Forms.Label();
@@ -98,19 +98,22 @@
             this.txtbox_MajorSeries = new System.Windows.Forms.TextBox();
             this.txtbox_ID = new System.Windows.Forms.TextBox();
             this.tw_Book = new System.Windows.Forms.TreeView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage_Film = new System.Windows.Forms.TabPage();
             this.FilmInfo = new System.Windows.Forms.GroupBox();
             this.tw_Film = new System.Windows.Forms.TreeView();
             this.imgLst_BookPreview = new System.Windows.Forms.ImageList(this.components);
             this.timer_BookPreview = new System.Windows.Forms.Timer(this.components);
             this.ofd_LoadXmlFile = new System.Windows.Forms.OpenFileDialog();
             this.sfd_SaveXmlFile = new System.Windows.Forms.SaveFileDialog();
+            this.print_Doc = new System.Drawing.Printing.PrintDocument();
+            this.print_Dialog = new System.Windows.Forms.PrintDialog();
+            this.print_PreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.menuStrip1.SuspendLayout();
             this.tc_Info.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage_Book.SuspendLayout();
             this.grpbox_BookInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_BookPreview)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tabPage_Film.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -191,6 +194,7 @@
             this.PrintToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.PrintToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.PrintToolStripMenuItem.Text = "&Печать";
+            this.PrintToolStripMenuItem.Click += new System.EventHandler(this.PrintToolStripMenuItem_Click);
             // 
             // PreviewToolStripMenuItem
             // 
@@ -199,6 +203,7 @@
             this.PreviewToolStripMenuItem.Name = "PreviewToolStripMenuItem";
             this.PreviewToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.PreviewToolStripMenuItem.Text = "Предварительный про&смотр";
+            this.PreviewToolStripMenuItem.Click += new System.EventHandler(this.PreviewToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -218,7 +223,7 @@
             this.CancelToolStripMenuItem,
             this.отменадействияToolStripMenuItem1,
             this.toolStripSeparator3,
-            this.CutToolStripMenuItem,
+            this.RemoveToolStripMenuItem,
             this.CopyToolStripMenuItem,
             this.PasteToolStripMenuItem,
             this.toolStripSeparator4,
@@ -246,14 +251,15 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(206, 6);
             // 
-            // CutToolStripMenuItem
+            // RemoveToolStripMenuItem
             // 
-            this.CutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CutToolStripMenuItem.Image")));
-            this.CutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CutToolStripMenuItem.Name = "CutToolStripMenuItem";
-            this.CutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.CutToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.CutToolStripMenuItem.Text = "Вырезат&ь";
+            this.RemoveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("RemoveToolStripMenuItem.Image")));
+            this.RemoveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem";
+            this.RemoveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.RemoveToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.RemoveToolStripMenuItem.Text = "Удалить";
+            this.RemoveToolStripMenuItem.Click += new System.EventHandler(this.RemoveToolStripMenuItem_Click);
             // 
             // CopyToolStripMenuItem
             // 
@@ -320,30 +326,30 @@
             // содержаниеToolStripMenuItem
             // 
             this.содержаниеToolStripMenuItem.Name = "содержаниеToolStripMenuItem";
-            this.содержаниеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.содержаниеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.содержаниеToolStripMenuItem.Text = "&Содержание";
             // 
             // индексToolStripMenuItem
             // 
             this.индексToolStripMenuItem.Name = "индексToolStripMenuItem";
-            this.индексToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.индексToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.индексToolStripMenuItem.Text = "&Индекс";
             // 
             // поискToolStripMenuItem
             // 
             this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
-            this.поискToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.поискToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.поискToolStripMenuItem.Text = "&Поиск";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(155, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.aboutToolStripMenuItem.Text = "&О программе...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -356,8 +362,8 @@
             // 
             // tc_Info
             // 
-            this.tc_Info.Controls.Add(this.tabPage1);
-            this.tc_Info.Controls.Add(this.tabPage2);
+            this.tc_Info.Controls.Add(this.tabPage_Book);
+            this.tc_Info.Controls.Add(this.tabPage_Film);
             this.tc_Info.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tc_Info.Location = new System.Drawing.Point(0, 24);
             this.tc_Info.Name = "tc_Info";
@@ -365,20 +371,23 @@
             this.tc_Info.Size = new System.Drawing.Size(865, 467);
             this.tc_Info.TabIndex = 1;
             // 
-            // tabPage1
+            // tabPage_Book
             // 
-            this.tabPage1.Controls.Add(this.grpbox_BookInfo);
-            this.tabPage1.Controls.Add(this.tw_Book);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(857, 441);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Книги";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage_Book.Controls.Add(this.grpbox_BookInfo);
+            this.tabPage_Book.Controls.Add(this.tw_Book);
+            this.tabPage_Book.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Book.Name = "tabPage_Book";
+            this.tabPage_Book.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Book.Size = new System.Drawing.Size(857, 441);
+            this.tabPage_Book.TabIndex = 0;
+            this.tabPage_Book.Text = "Книги";
+            this.tabPage_Book.UseVisualStyleBackColor = true;
             // 
             // grpbox_BookInfo
             // 
+            this.grpbox_BookInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpbox_BookInfo.Controls.Add(this.msktxtbox_ISBN);
             this.grpbox_BookInfo.Controls.Add(this.lbl_Notes);
             this.grpbox_BookInfo.Controls.Add(this.lbl_Artist);
@@ -715,23 +724,26 @@
             // 
             // tw_Book
             // 
+            this.tw_Book.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tw_Book.Location = new System.Drawing.Point(4, 7);
             this.tw_Book.Name = "tw_Book";
             this.tw_Book.Size = new System.Drawing.Size(200, 434);
             this.tw_Book.TabIndex = 0;
             this.tw_Book.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tw_Book_AfterSelect);
             // 
-            // tabPage2
+            // tabPage_Film
             // 
-            this.tabPage2.Controls.Add(this.FilmInfo);
-            this.tabPage2.Controls.Add(this.tw_Film);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(857, 441);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Фильмы";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage_Film.Controls.Add(this.FilmInfo);
+            this.tabPage_Film.Controls.Add(this.tw_Film);
+            this.tabPage_Film.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Film.Name = "tabPage_Film";
+            this.tabPage_Film.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Film.Size = new System.Drawing.Size(857, 441);
+            this.tabPage_Film.TabIndex = 1;
+            this.tabPage_Film.Text = "Фильмы";
+            this.tabPage_Film.UseVisualStyleBackColor = true;
             // 
             // FilmInfo
             // 
@@ -761,24 +773,42 @@
             this.timer_BookPreview.Interval = 2000;
             this.timer_BookPreview.Tick += new System.EventHandler(this.timer_BookPreview_Tick);
             // 
-            // Catalog
+            // print_Doc
+            // 
+            this.print_Doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.print_Doc_PrintPage);
+            // 
+            // print_Dialog
+            // 
+            this.print_Dialog.UseEXDialog = true;
+            // 
+            // print_PreviewDialog
+            // 
+            this.print_PreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.print_PreviewDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.print_PreviewDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.print_PreviewDialog.Enabled = true;
+            this.print_PreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("print_PreviewDialog.Icon")));
+            this.print_PreviewDialog.Name = "print_PreviewDialog";
+            this.print_PreviewDialog.Visible = false;
+            // 
+            // form_Catalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 491);
             this.Controls.Add(this.tc_Info);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Catalog";
+            this.Name = "form_Catalog";
             this.Text = "Каталогизатор";
             this.Load += new System.EventHandler(this.Catalog_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tc_Info.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabPage_Book.ResumeLayout(false);
             this.grpbox_BookInfo.ResumeLayout(false);
             this.grpbox_BookInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_BookPreview)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.tabPage_Film.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -801,7 +831,7 @@
         private System.Windows.Forms.ToolStripMenuItem CancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem CutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RemoveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CopyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PasteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
@@ -816,9 +846,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.TabControl tc_Info;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage_Book;
         private System.Windows.Forms.GroupBox grpbox_BookInfo;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage_Film;
         private System.Windows.Forms.GroupBox FilmInfo;
         private System.Windows.Forms.TreeView tw_Film;
         private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
@@ -861,6 +891,9 @@
         private System.Windows.Forms.TreeView tw_Book;
         private System.Windows.Forms.PictureBox picBox_BookPreview;
         private System.Windows.Forms.SaveFileDialog sfd_SaveXmlFile;
+        private System.Drawing.Printing.PrintDocument print_Doc;
+        private System.Windows.Forms.PrintDialog print_Dialog;
+        private System.Windows.Forms.PrintPreviewDialog print_PreviewDialog;
     }
 }
 

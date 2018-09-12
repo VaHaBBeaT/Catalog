@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Security;
@@ -18,19 +19,18 @@ namespace Catalog
     public partial class form_Catalog : Form
     {
         public static string fileName = "";
+        form_Debug fd = null;
+        static int imageNumber = 0;
 
         public static void SetFileName()
         {
             if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml")) fileName = AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml";
             else
             {
-                File.Create(AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml");
+                using (File.Create(AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml"));
                 fileName = AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml";
             }
-        }        
-        
-        form_Debug fd = null;
-        static int imageNumber = 0;
+        }
         
         public form_Catalog()
         {
@@ -198,7 +198,7 @@ namespace Catalog
         {
             List<Book> parse = FileOPs.ParseXmlToList(fileName);
 
-            if (GetDeepestChildNodeLevel(e.Node.TreeView.SelectedNode) == 1)
+            if ((tw_Book.SelectedNode != null) && (GetDeepestChildNodeLevel(e.Node.TreeView.SelectedNode) == 1))
             {
                 try
                 {
@@ -215,7 +215,6 @@ namespace Catalog
                     txtbox_Publisher.Text = parse.Find(b => b.bookAuthor == e.Node.Parent.Parent.Text && b.bookName == e.Node.Text).bookPublisher;
                     txtbox_PrintYear.Text = parse.Find(b => b.bookAuthor == e.Node.Parent.Parent.Text && b.bookName == e.Node.Text).bookPrintYear.ToString();
                     txtbox_PrintCity.Text = parse.Find(b => b.bookAuthor == e.Node.Parent.Parent.Text && b.bookName == e.Node.Text).bookPrintCity;
-                    //txtbox_ISBN.Text = parse.Find(b => b.bookAuthor == e.Node.Parent.Parent.Text && b.bookName == e.Node.Text).bookISBN.ToString();
                     if (parse.Find(b => b.bookAuthor == e.Node.Parent.Parent.Text && b.bookName == e.Node.Text).bookISBN.ToString().Length == 10) msktxtbox_ISBN.Mask = "000000000-0";
                     else if (parse.Find(b => b.bookAuthor == e.Node.Parent.Parent.Text && b.bookName == e.Node.Text).bookISBN.ToString().Length == 13) msktxtbox_ISBN.Mask = "000-0-00-000000-0";
                     msktxtbox_ISBN.Text = parse.Find(b => b.bookAuthor == e.Node.Parent.Parent.Text && b.bookName == e.Node.Text).bookISBN.ToString();
@@ -244,6 +243,66 @@ namespace Catalog
         {
             Form formAbout = new form_About();
             formAbout.Show();
+        }
+
+        private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((tw_Book.SelectedNode != null) && (GetDeepestChildNodeLevel(tw_Book.SelectedNode) == 1))
+            {
+                print_Dialog.Document = print_Doc;
+
+                if (print_Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    print_Doc.Print();
+                }
+            }
+        }
+
+        private void print_Doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            List<Book> parse = FileOPs.ParseXmlToList(fileName);
+            Image image = Image.FromFile(parse.Find(b => b.bookAuthor == tw_Book.SelectedNode.Parent.Parent.Text && b.bookName == tw_Book.SelectedNode.Text).picPath[0]);
+
+            PrivateFontCollection fontColl = new PrivateFontCollection();
+            fontColl.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Header.TTF");
+            fontColl.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Text.TTF");
+            Font myHeaderFont = new Font(fontColl.Families[0], 36f);
+            Font myTextFont = new Font(fontColl.Families[1], 16f);
+
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Center;
+            stringFormat.LineAlignment = StringAlignment.Center;
+
+            e.Graphics.PageUnit = GraphicsUnit.Millimeter;
+            
+            e.Graphics.DrawString(txtbox_Author.Text, myHeaderFont, Brushes.Black, new Rectangle(0, 10, 205, 15), stringFormat);
+            e.Graphics.DrawString(txtbox_Name.Text, myHeaderFont, Brushes.Black, new Rectangle(0, 25, 205, 15), stringFormat);
+            
+            e.Graphics.DrawImage(image, 20, 40, 70, 100);
+
+            e.Graphics.DrawString("Series: " + txtbox_Series.Text + " - " + txtbox_NumberInSeries.Text, myTextFont, Brushes.Black, 100, 50);
+            e.Graphics.DrawString("Genre: " + txtbox_Genre.Text, myTextFont, Brushes.Black, 100, 60);
+            e.Graphics.DrawString("Total Pages: " + txtbox_PagesCount.Text, myTextFont, Brushes.Black, 100, 70);
+            e.Graphics.DrawString("Publishing: " + txtbox_Publisher.Text + ", "+ txtbox_PrintCity.Text + ", " + txtbox_PrintYear.Text, myTextFont, Brushes.Black, 100, 80);
+            e.Graphics.DrawString("ISBN: " + msktxtbox_ISBN.Text, myTextFont, Brushes.Black, 100, 90);
+            e.Graphics.DrawString("Translator: " + txtbox_Translator.Text, myTextFont, Brushes.Black, 100, 100);
+            e.Graphics.DrawString("Artist: " + txtbox_Artist.Text, myTextFont, Brushes.Black, 100, 110);
+            e.Graphics.DrawString("Notes: " + txtbox_Notes.Text, myTextFont, Brushes.Black, 100, 120);
+        }
+
+        private void PreviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((tw_Book.SelectedNode != null) && (GetDeepestChildNodeLevel(tw_Book.SelectedNode) == 1))
+            {
+                try
+                {
+                    print_PreviewDialog.Document = print_Doc;
+                    print_PreviewDialog.Height = 700;
+                    print_PreviewDialog.Width = 500;
+                    print_PreviewDialog.ShowDialog();
+                }
+                catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+            }
         }
     }
 }

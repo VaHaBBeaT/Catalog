@@ -32,40 +32,23 @@
     <Translator>Pavlov</Translator>
     <Artist>Bondar</Artist>
     <Notes>Presented by Toh</Notes>
-    <picPath>@.\Pics\TI2\TI_01.jpg@.\Pics\TI2\TI_02.jpg@.\Pics\TI2\TI_03.jpg</picPath>
+    <picPath>@.\Pics\TI2\TI_03.jpg@.\Pics\TI2\TI_02.jpg@.\Pics\TI2\TI_01.jpg</picPath>
   </Book>
   <Book ID="3">
-    <MajorSeries>sDf</MajorSeries>
-    <Author>Pehov2</Author>
-    <Name>Veter 2</Name>
-    <Series>Veter Polyni</Series>
-    <NumberInSeries>2</NumberInSeries>
+    <MajorSeries>asd</MajorSeries>
+    <Author>Zykov</Author>
+    <Name>kirsan</Name>
+    <Series>magic</Series>
+    <NumberInSeries>1</NumberInSeries>
     <Genre>Fantasy</Genre>
-    <PagesCount>355</PagesCount>
+    <PagesCount>240</PagesCount>
     <Publisher>Armada</Publisher>
-    <PrintYear>2016</PrintYear>
+    <PrintYear>2013</PrintYear>
     <PrintCity>Moscow</PrintCity>
-    <ISBN>3210987654321</ISBN>
-    <Translator>Pavlov</Translator>
-    <Artist>Bondar</Artist>
-    <Notes>Presented by Toh</Notes>
-    <picPath>@.\Pics\TI2\TI_01.jpg@.\Pics\TI2\TI_02.jpg@.\Pics\TI2\TI_03.jpg</picPath>
-  </Book>
-  <Book ID="4">
-    <MajorSeries>sDf</MajorSeries>
-    <Author>Pehov2</Author>
-    <Name>Veter 2</Name>
-    <Series>Veter Polyni</Series>
-    <NumberInSeries>2</NumberInSeries>
-    <Genre>Fantasy</Genre>
-    <PagesCount>355</PagesCount>
-    <Publisher>Armada</Publisher>
-    <PrintYear>2016</PrintYear>
-    <PrintCity>Moscow</PrintCity>
-    <ISBN>3210987654321</ISBN>
-    <Translator>Pavlov</Translator>
-    <Artist>Bondar</Artist>
-    <Notes>Presented by Toh</Notes>
-    <picPath>@.\Pics\TI2\TI_01.jpg@.\Pics\TI2\TI_02.jpg@.\Pics\TI2\TI_03.jpg</picPath>
+    <ISBN>8901234567890</ISBN>
+    <Translator>Qwerty</Translator>
+    <Artist>John</Artist>
+    <Notes>rgohnblosgi</Notes>
+    <picPath>@.\Pics\Zykov\kirsan\Chrysanthemum.jpg@.\Pics\Zykov\kirsan\Desert.jpg@.\Pics\Zykov\kirsan\Hydrangeas.jpg</picPath>
   </Book>
 </Bookshelf>
