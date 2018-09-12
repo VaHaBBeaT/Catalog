@@ -59,7 +59,7 @@ namespace Catalog
             
             try
             {
-                FileOPs.AppendXml(bookAppend, form_Catalog.fileName);
+                FileOPs.AppendToXml(bookAppend, form_Catalog.fileName);
 
                 txtbox_ID.Clear();
                 txtbox_MajorSeries.Clear();

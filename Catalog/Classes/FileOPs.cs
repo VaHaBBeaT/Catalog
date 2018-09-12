@@ -33,11 +33,20 @@ namespace Catalog
             }
         }
 
-        public static void AppendXml(Book bookAppend, string filename)
+        public static void AppendToXml(Book bookAppend, string filename)
         {
             XDocument bookDoc = LoadXml(filename);
             
             bookDoc.Descendants("Bookshelf").First().Add(ParseBookToXml(bookAppend));
+
+            bookDoc.Save(filename);
+        }
+
+        public static void RemoveFromXml(Book bookRemove, string filename)
+        {
+            XDocument bookDoc = LoadXml(filename);
+
+            bookDoc.Descendants("Book").Where(b=>b.Attribute("ID").Value==bookRemove.bookID.ToString()).Remove();
 
             bookDoc.Save(filename);
         }

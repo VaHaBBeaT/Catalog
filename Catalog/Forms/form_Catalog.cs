@@ -304,5 +304,25 @@ namespace Catalog
                 catch (Exception ex) { MessageBox.Show(ex.ToString()); }
             }
         }
+
+        private void RemoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Book> parse = FileOPs.ParseXmlToList(fileName);
+
+            if ((tw_Book.SelectedNode != null) && (GetDeepestChildNodeLevel(tw_Book.SelectedNode) == 1))
+            {
+                try
+                {   
+                    timer_BookPreview.Stop();
+                    tw_Book.CollapseAll();
+                    grpbox_BookInfo.Hide();
+
+                    FileOPs.RemoveFromXml(parse.Find(b => b.bookAuthor == tw_Book.SelectedNode.Parent.Parent.Text && b.bookName == tw_Book.SelectedNode.Text), fileName);
+                    
+                    TreeViewOPs.CreateTree(ref tw_Book);
+                }
+                catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+            }
+        }
     }
 }
