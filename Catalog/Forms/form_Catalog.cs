@@ -19,17 +19,15 @@ namespace Catalog
     public partial class form_Catalog : Form
     {
         public static string fileName = "";
+        public static int imageNumber = 0;
+        public static int lastID = 0;
+
         form_Debug fd = null;
-        static int imageNumber = 0;
 
         public static void SetFileName()
         {
-            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml")) fileName = AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml";
-            else
-            {
-                using (File.Create(AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml"));
-                fileName = AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml";
-            }
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml")) using (File.Create(AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml"));
+            fileName = AppDomain.CurrentDomain.BaseDirectory + @"\Bookshelf.xml";
         }
         
         public form_Catalog()
@@ -56,6 +54,8 @@ namespace Catalog
             {
                 TreeViewOPs.CreateTree(ref tw_Book);
             });
+
+            FileOPs.SetLastID();
         }
 
         private void Catalog_Load(object sender, EventArgs e)
@@ -63,25 +63,26 @@ namespace Catalog
             grpbox_BookInfo.Hide();
             timer_BookPreview.Stop();
             TreeViewOPs.CreateTree(ref tw_Book);
+            FileOPs.SetLastID();
         }
 
         private void timer_BookPreview_Tick(object sender, EventArgs e)
         {
-            TreeViewOPs.LoadNextImage(tw_Book.SelectedNode, ref picBox_BookPreview, ref imageNumber);
+            TreeViewOPs.LoadNextImage(tw_Book.SelectedNode, ref picBox_BookPreview);
         }
 
         private void LoadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ofd_LoadXmlFile.InitialDirectory = Path.GetDirectoryName(fileName);
-            this.ofd_LoadXmlFile.Filter = "XML (*.Xml)|*.Xml|" + "All files (*.*)|*.*";
-            this.ofd_LoadXmlFile.Multiselect = false;
-            this.ofd_LoadXmlFile.Title = "My Data file Browser";
+            ofd_LoadXmlFile.InitialDirectory = Path.GetDirectoryName(fileName);
+            ofd_LoadXmlFile.Filter = "XML (*.Xml)|*.Xml|" + "All files (*.*)|*.*";
+            ofd_LoadXmlFile.Multiselect = false;
+            ofd_LoadXmlFile.Title = "My Data file Browser";
 
-            if (this.ofd_LoadXmlFile.ShowDialog() == DialogResult.OK)
+            if (ofd_LoadXmlFile.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    FileOPs.SaveXml(FileOPs.ParseXmlToList(fileName), fileName);
+                    FileOPs.SaveXmlFile(FileOPs.ParseXmlToList(fileName), fileName);
                 }
                 catch (SecurityException ex)
                 {
@@ -120,7 +121,7 @@ namespace Catalog
                 try
                 {
                     fileName = sfd_SaveXmlFile.FileName;
-                    FileOPs.SaveXml(parse, fileName);
+                    FileOPs.SaveXmlFile(parse, fileName);
                 }
                 catch (SecurityException ex)
                 {
@@ -148,7 +149,7 @@ namespace Catalog
         private void CreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formCreate = new form_CreateBook();
-            formCreate.Show();            
+            formCreate.Show();
         }
 
         private void debugToolStripMenuItem_Click(object sender, EventArgs e)
@@ -182,12 +183,6 @@ namespace Catalog
 
             return false;
         }
-        
-        public static int GetDeepestChildNodeLevel (TreeNode node)
-        {
-            var subLevel = node.Nodes.Cast<TreeNode>().Select(subNode => GetDeepestChildNodeLevel(subNode));
-            return subLevel.Count() == 0 ? 1 : subLevel.Max() + 1;
-        }
 
         private void tw_Book_BeforeSelect(object sender, TreeViewEventArgs e)
         {
@@ -198,11 +193,11 @@ namespace Catalog
         {
             List<Book> parse = FileOPs.ParseXmlToList(fileName);
 
-            if ((tw_Book.SelectedNode != null) && (GetDeepestChildNodeLevel(e.Node.TreeView.SelectedNode) == 1))
+            if ((tw_Book.SelectedNode != null) && (TreeViewOPs.GetDeepestChildNodeLevel(e.Node.TreeView.SelectedNode) == 1))
             {
                 try
                 {
-                    imageNumber = 1;
+                    imageNumber = 0;
                     grpbox_BookInfo.Show();
                     txtbox_ID.Text = parse.Find(b => b.bookAuthor == e.Node.Parent.Parent.Text && b.bookName == e.Node.Text).bookID.ToString();
                     txtbox_MajorSeries.Text = parse.Find(b => b.bookAuthor == e.Node.Parent.Parent.Text && b.bookName == e.Node.Text).bookMajorSeries;
@@ -247,7 +242,7 @@ namespace Catalog
 
         private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((tw_Book.SelectedNode != null) && (GetDeepestChildNodeLevel(tw_Book.SelectedNode) == 1))
+            if ((tw_Book.SelectedNode != null) && (TreeViewOPs.GetDeepestChildNodeLevel(tw_Book.SelectedNode) == 1))
             {
                 print_Dialog.Document = print_Doc;
 
@@ -292,7 +287,7 @@ namespace Catalog
 
         private void PreviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((tw_Book.SelectedNode != null) && (GetDeepestChildNodeLevel(tw_Book.SelectedNode) == 1))
+            if ((tw_Book.SelectedNode != null) && (TreeViewOPs.GetDeepestChildNodeLevel(tw_Book.SelectedNode) == 1))
             {
                 try
                 {
@@ -309,20 +304,35 @@ namespace Catalog
         {
             List<Book> parse = FileOPs.ParseXmlToList(fileName);
 
-            if ((tw_Book.SelectedNode != null) && (GetDeepestChildNodeLevel(tw_Book.SelectedNode) == 1))
+            if ((tw_Book.SelectedNode != null) && (TreeViewOPs.GetDeepestChildNodeLevel(tw_Book.SelectedNode) == 1))
             {
                 try
                 {   
                     timer_BookPreview.Stop();
-                    tw_Book.CollapseAll();
+                    picBox_BookPreview.Image = null;
                     grpbox_BookInfo.Hide();
 
-                    FileOPs.RemoveFromXml(parse.Find(b => b.bookAuthor == tw_Book.SelectedNode.Parent.Parent.Text && b.bookName == tw_Book.SelectedNode.Text), fileName);
+                    FileOPs.RemoveFromXmlFile(parse.Find(b => b.bookAuthor == tw_Book.SelectedNode.Parent.Parent.Text && b.bookName == tw_Book.SelectedNode.Text), fileName);
                     
                     TreeViewOPs.CreateTree(ref tw_Book);
                 }
                 catch (Exception ex) { MessageBox.Show(ex.ToString()); }
             }
+        }
+
+        private void CloneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TreeViewOPs.CopyTreeNode(tw_Book);
+        }
+
+        private void ExpandAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tw_Book.ExpandAll();
+        }
+
+        private void CollapseAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tw_Book.CollapseAll();
         }
     }
 }

@@ -46,7 +46,7 @@ namespace Catalog
 
         private void form_Debug_Load(object sender, EventArgs e)
         {
-            rtbBookInfo.Text = FileOPs.LoadXml(form_Catalog.fileName).ToString();
+            rtbBookInfo.Text = FileOPs.LoadXmlFile(form_Catalog.fileName).ToString();
         }
     }
 }

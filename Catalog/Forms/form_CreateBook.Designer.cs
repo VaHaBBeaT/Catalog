@@ -74,8 +74,10 @@
             // 
             this.txtbox_ID.Location = new System.Drawing.Point(103, 12);
             this.txtbox_ID.Name = "txtbox_ID";
+            this.txtbox_ID.ReadOnly = true;
             this.txtbox_ID.Size = new System.Drawing.Size(198, 20);
             this.txtbox_ID.TabIndex = 0;
+            this.txtbox_ID.TabStop = false;
             // 
             // txtbox_MajorSeries
             // 
@@ -430,31 +432,12 @@
         private System.Windows.Forms.Label lbl_ID;
         private System.Windows.Forms.Label lbl_MajorSeries;
         private System.Windows.Forms.Label lbl_Author;
-        private System.Windows.Forms.Button btn_Close;
-        private System.Windows.Forms.Button btn_SaveBook;
-        private System.Windows.Forms.TextBox txtbox_MajorSeries;
-        private System.Windows.Forms.TextBox txtbox_Author;
-        private System.Windows.Forms.TextBox txtbox_ID;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tssl_StatusBookCreate;
         private System.Windows.Forms.Label lbl_Name;
-        private System.Windows.Forms.TextBox txtbox_Name;
-        private System.Windows.Forms.TextBox txtbox_Series;
         private System.Windows.Forms.Label lbl_Series;
         private System.Windows.Forms.OpenFileDialog ofd_FileSelector;
-        private System.Windows.Forms.Button btn_AddFiles;
-        private System.Windows.Forms.FlowLayoutPanel flp_FileSelector;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtbox_NumberInSeries;
-        private System.Windows.Forms.TextBox txtbox_Genre;
-        private System.Windows.Forms.TextBox txtbox_PagesCount;
-        private System.Windows.Forms.TextBox txtbox_Publisher;
-        private System.Windows.Forms.TextBox txtbox_PrintYear;
-        private System.Windows.Forms.TextBox txtbox_PrintCity;
-        private System.Windows.Forms.TextBox txtbox_ISBN;
-        private System.Windows.Forms.TextBox txtbox_Translator;
-        private System.Windows.Forms.TextBox txtbox_Artist;
-        private System.Windows.Forms.TextBox txtbox_Notes;
         private System.Windows.Forms.Label lbl_NumberInSeries;
         private System.Windows.Forms.Label lbl_Genre;
         private System.Windows.Forms.Label lbl_PagesCount;
@@ -465,5 +448,24 @@
         private System.Windows.Forms.Label lbl_Translator;
         private System.Windows.Forms.Label lbl_Artist;
         private System.Windows.Forms.Label lbl_Notes;
+        public System.Windows.Forms.Button btn_Close;
+        public System.Windows.Forms.Button btn_SaveBook;
+        public System.Windows.Forms.TextBox txtbox_Author;
+        public System.Windows.Forms.TextBox txtbox_ID;
+        public System.Windows.Forms.TextBox txtbox_Name;
+        public System.Windows.Forms.TextBox txtbox_Series;
+        public System.Windows.Forms.Button btn_AddFiles;
+        public System.Windows.Forms.FlowLayoutPanel flp_FileSelector;
+        public System.Windows.Forms.TextBox txtbox_NumberInSeries;
+        public System.Windows.Forms.TextBox txtbox_Genre;
+        public System.Windows.Forms.TextBox txtbox_PagesCount;
+        public System.Windows.Forms.TextBox txtbox_Publisher;
+        public System.Windows.Forms.TextBox txtbox_PrintYear;
+        public System.Windows.Forms.TextBox txtbox_PrintCity;
+        public System.Windows.Forms.TextBox txtbox_ISBN;
+        public System.Windows.Forms.TextBox txtbox_Translator;
+        public System.Windows.Forms.TextBox txtbox_Artist;
+        public System.Windows.Forms.TextBox txtbox_Notes;
+        public System.Windows.Forms.TextBox txtbox_MajorSeries;
     }
 }

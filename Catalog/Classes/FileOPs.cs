@@ -13,13 +13,13 @@ namespace Catalog
 {
     public class FileOPs
     {
-        public static void SaveXml(List<Book> books, string filename)
+        public static void SaveXmlFile(List<Book> books, string filename)
         {
             if (!File.Exists(filename)) using (File.Create(filename))
             ParseListToXml(books).Save(filename);
         }
         
-        public static XDocument LoadXml(string filename)
+        public static XDocument LoadXmlFile(string filename)
         {
             try
             {
@@ -33,27 +33,33 @@ namespace Catalog
             }
         }
 
-        public static void AppendToXml(Book bookAppend, string filename)
+        public static void AppendToXmlFile(Book bookAppend, string filename)
         {
-            XDocument bookDoc = LoadXml(filename);
+            XDocument bookDoc = LoadXmlFile(filename);
             
             bookDoc.Descendants("Bookshelf").First().Add(ParseBookToXml(bookAppend));
 
             bookDoc.Save(filename);
         }
-
-        public static void RemoveFromXml(Book bookRemove, string filename)
+        
+        public static void RemoveFromXmlFile(Book bookRemove, string filename)
         {
-            XDocument bookDoc = LoadXml(filename);
+            XDocument bookDoc = LoadXmlFile(filename);
+
+            DirectoryInfo bookDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + bookRemove.bookAuthor + @"\" + bookRemove.bookName);
+            DirectoryInfo authorDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + bookRemove.bookAuthor);
 
             bookDoc.Descendants("Book").Where(b=>b.Attribute("ID").Value==bookRemove.bookID.ToString()).Remove();
+
+            bookDir.Delete(true);
+            if (authorDir.GetDirectories().Length == 0 && authorDir.GetFiles().Length == 0) authorDir.Delete(true);
 
             bookDoc.Save(filename);
         }
 
         public static List<Book> ParseXmlToList (string filename)
         {
-            XDocument bookDoc = XDocument.Load(filename);
+            XDocument bookDoc = LoadXmlFile(filename);
             List<Book> bookList = bookDoc.Descendants("Book").Select(b => new Book {
                                                 bookID = int.Parse(b.Attribute("ID").Value),
                                                 bookMajorSeries = b.Element("MajorSeries").Value.ToString(),
@@ -121,6 +127,13 @@ namespace Catalog
                                                             new XElement("picPath", bookAppend.picPath.Select(s => s = "@" + s)
                                                             ));
             return newElement;
+        }
+
+        public static void SetLastID()
+        {
+            List<Book> book = ParseXmlToList(form_Catalog.fileName);
+
+            form_Catalog.lastID = book.Max(b => b.bookID);
         }
     }
 }
