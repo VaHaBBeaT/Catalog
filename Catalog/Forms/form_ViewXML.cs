@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Catalog
 {
-    public partial class form_Debug : Form
+    public partial class form_ViewXML : Form
     {
-        public form_Debug()
+        public form_ViewXML()
         {
             InitializeComponent();
             watch();
@@ -23,8 +23,8 @@ namespace Catalog
         private void watch()
         {
             FileSystemWatcher watcher = new FileSystemWatcher();
-            watcher.Path = Path.GetDirectoryName(form_Catalog.fileName);
-            watcher.Filter = Path.GetFileName(form_Catalog.fileName);
+            watcher.Path = Path.GetDirectoryName(form_Catalog.bookFileName);
+            watcher.Filter = Path.GetFileName(form_Catalog.bookFileName);
             watcher.NotifyFilter = NotifyFilters.LastWrite;
             watcher.Changed += new FileSystemEventHandler(OnChanged);
             watcher.EnableRaisingEvents = true;
@@ -35,7 +35,7 @@ namespace Catalog
             Thread.Sleep(10);
             Invoke((MethodInvoker)delegate
             {
-                rtbBookInfo.LoadFile(form_Catalog.fileName, RichTextBoxStreamType.PlainText);
+                rtbBookInfo.LoadFile(form_Catalog.bookFileName, RichTextBoxStreamType.PlainText);
             });
         }
 
@@ -46,7 +46,7 @@ namespace Catalog
 
         private void form_Debug_Load(object sender, EventArgs e)
         {
-            rtbBookInfo.Text = FileOPs.LoadXmlFile(form_Catalog.fileName).ToString();
+            rtbBookInfo.Text = FileOPs.LoadXmlFile(form_Catalog.bookFileName).ToString();
         }
     }
 }
