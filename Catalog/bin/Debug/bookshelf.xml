@@ -3,7 +3,7 @@
   <Book ID="1">
     <MajorSeries>AsD</MajorSeries>
     <Author>Pehov</Author>
-    <Name>Veter</Name>
+    <Title>Veter</Title>
     <Series>Veter Polyni</Series>
     <NumberInSeries>1</NumberInSeries>
     <Genre>Fantasy</Genre>
@@ -20,7 +20,7 @@
   <Book ID="2">
     <MajorSeries>sDf</MajorSeries>
     <Author>Pehov</Author>
-    <Name>Veter 2</Name>
+    <Title>Veter 2</Title>
     <Series>Veter Polyni</Series>
     <NumberInSeries>2</NumberInSeries>
     <Genre>Fantasy</Genre>
@@ -33,5 +33,107 @@
     <Artist>Bondar</Artist>
     <Notes>Presented by Toh</Notes>
     <picPath>@.\Pics\TI2\TI_03.jpg@.\Pics\TI2\TI_02.jpg@.\Pics\TI2\TI_01.jpg</picPath>
+  </Book>
+  <Book ID="3">
+    <MajorSeries>asd</MajorSeries>
+    <Author>Rice</Author>
+    <Title>Lestat</Title>
+    <Series>Vamp</Series>
+    <NumberInSeries>1</NumberInSeries>
+    <Genre>Fantasy</Genre>
+    <PagesCount>340</PagesCount>
+    <Publisher>Armada</Publisher>
+    <PrintYear>2014</PrintYear>
+    <PrintCity>Moscow</PrintCity>
+    <ISBN>8327467683</ISBN>
+    <Translator>Qwerty</Translator>
+    <Artist>Zxcvb</Artist>
+    <Notes>kgujhn</Notes>
+    <picPath>@.\Pics\Rice\Lestat\Koala.jpg@.\Pics\Rice\Lestat\Lighthouse.jpg@.\Pics\Rice\Lestat\Penguins.jpg</picPath>
+  </Book>
+  <Book ID="4">
+    <MajorSeries>asd</MajorSeries>
+    <Author>Rice</Author>
+    <Title>Lestat 2</Title>
+    <Series>Vamp</Series>
+    <NumberInSeries>2</NumberInSeries>
+    <Genre>Fantasy</Genre>
+    <PagesCount>320</PagesCount>
+    <Publisher>lsDf</Publisher>
+    <PrintYear>897</PrintYear>
+    <PrintCity>kjh</PrintCity>
+    <ISBN>1111122222987</ISBN>
+    <Translator>sldkfvn</Translator>
+    <Artist>lsgvm</Artist>
+    <Notes>';lfvjmk</Notes>
+    <picPath>@.\Pics\Rice\Lestat 2\Penguins.jpg@.\Pics\Rice\Lestat 2\Koala.jpg@.\Pics\Rice\Lestat 2\Tulips.jpg</picPath>
+  </Book>
+  <Book ID="5">
+    <MajorSeries>asd</MajorSeries>
+    <Author>Rice</Author>
+    <Title>Lestat 3</Title>
+    <Series>Vamp</Series>
+    <NumberInSeries>3</NumberInSeries>
+    <Genre>Fantasy</Genre>
+    <PagesCount>230</PagesCount>
+    <Publisher>Armada</Publisher>
+    <PrintYear>2013</PrintYear>
+    <PrintCity>Moscow</PrintCity>
+    <ISBN>1234567890890</ISBN>
+    <Translator>Asd</Translator>
+    <Artist>Dsa</Artist>
+    <Notes>sfkdjbhlsdkjv</Notes>
+    <picPath>@.\Pics\Rice\Lestat 3\Lestat 3-1.jpg@.\Pics\Rice\Lestat 3\Lestat 3-2.jpg@.\Pics\Rice\Lestat 3\Lestat 3-3.jpg</picPath>
+  </Book>
+  <Book ID="6">
+    <MajorSeries>asd</MajorSeries>
+    <Author>Rice</Author>
+    <Title>Lestat 4</Title>
+    <Series>Vamp</Series>
+    <NumberInSeries>3</NumberInSeries>
+    <Genre>Fantasy</Genre>
+    <PagesCount>230</PagesCount>
+    <Publisher>Armada</Publisher>
+    <PrintYear>2013</PrintYear>
+    <PrintCity>Moscow</PrintCity>
+    <ISBN>1234567890890</ISBN>
+    <Translator>Asd</Translator>
+    <Artist>Dsa</Artist>
+    <Notes>sfkdjbhlsdkjv</Notes>
+    <picPath>@.\Pics\Rice\Lestat 4\Lestat 4-1.jpg@.\Pics\Rice\Lestat 4\Lestat 4-2.jpg@.\Pics\Rice\Lestat 4\Lestat 4-3.jpg</picPath>
+  </Book>
+  <Book ID="7">
+    <MajorSeries>asd</MajorSeries>
+    <Author>Rice</Author>
+    <Title>Lestat 5</Title>
+    <Series>Vamp</Series>
+    <NumberInSeries>3</NumberInSeries>
+    <Genre>Fantasy</Genre>
+    <PagesCount>230</PagesCount>
+    <Publisher>Armada</Publisher>
+    <PrintYear>2013</PrintYear>
+    <PrintCity>Moscow</PrintCity>
+    <ISBN>1234567890890</ISBN>
+    <Translator>Asd</Translator>
+    <Artist>Dsa</Artist>
+    <Notes>sfkdjbhlsdkjv</Notes>
+    <picPath>@.\Pics\Rice\Lestat 5\Lestat 5-1.jpg@.\Pics\Rice\Lestat 5\Lestat 5-2.jpg@.\Pics\Rice\Lestat 5\Lestat 5-3.jpg</picPath>
+  </Book>
+  <Book ID="8">
+    <MajorSeries>asd</MajorSeries>
+    <Author>Rice</Author>
+    <Title>Lestat 6</Title>
+    <Series>Vamp</Series>
+    <NumberInSeries>3</NumberInSeries>
+    <Genre>Fantasy</Genre>
+    <PagesCount>230</PagesCount>
+    <Publisher>Armada</Publisher>
+    <PrintYear>2013</PrintYear>
+    <PrintCity>Moscow</PrintCity>
+    <ISBN>1234567890890</ISBN>
+    <Translator>Asd</Translator>
+    <Artist>Dsa</Artist>
+    <Notes>sfkdjbhlsdkjv</Notes>
+    <picPath>@.\Pics\Rice\Lestat 6\Lestat 6-1.jpg@.\Pics\Rice\Lestat 6\Lestat 6-2.jpg@.\Pics\Rice\Lestat 6\Lestat 6-3.jpg</picPath>
   </Book>
 </Bookshelf>

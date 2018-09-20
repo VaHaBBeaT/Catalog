@@ -33,6 +33,35 @@ namespace Catalog
             }
         }
 
+        public static void EditXmlFile (Book bookEdit, string filename)
+        {
+            XDocument bookDoc = LoadXmlFile(filename);
+            
+            var book = bookDoc.Descendants("Book").SingleOrDefault(b => b.Attribute("ID").Value == bookEdit.bookID.ToString());
+
+            //MessageBox.Show(string.Format("{0}|{1}", bookDoc.Descendants("Book").SingleOrDefault(b => b.Attribute("ID").Value == bookEdit.bookID.ToString()), bookEdit.bookID.ToString()));
+
+            if (book.Element("MajorSeries").Value != bookEdit.bookMajorSeries) book.Element("MajorSeries").Value = bookEdit.bookMajorSeries;
+            if (book.Element("Author").Value != bookEdit.bookAuthor) book.Element("Author").Value = bookEdit.bookAuthor;
+            if (book.Element("Title").Value != bookEdit.bookTitle) book.Element("Title").Value = bookEdit.bookTitle;
+            if (book.Element("Series").Value != bookEdit.bookSeries) book.Element("Series").Value = bookEdit.bookSeries;
+            if (book.Element("NumberInSeries").Value != bookEdit.bookNumberInSeries.ToString()) book.Element("NumberInSeries").Value = bookEdit.bookNumberInSeries.ToString();
+            if (book.Element("Genre").Value != bookEdit.bookGenre) book.Element("Genre").Value = bookEdit.bookGenre;
+            if (book.Element("PagesCount").Value != bookEdit.bookPagesCount.ToString()) book.Element("PagesCount").Value = bookEdit.bookPagesCount.ToString();
+            if (book.Element("Publisher").Value != bookEdit.bookPublisher) book.Element("Publisher").Value = bookEdit.bookPublisher;
+            if (book.Element("PrintYear").Value != bookEdit.bookPrintYear.ToString()) book.Element("PrintYear").Value = bookEdit.bookPrintYear.ToString();
+            if (book.Element("PrintCity").Value != bookEdit.bookPrintCity) book.Element("PrintCity").Value = bookEdit.bookPrintCity;
+            if (book.Element("ISBN").Value != bookEdit.bookISBN.ToString()) book.Element("ISBN").Value = bookEdit.bookISBN.ToString();
+            if (book.Element("Translator").Value != bookEdit.bookTranslator) book.Element("Translator").Value = bookEdit.bookTranslator;
+            if (book.Element("Artist").Value != bookEdit.bookArtist) book.Element("Artist").Value = bookEdit.bookArtist;
+            if (book.Element("Notes").Value != bookEdit.bookNotes) book.Element("Notes").Value = bookEdit.bookNotes;
+
+            book.Element("picPath").Value = "";
+            foreach (var bE in bookEdit.picPath) book.Element("picPath").Value += "@" + bE;
+
+            bookDoc.Save(filename);
+        }
+
         public static void AppendToXmlFile(Book bookAppend, string filename)
         {
             XDocument bookDoc = LoadXmlFile(filename);
@@ -46,10 +75,10 @@ namespace Catalog
         {
             XDocument bookDoc = LoadXmlFile(filename);
 
-            DirectoryInfo bookDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + bookRemove.bookAuthor + @"\" + bookRemove.bookName);
+            DirectoryInfo bookDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + bookRemove.bookAuthor + @"\" + bookRemove.bookTitle);
             DirectoryInfo authorDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + bookRemove.bookAuthor);
 
-            bookDoc.Descendants("Book").Where(b=>b.Attribute("ID").Value==bookRemove.bookID.ToString()).Remove();
+            bookDoc.Descendants("Book").Where(b => b.Attribute("ID").Value == bookRemove.bookID.ToString()).Remove();
 
             bookDir.Delete(true);
             if (authorDir.GetDirectories().Length == 0 && authorDir.GetFiles().Length == 0) authorDir.Delete(true);
@@ -64,7 +93,7 @@ namespace Catalog
                                                 bookID = int.Parse(b.Attribute("ID").Value),
                                                 bookMajorSeries = b.Element("MajorSeries").Value.ToString(),
                                                 bookAuthor = b.Element("Author").Value.ToString(),
-                                                bookName = b.Element("Name").Value.ToString(),
+                                                bookTitle = b.Element("Title").Value.ToString(),
                                                 bookSeries = b.Element("Series").Value.ToString(),
                                                 bookNumberInSeries = int.Parse(b.Element("NumberInSeries").Value),
                                                 bookGenre = b.Element("Genre").Value.ToString(),
@@ -89,7 +118,7 @@ namespace Catalog
                 select new XElement("Book", new XAttribute("ID", b.bookID),
                                                 new XElement("MajorSeries", b.bookMajorSeries),
                                                 new XElement("Author", b.bookAuthor),
-                                                new XElement("Name", b.bookName),
+                                                new XElement("Title", b.bookTitle),
                                                 new XElement("Series", b.bookSeries),
                                                 new XElement("NumberInSeries", b.bookNumberInSeries),
                                                 new XElement("Genre", b.bookGenre),
@@ -112,7 +141,7 @@ namespace Catalog
             XElement newElement = new XElement("Book", new XAttribute("ID", bookAppend.bookID),
                                                             new XElement("MajorSeries", bookAppend.bookMajorSeries),
                                                             new XElement("Author", bookAppend.bookAuthor),
-                                                            new XElement("Name", bookAppend.bookName),
+                                                            new XElement("Title", bookAppend.bookTitle),
                                                             new XElement("Series", bookAppend.bookSeries),
                                                             new XElement("NumberInSeries", bookAppend.bookNumberInSeries),
                                                             new XElement("Genre", bookAppend.bookGenre),

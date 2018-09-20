@@ -13,7 +13,7 @@ namespace Catalog
         public int bookID;
         public string bookMajorSeries;
         public string bookAuthor;
-        public string bookName;
+        public string bookTitle;
         public string bookSeries;
         public int bookNumberInSeries;
         public string bookGenre;
@@ -27,13 +27,13 @@ namespace Catalog
         public string bookNotes;
         public List<string> picPath;
 
-        public Book(int id, string majorseries, string author, string name, string series, int numberinseries, string genre, int pagescount, string publisher,
+        public Book(int id, string majorseries, string author, string title, string series, int numberinseries, string genre, int pagescount, string publisher,
                     int printyear, string printcity, long isbn, string translator, string artist, string notes, List<string> picpath)
         {
             bookID = id;
             bookMajorSeries = majorseries;
             bookAuthor = author;
-            bookName = name;
+            bookTitle = title;
             bookSeries = series;
             bookNumberInSeries = numberinseries;
             bookGenre = genre;

@@ -15,14 +15,6 @@ namespace Catalog
     public partial class form_CreateBook : Form
     {
         List<string> fileNames = new List<string>();
-        List<TextBox> txtBoxes = new List<TextBox>();
-
-        //For clone action
-        //public string txt_Author
-        //{
-        //    get { return txtbox_Author.Text; }
-        //    set { txtbox_Author.Text = value; }
-        //}
 
         public form_CreateBook()
         {
@@ -37,7 +29,7 @@ namespace Catalog
         {
             List<Book> parse = FileOPs.ParseXmlToList(form_Catalog.fileName);
 
-            Book book = parse.Find(b => b.bookAuthor == txtbox_Author.Text && b.bookName == txtbox_Name.Text);
+            Book book = parse.Find(b => b.bookAuthor == txtbox_Author.Text && b.bookTitle == txtbox_Title.Text);
 
             if (book == null)
             {
@@ -49,10 +41,10 @@ namespace Catalog
                 {
                     try
                     {
-                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + txtbox_Author.Text + @"\" + txtbox_Name.Text);
+                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + txtbox_Author.Text + @"\" + txtbox_Title.Text);
                         string extension = Path.GetExtension(file);
-                        string path = string.Format(@".\Pics\" + txtbox_Author.Text + @"\" + txtbox_Name.Text + @"\");
-                        string tempFileName = string.Format("{0}-{1}", txtbox_Name.Text, count++);
+                        string path = string.Format(@".\Pics\" + txtbox_Author.Text + @"\" + txtbox_Title.Text + @"\");
+                        string tempFileName = string.Format("{0}-{1}", txtbox_Title.Text, count++);
 
                         string fullPath = Path.Combine(path, tempFileName + extension);
                         File.Copy(file, fullPath);
@@ -61,7 +53,7 @@ namespace Catalog
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
 
-                Book bookAppend = new Book(int.Parse(txtbox_ID.Text), txtbox_MajorSeries.Text, txtbox_Author.Text, txtbox_Name.Text, txtbox_Series.Text, int.Parse(txtbox_NumberInSeries.Text), txtbox_Genre.Text, int.Parse(txtbox_PagesCount.Text), txtbox_Publisher.Text, int.Parse(txtbox_PrintYear.Text), txtbox_PrintCity.Text, long.Parse(txtbox_ISBN.Text), txtbox_Translator.Text, txtbox_Artist.Text, txtbox_Notes.Text, filePath);
+                Book bookAppend = new Book(int.Parse(txtbox_ID.Text), txtbox_MajorSeries.Text, txtbox_Author.Text, txtbox_Title.Text, txtbox_Series.Text, int.Parse(txtbox_NumberInSeries.Text), txtbox_Genre.Text, int.Parse(txtbox_PagesCount.Text), txtbox_Publisher.Text, int.Parse(txtbox_PrintYear.Text), txtbox_PrintCity.Text, long.Parse(txtbox_ISBN.Text), txtbox_Translator.Text, txtbox_Artist.Text, txtbox_Notes.Text, filePath);
 
                 try
                 {
@@ -70,7 +62,7 @@ namespace Catalog
                     txtbox_ID.Clear();
                     txtbox_MajorSeries.Clear();
                     txtbox_Author.Clear();
-                    txtbox_Name.Clear();
+                    txtbox_Title.Clear();
                     txtbox_Series.Clear();
                     txtbox_NumberInSeries.Clear();
                     txtbox_Genre.Clear();
@@ -82,7 +74,8 @@ namespace Catalog
                     txtbox_Translator.Clear();
                     txtbox_Artist.Clear();
                     txtbox_Notes.Clear();
-                    foreach (var tb in txtBoxes) tb.Dispose();
+                    
+                    flp_FileSelector.Controls.Clear();
 
                     tssl_StatusBookCreate.Text = "Success!";
 
@@ -98,11 +91,7 @@ namespace Catalog
             }
             else
             {
-                MessageBox.Show(string.Format("Authors {0} book '{1}' already exist, please edit bookinfo", txtbox_Author.Text, txtbox_Name.Text));
-                //txtbox_Name.SelectionStart = 0;
-                //txtbox_Name.SelectionLength = txtbox_Name.Text.Length;
-                //txtbox_Author.SelectionStart = 0;
-                //txtbox_Author.SelectionLength=txtbox_Author.Text.Length;
+                MessageBox.Show(string.Format("Authors {0} book '{1}' already exist, please edit bookinfo", txtbox_Author.Text, txtbox_Title.Text));
             }
         }
 
@@ -124,11 +113,19 @@ namespace Catalog
                     try
                     {
                         TextBox tb = new TextBox();
-                        tb.Width = flp_FileSelector.Width;
+                        tb.Width = flp_FileSelector.Width-60;
                         tb.Text = file;
-                        txtBoxes.Add(tb);
                         fileNames.Add(file);
                         flp_FileSelector.Controls.Add(tb);
+
+                        Button button_Delete = new Button();
+                        button_Delete.Name = "Delete";
+                        button_Delete.Width = 40;
+                        button_Delete.Height = tb.Height;
+                        button_Delete.Image = new Bitmap(Image.FromFile(@".\Icons\Delete.png"), new Size(16, 16));
+                        button_Delete.Click += new EventHandler(btn_Delete_Click);
+                        flp_FileSelector.Controls.Add(button_Delete);
+
                         tssl_StatusBookCreate.Text = "File Added!";
                     }
                     catch (SecurityException ex)
@@ -148,6 +145,12 @@ namespace Catalog
                     }
                 }
             }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            flp_FileSelector.Controls.RemoveAt(flp_FileSelector.Controls.IndexOf((Control)sender) - 1);
+            flp_FileSelector.Controls.RemoveAt(flp_FileSelector.Controls.IndexOf((Control)sender));
         }
     }
 }

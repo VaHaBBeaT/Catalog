@@ -39,7 +39,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssl_StatusBookCreate = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_Name = new System.Windows.Forms.Label();
-            this.txtbox_Name = new System.Windows.Forms.TextBox();
+            this.txtbox_Title = new System.Windows.Forms.TextBox();
             this.txtbox_Series = new System.Windows.Forms.TextBox();
             this.lbl_Series = new System.Windows.Forms.Label();
             this.ofd_FileSelector = new System.Windows.Forms.OpenFileDialog();
@@ -67,7 +67,6 @@
             this.lbl_Artist = new System.Windows.Forms.Label();
             this.lbl_Notes = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
-            this.flp_FileSelector.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbox_ID
@@ -95,6 +94,8 @@
             // 
             // lbl_ID
             // 
+            this.lbl_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ID.AutoSize = true;
             this.lbl_ID.Location = new System.Drawing.Point(79, 15);
             this.lbl_ID.Name = "lbl_ID";
@@ -104,8 +105,10 @@
             // 
             // lbl_MajorSeries
             // 
+            this.lbl_MajorSeries.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_MajorSeries.AutoSize = true;
-            this.lbl_MajorSeries.Location = new System.Drawing.Point(38, 42);
+            this.lbl_MajorSeries.Location = new System.Drawing.Point(35, 42);
             this.lbl_MajorSeries.Name = "lbl_MajorSeries";
             this.lbl_MajorSeries.Size = new System.Drawing.Size(62, 13);
             this.lbl_MajorSeries.TabIndex = 5;
@@ -113,8 +116,10 @@
             // 
             // lbl_Author
             // 
+            this.lbl_Author.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Author.AutoSize = true;
-            this.lbl_Author.Location = new System.Drawing.Point(62, 69);
+            this.lbl_Author.Location = new System.Drawing.Point(59, 69);
             this.lbl_Author.Name = "lbl_Author";
             this.lbl_Author.Size = new System.Drawing.Size(38, 13);
             this.lbl_Author.TabIndex = 6;
@@ -158,19 +163,21 @@
             // 
             // lbl_Name
             // 
+            this.lbl_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(65, 96);
+            this.lbl_Name.Location = new System.Drawing.Point(70, 96);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Name.Size = new System.Drawing.Size(27, 13);
             this.lbl_Name.TabIndex = 7;
-            this.lbl_Name.Text = "Name";
+            this.lbl_Name.Text = "Title";
             // 
-            // txtbox_Name
+            // txtbox_Title
             // 
-            this.txtbox_Name.Location = new System.Drawing.Point(103, 93);
-            this.txtbox_Name.Name = "txtbox_Name";
-            this.txtbox_Name.Size = new System.Drawing.Size(198, 20);
-            this.txtbox_Name.TabIndex = 3;
+            this.txtbox_Title.Location = new System.Drawing.Point(103, 93);
+            this.txtbox_Title.Name = "txtbox_Title";
+            this.txtbox_Title.Size = new System.Drawing.Size(198, 20);
+            this.txtbox_Title.TabIndex = 3;
             // 
             // txtbox_Series
             // 
@@ -181,6 +188,8 @@
             // 
             // lbl_Series
             // 
+            this.lbl_Series.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Series.AutoSize = true;
             this.lbl_Series.Location = new System.Drawing.Point(61, 123);
             this.lbl_Series.Name = "lbl_Series";
@@ -190,7 +199,7 @@
             // 
             // btn_AddFiles
             // 
-            this.btn_AddFiles.Location = new System.Drawing.Point(543, 387);
+            this.btn_AddFiles.Location = new System.Drawing.Point(548, 381);
             this.btn_AddFiles.Name = "btn_AddFiles";
             this.btn_AddFiles.Size = new System.Drawing.Size(75, 23);
             this.btn_AddFiles.TabIndex = 57;
@@ -200,19 +209,19 @@
             // 
             // flp_FileSelector
             // 
-            this.flp_FileSelector.Controls.Add(this.textBox1);
-            this.flp_FileSelector.Location = new System.Drawing.Point(307, 15);
+            this.flp_FileSelector.Location = new System.Drawing.Point(307, 39);
             this.flp_FileSelector.Name = "flp_FileSelector";
-            this.flp_FileSelector.Size = new System.Drawing.Size(316, 366);
+            this.flp_FileSelector.Size = new System.Drawing.Size(316, 336);
             this.flp_FileSelector.TabIndex = 50;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Location = new System.Drawing.Point(307, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(308, 20);
+            this.textBox1.Size = new System.Drawing.Size(316, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TabStop = false;
             this.textBox1.Text = "Add preview files here";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -289,6 +298,8 @@
             // 
             // lbl_NumberInSeries
             // 
+            this.lbl_NumberInSeries.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_NumberInSeries.AutoSize = true;
             this.lbl_NumberInSeries.Location = new System.Drawing.Point(18, 150);
             this.lbl_NumberInSeries.Name = "lbl_NumberInSeries";
@@ -298,6 +309,8 @@
             // 
             // lbl_Genre
             // 
+            this.lbl_Genre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Genre.AutoSize = true;
             this.lbl_Genre.Location = new System.Drawing.Point(61, 177);
             this.lbl_Genre.Name = "lbl_Genre";
@@ -307,6 +320,8 @@
             // 
             // lbl_PagesCount
             // 
+            this.lbl_PagesCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PagesCount.AutoSize = true;
             this.lbl_PagesCount.Location = new System.Drawing.Point(32, 204);
             this.lbl_PagesCount.Name = "lbl_PagesCount";
@@ -316,6 +331,8 @@
             // 
             // lbl_Publisher
             // 
+            this.lbl_Publisher.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Publisher.AutoSize = true;
             this.lbl_Publisher.Location = new System.Drawing.Point(47, 231);
             this.lbl_Publisher.Name = "lbl_Publisher";
@@ -325,6 +342,8 @@
             // 
             // lbl_PrintYear
             // 
+            this.lbl_PrintYear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PrintYear.AutoSize = true;
             this.lbl_PrintYear.Location = new System.Drawing.Point(47, 258);
             this.lbl_PrintYear.Name = "lbl_PrintYear";
@@ -334,6 +353,8 @@
             // 
             // lbl_PrintCity
             // 
+            this.lbl_PrintCity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PrintCity.AutoSize = true;
             this.lbl_PrintCity.Location = new System.Drawing.Point(52, 285);
             this.lbl_PrintCity.Name = "lbl_PrintCity";
@@ -343,6 +364,8 @@
             // 
             // lbl_ISBN
             // 
+            this.lbl_ISBN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ISBN.AutoSize = true;
             this.lbl_ISBN.Location = new System.Drawing.Point(65, 312);
             this.lbl_ISBN.Name = "lbl_ISBN";
@@ -352,6 +375,8 @@
             // 
             // lbl_Translator
             // 
+            this.lbl_Translator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Translator.AutoSize = true;
             this.lbl_Translator.Location = new System.Drawing.Point(43, 339);
             this.lbl_Translator.Name = "lbl_Translator";
@@ -361,6 +386,8 @@
             // 
             // lbl_Artist
             // 
+            this.lbl_Artist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Artist.AutoSize = true;
             this.lbl_Artist.Location = new System.Drawing.Point(67, 365);
             this.lbl_Artist.Name = "lbl_Artist";
@@ -370,6 +397,8 @@
             // 
             // lbl_Notes
             // 
+            this.lbl_Notes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Notes.AutoSize = true;
             this.lbl_Notes.Location = new System.Drawing.Point(62, 392);
             this.lbl_Notes.Name = "lbl_Notes";
@@ -382,6 +411,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 512);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lbl_Notes);
             this.Controls.Add(this.lbl_Artist);
             this.Controls.Add(this.lbl_Translator);
@@ -406,7 +436,7 @@
             this.Controls.Add(this.btn_AddFiles);
             this.Controls.Add(this.lbl_Series);
             this.Controls.Add(this.txtbox_Series);
-            this.Controls.Add(this.txtbox_Name);
+            this.Controls.Add(this.txtbox_Title);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btn_Close);
@@ -421,8 +451,6 @@
             this.Text = "Создать книгу";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.flp_FileSelector.ResumeLayout(false);
-            this.flp_FileSelector.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,7 +480,7 @@
         public System.Windows.Forms.Button btn_SaveBook;
         public System.Windows.Forms.TextBox txtbox_Author;
         public System.Windows.Forms.TextBox txtbox_ID;
-        public System.Windows.Forms.TextBox txtbox_Name;
+        public System.Windows.Forms.TextBox txtbox_Title;
         public System.Windows.Forms.TextBox txtbox_Series;
         public System.Windows.Forms.Button btn_AddFiles;
         public System.Windows.Forms.FlowLayoutPanel flp_FileSelector;

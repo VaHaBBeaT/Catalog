@@ -11,7 +11,7 @@ namespace Catalog
 {
     class TreeViewOPs
     {
-        public static void CreateTree(ref TreeView tree)
+        public static void CreateTree(TreeView tree)
         {
             XDocument xDoc = FileOPs.LoadXmlFile(form_Catalog.fileName);
             tree.Nodes.Clear();
@@ -28,11 +28,11 @@ namespace Catalog
                 foreach (var bs in bookSeries)
                 {
                     tree.Nodes[0].Nodes[noDupesAuthor.IndexOf(nDA)].Nodes.Add(bs.bookSeries);
-                    List<Book> bookName = parse.FindAll(x => x.bookAuthor.Equals(nDA.bookAuthor) && x.bookSeries.Equals(bs.bookSeries));
+                    List<Book> bookTitle = parse.FindAll(x => x.bookAuthor.Equals(nDA.bookAuthor) && x.bookSeries.Equals(bs.bookSeries));
 
-                    foreach (var bn in bookName)
+                    foreach (var bn in bookTitle)
                     {
-                        tree.Nodes[0].Nodes[noDupesAuthor.IndexOf(nDA)].Nodes[bookSeries.IndexOf(bs)].Nodes.Add(bn.bookName);
+                        tree.Nodes[0].Nodes[noDupesAuthor.IndexOf(nDA)].Nodes[bookSeries.IndexOf(bs)].Nodes.Add(bn.bookTitle);
                     }
                 }
             }
@@ -46,7 +46,7 @@ namespace Catalog
         {
             List<Book> parse = FileOPs.ParseXmlToList(form_Catalog.fileName);
 
-            var item = parse.Find(a => a.bookName.Equals(node.Text));
+            var item = parse.Find(a => a.bookTitle.Equals(node.Text));
 
             if (form_Catalog.imageNumber == item.picPath.Count)
             {
@@ -70,15 +70,15 @@ namespace Catalog
                 try
                 {
                     List<Book> parse = FileOPs.ParseXmlToList(form_Catalog.fileName);
-                    Book cloneBook = parse.Find(b => b.bookName == tree.SelectedNode.Text && b.bookSeries == tree.SelectedNode.Parent.Text && b.bookAuthor == tree.SelectedNode.Parent.Parent.Text);
+                    Book cloneBook = parse.Find(b => b.bookTitle == tree.SelectedNode.Text && b.bookSeries == tree.SelectedNode.Parent.Text && b.bookAuthor == tree.SelectedNode.Parent.Parent.Text);
 
-                    //MessageBox.Show(string.Format("Cloning book:\nAuthor: {0}\nSeries: {1}\nBook: {2}", cloneBook.bookAuthor, cloneBook.bookSeries, cloneBook.bookName));
+                    //MessageBox.Show(string.Format("Cloning book:\nAuthor: {0}\nSeries: {1}\nBook: {2}", cloneBook.bookAuthor, cloneBook.bookSeries, cloneBook.bookTitle));
 
                     form_CreateBook form = new form_CreateBook();
                     form.txtbox_ID.Text = form_Catalog.lastID++.ToString();
                     form.txtbox_MajorSeries.Text = cloneBook.bookMajorSeries;
                     form.txtbox_Author.Text = cloneBook.bookAuthor;
-                    form.txtbox_Name.Text = cloneBook.bookName;
+                    form.txtbox_Title.Text = cloneBook.bookTitle;
                     form.txtbox_Series.Text = cloneBook.bookSeries;
                     form.txtbox_NumberInSeries.Text = cloneBook.bookNumberInSeries.ToString();
                     form.txtbox_Genre.Text = cloneBook.bookGenre;
@@ -93,7 +93,7 @@ namespace Catalog
 
                     form_Catalog.imageNumber = 0;
 
-                    tree.SelectedNode = new TreeNode(cloneBook.bookName);
+                    tree.SelectedNode = new TreeNode(cloneBook.bookTitle);
 
                     form.Show();
                 }

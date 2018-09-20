@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Catalog
 {
-    public partial class form_Debug : Form
+    public partial class form_ViewXML : Form
     {
-        public form_Debug()
+        public form_ViewXML()
         {
             InitializeComponent();
             watch();
