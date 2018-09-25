@@ -22,7 +22,7 @@ namespace Catalog
             //InitializeOpenFileDialog();
             flp_FileSelector.BorderStyle = BorderStyle.FixedSingle;
 
-            txtbox_ID.Text = form_Catalog.lastID++.ToString();
+            txtbox_ID.Text = form_Catalog.lastbookID++.ToString();
         }
 
         private void btn_SaveBook_Click(object sender, EventArgs e)
@@ -41,9 +41,9 @@ namespace Catalog
                 {
                     try
                     {
-                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + txtbox_Author.Text + @"\" + txtbox_Title.Text);
+                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books" + txtbox_Author.Text + @"\" + txtbox_Title.Text);
                         string extension = Path.GetExtension(file);
-                        string path = string.Format(@".\Pics\" + txtbox_Author.Text + @"\" + txtbox_Title.Text + @"\");
+                        string path = string.Format(@".\Pics\Books\" + txtbox_Author.Text + @"\" + txtbox_Title.Text + @"\");
                         string tempFileName = string.Format("{0}-{1}", txtbox_Title.Text, count++);
 
                         string fullPath = Path.Combine(path, tempFileName + extension);
@@ -53,7 +53,12 @@ namespace Catalog
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
 
-                Book bookAppend = new Book(int.Parse(txtbox_ID.Text), txtbox_MajorSeries.Text, txtbox_Author.Text, txtbox_Title.Text, txtbox_Series.Text, int.Parse(txtbox_NumberInSeries.Text), txtbox_Genre.Text, int.Parse(txtbox_PagesCount.Text), txtbox_Publisher.Text, int.Parse(txtbox_PrintYear.Text), txtbox_PrintCity.Text, long.Parse(txtbox_ISBN.Text), txtbox_Translator.Text, txtbox_Artist.Text, txtbox_Notes.Text, filePath);
+                Book bookAppend = new Book(int.Parse(txtbox_ID.Text), txtbox_MajorSeries.Text, txtbox_Author.Text,
+                                           txtbox_Title.Text, txtbox_Series.Text, int.Parse(txtbox_NumberInSeries.Text),
+                                           txtbox_Genre.Text, int.Parse(txtbox_PagesCount.Text), txtbox_Publisher.Text,
+                                           int.Parse(txtbox_PrintYear.Text), txtbox_PrintCity.Text,
+                                           long.Parse(txtbox_ISBN.Text), txtbox_Translator.Text, txtbox_Artist.Text,
+                                           txtbox_Notes.Text, filePath);
 
                 try
                 {
@@ -79,8 +84,8 @@ namespace Catalog
 
                     tssl_StatusBookCreate.Text = "Success!";
 
-                    form_Catalog.lastID++;
-                    txtbox_ID.Text = form_Catalog.lastID.ToString();
+                    form_Catalog.lastbookID++;
+                    txtbox_ID.Text = form_Catalog.lastbookID.ToString();
                 }
 
                 catch (FileNotFoundException ex)
@@ -149,6 +154,7 @@ namespace Catalog
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
+            fileNames.RemoveAt((flp_FileSelector.Controls.IndexOf((Control)sender) - 1)/2);
             flp_FileSelector.Controls.RemoveAt(flp_FileSelector.Controls.IndexOf((Control)sender) - 1);
             flp_FileSelector.Controls.RemoveAt(flp_FileSelector.Controls.IndexOf((Control)sender));
         }

@@ -21,7 +21,7 @@ namespace Catalog
         public string bookPublisher;
         public int bookPrintYear;
         public string bookPrintCity;
-        public int bookISBN;
+        public long bookISBN;
         public string bookTranslator;
         public string bookArtist;
         public string bookNotes;
@@ -29,7 +29,7 @@ namespace Catalog
 
         public Book(int id, string majorseries, string author, string title, string series,
                     int numberinseries, string genre, int pagescount, string publisher,
-                    int printyear, string printcity, int isbn, string translator,
+                    int printyear, string printcity, long isbn, string translator,
                     string artist, string notes, List<string> picpath)
         {
             bookID = id;

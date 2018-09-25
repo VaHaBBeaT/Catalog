@@ -14,28 +14,28 @@ namespace Catalog
 {
     public partial class form_ViewXML : Form
     {
-        public form_ViewXML()
+        public form_ViewXML(string filename)
         {
-            InitializeComponent();
-            watch();
+            InitializeComponent(filename);
+            watch(filename);
         }
 
-        private void watch()
+        private void watch(string filename)
         {
             FileSystemWatcher watcher = new FileSystemWatcher();
-            watcher.Path = Path.GetDirectoryName(form_Catalog.bookFileName);
-            watcher.Filter = Path.GetFileName(form_Catalog.bookFileName);
+            watcher.Path = Path.GetDirectoryName(filename);
+            watcher.Filter = Path.GetFileName(filename);
             watcher.NotifyFilter = NotifyFilters.LastWrite;
-            watcher.Changed += new FileSystemEventHandler(OnChanged);
+            watcher.Changed += new FileSystemEventHandler((sender, e) => OnChanged(sender, e, filename));
             watcher.EnableRaisingEvents = true;
         }
 
-        private void OnChanged(object source, FileSystemEventArgs e)
+        private void OnChanged(object source, FileSystemEventArgs e, string file)
         {
             Thread.Sleep(10);
             Invoke((MethodInvoker)delegate
             {
-                rtbBookInfo.LoadFile(form_Catalog.bookFileName, RichTextBoxStreamType.PlainText);
+                rtbXMLInfo.LoadFile(file, RichTextBoxStreamType.PlainText);
             });
         }
 
@@ -44,9 +44,9 @@ namespace Catalog
 
         }
 
-        private void form_Debug_Load(object sender, EventArgs e)
+        private void form_ViewXML_Load(object sender, EventArgs e, string file)
         {
-            rtbBookInfo.Text = FileOPs.LoadXmlFile(form_Catalog.bookFileName).ToString();
+            rtbXMLInfo.Text = FileOPs.LoadXmlFile(file).ToString();
         }
     }
 }

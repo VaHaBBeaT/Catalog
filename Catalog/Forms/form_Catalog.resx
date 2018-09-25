@@ -118,40 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>144, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>594, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
-  </data>
-  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Файл</value>
-  </data>
   <data name="LoadToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -276,11 +245,29 @@
   <data name="ExitToolStripMenuItem.Text" xml:space="preserve">
     <value>Вы&amp;ход</value>
   </data>
-  <data name="правкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 20</value>
+  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
   </data>
-  <data name="правкаToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Правка</value>
+  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Файл</value>
+  </data>
+  <data name="CreateBookToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+B</value>
+  </data>
+  <data name="CreateBookToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="CreateBookToolStripMenuItem.Text" xml:space="preserve">
+    <value>Книга</value>
+  </data>
+  <data name="CreateFilmToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+F</value>
+  </data>
+  <data name="CreateFilmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="CreateFilmToolStripMenuItem.Text" xml:space="preserve">
+    <value>Фильм</value>
   </data>
   <data name="CreateToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -295,9 +282,6 @@
   </data>
   <data name="CreateToolStripMenuItem.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
-  </data>
-  <data name="CreateToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+N</value>
   </data>
   <data name="CreateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 22</value>
@@ -398,14 +382,11 @@
   <data name="ViewXMLToolStripMenuItem.Text" xml:space="preserve">
     <value>Посмотреть XML</value>
   </data>
-  <data name="сервисToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="правкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 20</value>
   </data>
-  <data name="сервисToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Сервис</value>
-  </data>
-  <data name="сервисToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="правкаToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Правка</value>
   </data>
   <data name="настройкиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 22</value>
@@ -413,6 +394,7 @@
   <data name="настройкиToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Настройки</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="настройкиToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -434,11 +416,14 @@
   <data name="ChangeLanguageToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 20</value>
+  <data name="сервисToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
   </data>
-  <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Спра&amp;вка</value>
+  <data name="сервисToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Сервис</value>
+  </data>
+  <data name="сервисToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="содержаниеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 22</value>
@@ -479,1108 +464,553 @@
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;О программе...</value>
   </data>
-  <data name="tc_Info.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
   </data>
-  <data name="&gt;&gt;grpbox_BookInfo.Name" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
+  <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Спра&amp;вка</value>
   </data>
-  <data name="&gt;&gt;grpbox_BookInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;grpbox_BookInfo.Parent" xml:space="preserve">
-    <value>tabPage_Book</value>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>634, 24</value>
   </data>
-  <data name="&gt;&gt;grpbox_BookInfo.ZOrder" xml:space="preserve">
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;tw_Book.Name" xml:space="preserve">
-    <value>tw_Book</value>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
-  <data name="&gt;&gt;tw_Book.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
-  <data name="&gt;&gt;tw_Book.Parent" xml:space="preserve">
-    <value>tabPage_Book</value>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tw_Book.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabPage_Book.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPage_Book.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage_Book.Size" type="System.Drawing.Size, System.Drawing">
-    <value>586, 402</value>
-  </data>
-  <data name="tabPage_Book.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPage_Book.Text" xml:space="preserve">
-    <value>Книги</value>
-  </data>
-  <data name="&gt;&gt;tabPage_Book.Name" xml:space="preserve">
-    <value>tabPage_Book</value>
-  </data>
-  <data name="&gt;&gt;tabPage_Book.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage_Book.Parent" xml:space="preserve">
-    <value>tc_Info</value>
-  </data>
-  <data name="&gt;&gt;tabPage_Book.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="FilmInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 0</value>
-  </data>
-  <data name="FilmInfo.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>373, 400</value>
-  </data>
-  <data name="FilmInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>373, 401</value>
-  </data>
-  <data name="FilmInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="FilmInfo.Text" xml:space="preserve">
-    <value>Информация о фильме</value>
-  </data>
-  <data name="&gt;&gt;FilmInfo.Name" xml:space="preserve">
-    <value>FilmInfo</value>
-  </data>
-  <data name="&gt;&gt;FilmInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilmInfo.Parent" xml:space="preserve">
-    <value>tabPage_Film</value>
-  </data>
-  <data name="&gt;&gt;FilmInfo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tw_Film.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 6</value>
-  </data>
-  <data name="tw_Film.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>200, 150</value>
-  </data>
-  <data name="tw_Film.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 395</value>
-  </data>
-  <data name="tw_Film.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tw_Film.Name" xml:space="preserve">
-    <value>tw_Film</value>
-  </data>
-  <data name="&gt;&gt;tw_Film.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tw_Film.Parent" xml:space="preserve">
-    <value>tabPage_Film</value>
-  </data>
-  <data name="&gt;&gt;tw_Film.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabPage_Film.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPage_Film.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage_Film.Size" type="System.Drawing.Size, System.Drawing">
-    <value>586, 402</value>
-  </data>
-  <data name="tabPage_Film.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPage_Film.Text" xml:space="preserve">
-    <value>Фильмы</value>
-  </data>
-  <data name="&gt;&gt;tabPage_Film.Name" xml:space="preserve">
-    <value>tabPage_Film</value>
-  </data>
-  <data name="&gt;&gt;tabPage_Film.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage_Film.Parent" xml:space="preserve">
-    <value>tc_Info</value>
-  </data>
-  <data name="&gt;&gt;tabPage_Film.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tc_Info.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="tc_Info.Size" type="System.Drawing.Size, System.Drawing">
-    <value>594, 428</value>
-  </data>
-  <data name="tc_Info.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tc_Info.Name" xml:space="preserve">
-    <value>tc_Info</value>
-  </data>
-  <data name="&gt;&gt;tc_Info.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tc_Info.Parent" xml:space="preserve">
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;tc_Info.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tc_Info.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="grpbox_BookInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;msktxtbox_ISBN.Name" xml:space="preserve">
-    <value>msktxtbox_ISBN</value>
+  <data name="msktxtbox_BookISBN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 319</value>
   </data>
-  <data name="&gt;&gt;msktxtbox_ISBN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;msktxtbox_ISBN.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;msktxtbox_ISBN.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbl_Notes.Name" xml:space="preserve">
-    <value>lbl_Notes</value>
-  </data>
-  <data name="&gt;&gt;lbl_Notes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Notes.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_Notes.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lbl_Artist.Name" xml:space="preserve">
-    <value>lbl_Artist</value>
-  </data>
-  <data name="&gt;&gt;lbl_Artist.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Artist.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_Artist.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lbl_Translator.Name" xml:space="preserve">
-    <value>lbl_Translator</value>
-  </data>
-  <data name="&gt;&gt;lbl_Translator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Translator.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_Translator.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lbl_ISBN.Name" xml:space="preserve">
-    <value>lbl_ISBN</value>
-  </data>
-  <data name="&gt;&gt;lbl_ISBN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_ISBN.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_ISBN.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lbl_PrintCity.Name" xml:space="preserve">
-    <value>lbl_PrintCity</value>
-  </data>
-  <data name="&gt;&gt;lbl_PrintCity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_PrintCity.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_PrintCity.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lbl_PrintYear.Name" xml:space="preserve">
-    <value>lbl_PrintYear</value>
-  </data>
-  <data name="&gt;&gt;lbl_PrintYear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_PrintYear.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_PrintYear.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lbl_Publisher.Name" xml:space="preserve">
-    <value>lbl_Publisher</value>
-  </data>
-  <data name="&gt;&gt;lbl_Publisher.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Publisher.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_Publisher.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lbl_PagesCount.Name" xml:space="preserve">
-    <value>lbl_PagesCount</value>
-  </data>
-  <data name="&gt;&gt;lbl_PagesCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_PagesCount.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_PagesCount.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lbl_Genre.Name" xml:space="preserve">
-    <value>lbl_Genre</value>
-  </data>
-  <data name="&gt;&gt;lbl_Genre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Genre.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_Genre.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lbl_NumberInSeries.Name" xml:space="preserve">
-    <value>lbl_NumberInSeries</value>
-  </data>
-  <data name="&gt;&gt;lbl_NumberInSeries.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_NumberInSeries.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_NumberInSeries.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Notes.Name" xml:space="preserve">
-    <value>txtbox_Notes</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Notes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Notes.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Notes.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Artist.Name" xml:space="preserve">
-    <value>txtbox_Artist</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Artist.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Artist.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Artist.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Translator.Name" xml:space="preserve">
-    <value>txtbox_Translator</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Translator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Translator.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Translator.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PrintCity.Name" xml:space="preserve">
-    <value>txtbox_PrintCity</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PrintCity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PrintCity.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PrintCity.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PrintYear.Name" xml:space="preserve">
-    <value>txtbox_PrintYear</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PrintYear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PrintYear.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PrintYear.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Publisher.Name" xml:space="preserve">
-    <value>txtbox_Publisher</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Publisher.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Publisher.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Publisher.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PagesCount.Name" xml:space="preserve">
-    <value>txtbox_PagesCount</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PagesCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PagesCount.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_PagesCount.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Genre.Name" xml:space="preserve">
-    <value>txtbox_Genre</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Genre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Genre.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Genre.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;txtbox_NumberInSeries.Name" xml:space="preserve">
-    <value>txtbox_NumberInSeries</value>
-  </data>
-  <data name="&gt;&gt;txtbox_NumberInSeries.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_NumberInSeries.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_NumberInSeries.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;picBox_BookPreview.Name" xml:space="preserve">
-    <value>picBox_BookPreview</value>
-  </data>
-  <data name="&gt;&gt;picBox_BookPreview.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picBox_BookPreview.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;picBox_BookPreview.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;lbl_Series.Name" xml:space="preserve">
-    <value>lbl_Series</value>
-  </data>
-  <data name="&gt;&gt;lbl_Series.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Series.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_Series.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Series.Name" xml:space="preserve">
-    <value>txtbox_Series</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Series.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Series.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Series.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.Name" xml:space="preserve">
-    <value>lbl_Name</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;lbl_Author.Name" xml:space="preserve">
-    <value>lbl_Author</value>
-  </data>
-  <data name="&gt;&gt;lbl_Author.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Author.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_Author.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;lbl_MajorSeries.Name" xml:space="preserve">
-    <value>lbl_MajorSeries</value>
-  </data>
-  <data name="&gt;&gt;lbl_MajorSeries.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_MajorSeries.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_MajorSeries.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;lbl_ID.Name" xml:space="preserve">
-    <value>lbl_ID</value>
-  </data>
-  <data name="&gt;&gt;lbl_ID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_ID.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;lbl_ID.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Title.Name" xml:space="preserve">
-    <value>txtbox_Title</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Title.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Title.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Title.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Author.Name" xml:space="preserve">
-    <value>txtbox_Author</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Author.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Author.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_Author.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;txtbox_MajorSeries.Name" xml:space="preserve">
-    <value>txtbox_MajorSeries</value>
-  </data>
-  <data name="&gt;&gt;txtbox_MajorSeries.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_MajorSeries.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_MajorSeries.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;txtbox_ID.Name" xml:space="preserve">
-    <value>txtbox_ID</value>
-  </data>
-  <data name="&gt;&gt;txtbox_ID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbox_ID.Parent" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;txtbox_ID.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
-  <data name="grpbox_BookInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 0</value>
-  </data>
-  <data name="grpbox_BookInfo.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>373, 400</value>
-  </data>
-  <data name="grpbox_BookInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>373, 401</value>
-  </data>
-  <data name="grpbox_BookInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="grpbox_BookInfo.Text" xml:space="preserve">
-    <value>Информация о книге</value>
-  </data>
-  <data name="&gt;&gt;grpbox_BookInfo.Name" xml:space="preserve">
-    <value>grpbox_BookInfo</value>
-  </data>
-  <data name="&gt;&gt;grpbox_BookInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpbox_BookInfo.Parent" xml:space="preserve">
-    <value>tabPage_Book</value>
-  </data>
-  <data name="&gt;&gt;grpbox_BookInfo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="msktxtbox_ISBN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 321</value>
-  </data>
-  <data name="msktxtbox_ISBN.PromptChar" type="System.Char, mscorlib" xml:space="preserve">
+  <data name="msktxtbox_BookISBN.PromptChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>x</value>
   </data>
-  <data name="msktxtbox_ISBN.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="msktxtbox_BookISBN.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="msktxtbox_ISBN.TabIndex" type="System.Int32, mscorlib">
+  <data name="msktxtbox_BookISBN.TabIndex" type="System.Int32, mscorlib">
     <value>115</value>
   </data>
-  <data name="&gt;&gt;msktxtbox_ISBN.Name" xml:space="preserve">
-    <value>msktxtbox_ISBN</value>
+  <data name="&gt;&gt;msktxtbox_BookISBN.Name" xml:space="preserve">
+    <value>msktxtbox_BookISBN</value>
   </data>
-  <data name="&gt;&gt;msktxtbox_ISBN.Type" xml:space="preserve">
+  <data name="&gt;&gt;msktxtbox_BookISBN.Type" xml:space="preserve">
     <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;msktxtbox_ISBN.Parent" xml:space="preserve">
+  <data name="&gt;&gt;msktxtbox_BookISBN.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;msktxtbox_ISBN.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;msktxtbox_BookISBN.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lbl_Notes.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookNotes.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_Notes.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lbl_BookNotes.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 270</value>
   </data>
-  <data name="lbl_Notes.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookNotes.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 13</value>
   </data>
-  <data name="lbl_Notes.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookNotes.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
   </data>
-  <data name="lbl_Notes.Text" xml:space="preserve">
+  <data name="lbl_BookNotes.Text" xml:space="preserve">
     <value>Заметки</value>
   </data>
-  <data name="&gt;&gt;lbl_Notes.Name" xml:space="preserve">
-    <value>lbl_Notes</value>
+  <data name="&gt;&gt;lbl_BookNotes.Name" xml:space="preserve">
+    <value>lbl_BookNotes</value>
   </data>
-  <data name="&gt;&gt;lbl_Notes.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookNotes.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_Notes.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookNotes.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_Notes.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookNotes.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbl_Artist.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookArtist.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_Artist.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookArtist.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_Artist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>205, 378</value>
+  <data name="lbl_BookArtist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 376</value>
   </data>
-  <data name="lbl_Artist.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookArtist.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 13</value>
   </data>
-  <data name="lbl_Artist.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookArtist.TabIndex" type="System.Int32, mscorlib">
     <value>113</value>
   </data>
-  <data name="lbl_Artist.Text" xml:space="preserve">
+  <data name="lbl_BookArtist.Text" xml:space="preserve">
     <value>Художник</value>
   </data>
-  <data name="&gt;&gt;lbl_Artist.Name" xml:space="preserve">
-    <value>lbl_Artist</value>
+  <data name="&gt;&gt;lbl_BookArtist.Name" xml:space="preserve">
+    <value>lbl_BookArtist</value>
   </data>
-  <data name="&gt;&gt;lbl_Artist.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookArtist.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_Artist.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookArtist.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_Artist.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookArtist.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="lbl_Translator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookTranslator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_Translator.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookTranslator.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_Translator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 351</value>
+  <data name="lbl_BookTranslator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 349</value>
   </data>
-  <data name="lbl_Translator.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookTranslator.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 13</value>
   </data>
-  <data name="lbl_Translator.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookTranslator.TabIndex" type="System.Int32, mscorlib">
     <value>112</value>
   </data>
-  <data name="lbl_Translator.Text" xml:space="preserve">
+  <data name="lbl_BookTranslator.Text" xml:space="preserve">
     <value>Переводчик</value>
   </data>
-  <data name="&gt;&gt;lbl_Translator.Name" xml:space="preserve">
-    <value>lbl_Translator</value>
+  <data name="&gt;&gt;lbl_BookTranslator.Name" xml:space="preserve">
+    <value>lbl_BookTranslator</value>
   </data>
-  <data name="&gt;&gt;lbl_Translator.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookTranslator.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_Translator.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookTranslator.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_Translator.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookTranslator.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="lbl_ISBN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookISBN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_ISBN.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookISBN.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_ISBN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 324</value>
+  <data name="lbl_BookISBN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 322</value>
   </data>
-  <data name="lbl_ISBN.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookISBN.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 13</value>
   </data>
-  <data name="lbl_ISBN.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookISBN.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
   </data>
-  <data name="lbl_ISBN.Text" xml:space="preserve">
+  <data name="lbl_BookISBN.Text" xml:space="preserve">
     <value>ISBN</value>
   </data>
-  <data name="&gt;&gt;lbl_ISBN.Name" xml:space="preserve">
-    <value>lbl_ISBN</value>
+  <data name="&gt;&gt;lbl_BookISBN.Name" xml:space="preserve">
+    <value>lbl_BookISBN</value>
   </data>
-  <data name="&gt;&gt;lbl_ISBN.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookISBN.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_ISBN.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookISBN.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_ISBN.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookISBN.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="lbl_PrintCity.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookPrintCity.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_PrintCity.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookPrintCity.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_PrintCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 297</value>
+  <data name="lbl_BookPrintCity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 295</value>
   </data>
-  <data name="lbl_PrintCity.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookPrintCity.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
   </data>
-  <data name="lbl_PrintCity.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookPrintCity.TabIndex" type="System.Int32, mscorlib">
     <value>110</value>
   </data>
-  <data name="lbl_PrintCity.Text" xml:space="preserve">
+  <data name="lbl_BookPrintCity.Text" xml:space="preserve">
     <value>Город печати</value>
   </data>
-  <data name="&gt;&gt;lbl_PrintCity.Name" xml:space="preserve">
-    <value>lbl_PrintCity</value>
+  <data name="&gt;&gt;lbl_BookPrintCity.Name" xml:space="preserve">
+    <value>lbl_BookPrintCity</value>
   </data>
-  <data name="&gt;&gt;lbl_PrintCity.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPrintCity.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_PrintCity.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPrintCity.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_PrintCity.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPrintCity.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="lbl_PrintYear.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookPrintYear.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_PrintYear.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookPrintYear.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_PrintYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 270</value>
+  <data name="lbl_BookPrintYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 268</value>
   </data>
-  <data name="lbl_PrintYear.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookPrintYear.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 13</value>
   </data>
-  <data name="lbl_PrintYear.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookPrintYear.TabIndex" type="System.Int32, mscorlib">
     <value>109</value>
   </data>
-  <data name="lbl_PrintYear.Text" xml:space="preserve">
+  <data name="lbl_BookPrintYear.Text" xml:space="preserve">
     <value>Год выпуска</value>
   </data>
-  <data name="&gt;&gt;lbl_PrintYear.Name" xml:space="preserve">
-    <value>lbl_PrintYear</value>
+  <data name="&gt;&gt;lbl_BookPrintYear.Name" xml:space="preserve">
+    <value>lbl_BookPrintYear</value>
   </data>
-  <data name="&gt;&gt;lbl_PrintYear.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPrintYear.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_PrintYear.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPrintYear.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_PrintYear.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPrintYear.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="lbl_Publisher.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookPublisher.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_Publisher.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookPublisher.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_Publisher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 243</value>
+  <data name="lbl_BookPublisher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 241</value>
   </data>
-  <data name="lbl_Publisher.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookPublisher.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
   </data>
-  <data name="lbl_Publisher.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookPublisher.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
   </data>
-  <data name="lbl_Publisher.Text" xml:space="preserve">
+  <data name="lbl_BookPublisher.Text" xml:space="preserve">
     <value>Издатель</value>
   </data>
-  <data name="&gt;&gt;lbl_Publisher.Name" xml:space="preserve">
-    <value>lbl_Publisher</value>
+  <data name="&gt;&gt;lbl_BookPublisher.Name" xml:space="preserve">
+    <value>lbl_BookPublisher</value>
   </data>
-  <data name="&gt;&gt;lbl_Publisher.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPublisher.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_Publisher.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPublisher.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_Publisher.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPublisher.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="lbl_PagesCount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookPagesCount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_PagesCount.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookPagesCount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_PagesCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 216</value>
+  <data name="lbl_BookPagesCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 214</value>
   </data>
-  <data name="lbl_PagesCount.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookPagesCount.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 13</value>
   </data>
-  <data name="lbl_PagesCount.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookPagesCount.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
   </data>
-  <data name="lbl_PagesCount.Text" xml:space="preserve">
+  <data name="lbl_BookPagesCount.Text" xml:space="preserve">
     <value>Кол-во страниц</value>
   </data>
-  <data name="&gt;&gt;lbl_PagesCount.Name" xml:space="preserve">
-    <value>lbl_PagesCount</value>
+  <data name="&gt;&gt;lbl_BookPagesCount.Name" xml:space="preserve">
+    <value>lbl_BookPagesCount</value>
   </data>
-  <data name="&gt;&gt;lbl_PagesCount.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPagesCount.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_PagesCount.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPagesCount.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_PagesCount.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookPagesCount.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="lbl_Genre.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookGenre.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_Genre.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookGenre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_Genre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 189</value>
+  <data name="lbl_BookGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 187</value>
   </data>
-  <data name="lbl_Genre.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookGenre.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 13</value>
   </data>
-  <data name="lbl_Genre.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookGenre.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
   </data>
-  <data name="lbl_Genre.Text" xml:space="preserve">
+  <data name="lbl_BookGenre.Text" xml:space="preserve">
     <value>Жанр</value>
   </data>
-  <data name="&gt;&gt;lbl_Genre.Name" xml:space="preserve">
-    <value>lbl_Genre</value>
+  <data name="&gt;&gt;lbl_BookGenre.Name" xml:space="preserve">
+    <value>lbl_BookGenre</value>
   </data>
-  <data name="&gt;&gt;lbl_Genre.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookGenre.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_Genre.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookGenre.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_Genre.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookGenre.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="lbl_NumberInSeries.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookNumberInSeries.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_NumberInSeries.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookNumberInSeries.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_NumberInSeries.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 162</value>
+  <data name="lbl_BookNumberInSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>218, 160</value>
   </data>
-  <data name="lbl_NumberInSeries.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookNumberInSeries.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 13</value>
   </data>
-  <data name="lbl_NumberInSeries.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookNumberInSeries.TabIndex" type="System.Int32, mscorlib">
     <value>105</value>
   </data>
-  <data name="lbl_NumberInSeries.Text" xml:space="preserve">
+  <data name="lbl_BookNumberInSeries.Text" xml:space="preserve">
     <value>Номер в серии</value>
   </data>
-  <data name="&gt;&gt;lbl_NumberInSeries.Name" xml:space="preserve">
-    <value>lbl_NumberInSeries</value>
+  <data name="&gt;&gt;lbl_BookNumberInSeries.Name" xml:space="preserve">
+    <value>lbl_BookNumberInSeries</value>
   </data>
-  <data name="&gt;&gt;lbl_NumberInSeries.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookNumberInSeries.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_NumberInSeries.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookNumberInSeries.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_NumberInSeries.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookNumberInSeries.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="txtbox_Notes.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtbox_BookNotes.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 286</value>
   </data>
-  <data name="txtbox_Notes.Multiline" type="System.Boolean, mscorlib">
+  <data name="txtbox_BookNotes.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="txtbox_Notes.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookNotes.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 107</value>
   </data>
-  <data name="txtbox_Notes.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookNotes.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;txtbox_Notes.Name" xml:space="preserve">
-    <value>txtbox_Notes</value>
+  <data name="&gt;&gt;txtbox_BookNotes.Name" xml:space="preserve">
+    <value>txtbox_BookNotes</value>
   </data>
-  <data name="&gt;&gt;txtbox_Notes.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookNotes.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_Notes.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookNotes.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_Notes.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookNotes.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="txtbox_Artist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 375</value>
+  <data name="txtbox_BookArtist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 373</value>
   </data>
-  <data name="txtbox_Artist.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookArtist.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_Artist.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookArtist.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;txtbox_Artist.Name" xml:space="preserve">
-    <value>txtbox_Artist</value>
+  <data name="&gt;&gt;txtbox_BookArtist.Name" xml:space="preserve">
+    <value>txtbox_BookArtist</value>
   </data>
-  <data name="&gt;&gt;txtbox_Artist.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookArtist.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_Artist.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookArtist.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_Artist.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookArtist.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="txtbox_Translator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 348</value>
+  <data name="txtbox_BookTranslator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 346</value>
   </data>
-  <data name="txtbox_Translator.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookTranslator.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_Translator.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookTranslator.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;txtbox_Translator.Name" xml:space="preserve">
-    <value>txtbox_Translator</value>
+  <data name="&gt;&gt;txtbox_BookTranslator.Name" xml:space="preserve">
+    <value>txtbox_BookTranslator</value>
   </data>
-  <data name="&gt;&gt;txtbox_Translator.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookTranslator.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_Translator.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookTranslator.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_Translator.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookTranslator.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="txtbox_PrintCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 294</value>
+  <data name="txtbox_BookPrintCity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 292</value>
   </data>
-  <data name="txtbox_PrintCity.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookPrintCity.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_PrintCity.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookPrintCity.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;txtbox_PrintCity.Name" xml:space="preserve">
-    <value>txtbox_PrintCity</value>
+  <data name="&gt;&gt;txtbox_BookPrintCity.Name" xml:space="preserve">
+    <value>txtbox_BookPrintCity</value>
   </data>
-  <data name="&gt;&gt;txtbox_PrintCity.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPrintCity.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_PrintCity.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPrintCity.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_PrintCity.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPrintCity.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="txtbox_PrintYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 267</value>
+  <data name="txtbox_BookPrintYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 265</value>
   </data>
-  <data name="txtbox_PrintYear.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookPrintYear.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_PrintYear.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookPrintYear.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;txtbox_PrintYear.Name" xml:space="preserve">
-    <value>txtbox_PrintYear</value>
+  <data name="&gt;&gt;txtbox_BookPrintYear.Name" xml:space="preserve">
+    <value>txtbox_BookPrintYear</value>
   </data>
-  <data name="&gt;&gt;txtbox_PrintYear.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPrintYear.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_PrintYear.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPrintYear.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_PrintYear.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPrintYear.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="txtbox_Publisher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 240</value>
+  <data name="txtbox_BookPublisher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 238</value>
   </data>
-  <data name="txtbox_Publisher.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookPublisher.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_Publisher.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookPublisher.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;txtbox_Publisher.Name" xml:space="preserve">
-    <value>txtbox_Publisher</value>
+  <data name="&gt;&gt;txtbox_BookPublisher.Name" xml:space="preserve">
+    <value>txtbox_BookPublisher</value>
   </data>
-  <data name="&gt;&gt;txtbox_Publisher.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPublisher.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_Publisher.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPublisher.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_Publisher.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPublisher.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="txtbox_PagesCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 213</value>
+  <data name="txtbox_BookPagesCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 211</value>
   </data>
-  <data name="txtbox_PagesCount.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookPagesCount.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_PagesCount.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookPagesCount.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;txtbox_PagesCount.Name" xml:space="preserve">
-    <value>txtbox_PagesCount</value>
+  <data name="&gt;&gt;txtbox_BookPagesCount.Name" xml:space="preserve">
+    <value>txtbox_BookPagesCount</value>
   </data>
-  <data name="&gt;&gt;txtbox_PagesCount.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPagesCount.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_PagesCount.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPagesCount.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_PagesCount.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookPagesCount.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="txtbox_Genre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 186</value>
+  <data name="txtbox_BookGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 184</value>
   </data>
-  <data name="txtbox_Genre.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookGenre.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_Genre.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookGenre.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;txtbox_Genre.Name" xml:space="preserve">
-    <value>txtbox_Genre</value>
+  <data name="&gt;&gt;txtbox_BookGenre.Name" xml:space="preserve">
+    <value>txtbox_BookGenre</value>
   </data>
-  <data name="&gt;&gt;txtbox_Genre.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookGenre.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_Genre.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookGenre.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_Genre.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookGenre.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="txtbox_NumberInSeries.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 159</value>
+  <data name="txtbox_BookNumberInSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 157</value>
   </data>
-  <data name="txtbox_NumberInSeries.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookNumberInSeries.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_NumberInSeries.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookNumberInSeries.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;txtbox_NumberInSeries.Name" xml:space="preserve">
-    <value>txtbox_NumberInSeries</value>
+  <data name="&gt;&gt;txtbox_BookNumberInSeries.Name" xml:space="preserve">
+    <value>txtbox_BookNumberInSeries</value>
   </data>
-  <data name="&gt;&gt;txtbox_NumberInSeries.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookNumberInSeries.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_NumberInSeries.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookNumberInSeries.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_NumberInSeries.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookNumberInSeries.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
@@ -1688,260 +1118,287 @@
   <data name="&gt;&gt;picBox_BookPreview.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="lbl_Series.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookSeries.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_Series.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookSeries.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_Series.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 135</value>
+  <data name="lbl_BookSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 133</value>
   </data>
-  <data name="lbl_Series.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookSeries.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 13</value>
   </data>
-  <data name="lbl_Series.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookSeries.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
   </data>
-  <data name="lbl_Series.Text" xml:space="preserve">
+  <data name="lbl_BookSeries.Text" xml:space="preserve">
     <value>Серия</value>
   </data>
-  <data name="&gt;&gt;lbl_Series.Name" xml:space="preserve">
-    <value>lbl_Series</value>
+  <data name="&gt;&gt;lbl_BookSeries.Name" xml:space="preserve">
+    <value>lbl_BookSeries</value>
   </data>
-  <data name="&gt;&gt;lbl_Series.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookSeries.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_Series.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookSeries.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_Series.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookSeries.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
-  <data name="txtbox_Series.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 132</value>
+  <data name="txtbox_BookSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 130</value>
   </data>
-  <data name="txtbox_Series.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookSeries.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_Series.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookSeries.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;txtbox_Series.Name" xml:space="preserve">
-    <value>txtbox_Series</value>
+  <data name="&gt;&gt;txtbox_BookSeries.Name" xml:space="preserve">
+    <value>txtbox_BookSeries</value>
   </data>
-  <data name="&gt;&gt;txtbox_Series.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookSeries.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_Series.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookSeries.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_Series.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookSeries.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
-  <data name="lbl_Name.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_Name.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 108</value>
+  <data name="lbl_BookTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 106</value>
   </data>
-  <data name="lbl_Name.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 13</value>
   </data>
-  <data name="lbl_Name.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookTitle.TabIndex" type="System.Int32, mscorlib">
     <value>103</value>
   </data>
-  <data name="lbl_Name.Text" xml:space="preserve">
+  <data name="lbl_BookTitle.Text" xml:space="preserve">
     <value>Название книги</value>
   </data>
-  <data name="&gt;&gt;lbl_Name.Name" xml:space="preserve">
-    <value>lbl_Name</value>
+  <data name="&gt;&gt;lbl_BookTitle.Name" xml:space="preserve">
+    <value>lbl_BookTitle</value>
   </data>
-  <data name="&gt;&gt;lbl_Name.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_Name.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookTitle.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_Name.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookTitle.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="lbl_Author.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookAuthor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_Author.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookAuthor.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_Author.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 81</value>
+  <data name="lbl_BookAuthor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>264, 79</value>
   </data>
-  <data name="lbl_Author.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookAuthor.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 13</value>
   </data>
-  <data name="lbl_Author.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookAuthor.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
   </data>
-  <data name="lbl_Author.Text" xml:space="preserve">
+  <data name="lbl_BookAuthor.Text" xml:space="preserve">
     <value>Автор</value>
   </data>
-  <data name="&gt;&gt;lbl_Author.Name" xml:space="preserve">
-    <value>lbl_Author</value>
+  <data name="&gt;&gt;lbl_BookAuthor.Name" xml:space="preserve">
+    <value>lbl_BookAuthor</value>
   </data>
-  <data name="&gt;&gt;lbl_Author.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookAuthor.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_Author.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookAuthor.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_Author.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookAuthor.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="lbl_MajorSeries.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookMajorSeries.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_MajorSeries.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookMajorSeries.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_MajorSeries.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 54</value>
+  <data name="lbl_BookMajorSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 52</value>
   </data>
-  <data name="lbl_MajorSeries.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookMajorSeries.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
   </data>
-  <data name="lbl_MajorSeries.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookMajorSeries.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
   </data>
-  <data name="lbl_MajorSeries.Text" xml:space="preserve">
+  <data name="lbl_BookMajorSeries.Text" xml:space="preserve">
     <value>Серия изд-ва</value>
   </data>
-  <data name="&gt;&gt;lbl_MajorSeries.Name" xml:space="preserve">
-    <value>lbl_MajorSeries</value>
+  <data name="&gt;&gt;lbl_BookMajorSeries.Name" xml:space="preserve">
+    <value>lbl_BookMajorSeries</value>
   </data>
-  <data name="&gt;&gt;lbl_MajorSeries.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookMajorSeries.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_MajorSeries.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookMajorSeries.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_MajorSeries.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookMajorSeries.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="lbl_ID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_BookID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lbl_ID.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_BookID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_ID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 27</value>
+  <data name="lbl_BookID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 25</value>
   </data>
-  <data name="lbl_ID.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BookID.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 13</value>
   </data>
-  <data name="lbl_ID.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_BookID.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
-  <data name="lbl_ID.Text" xml:space="preserve">
+  <data name="lbl_BookID.Text" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="&gt;&gt;lbl_ID.Name" xml:space="preserve">
-    <value>lbl_ID</value>
+  <data name="&gt;&gt;lbl_BookID.Name" xml:space="preserve">
+    <value>lbl_BookID</value>
   </data>
-  <data name="&gt;&gt;lbl_ID.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookID.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_ID.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookID.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;lbl_ID.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BookID.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
-  <data name="txtbox_Title.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 105</value>
+  <data name="txtbox_BookTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 103</value>
   </data>
-  <data name="txtbox_Title.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_Title.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookTitle.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;txtbox_Title.Name" xml:space="preserve">
-    <value>txtbox_Title</value>
+  <data name="&gt;&gt;txtbox_BookTitle.Name" xml:space="preserve">
+    <value>txtbox_BookTitle</value>
   </data>
-  <data name="&gt;&gt;txtbox_Title.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_Title.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookTitle.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_Title.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookTitle.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
-  <data name="txtbox_Author.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 78</value>
+  <data name="txtbox_BookAuthor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 76</value>
   </data>
-  <data name="txtbox_Author.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookAuthor.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_Author.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookAuthor.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;txtbox_Author.Name" xml:space="preserve">
-    <value>txtbox_Author</value>
+  <data name="&gt;&gt;txtbox_BookAuthor.Name" xml:space="preserve">
+    <value>txtbox_BookAuthor</value>
   </data>
-  <data name="&gt;&gt;txtbox_Author.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookAuthor.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_Author.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookAuthor.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_Author.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookAuthor.ZOrder" xml:space="preserve">
     <value>31</value>
   </data>
-  <data name="txtbox_MajorSeries.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 51</value>
+  <data name="txtbox_BookMajorSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 49</value>
   </data>
-  <data name="txtbox_MajorSeries.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookMajorSeries.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_MajorSeries.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookMajorSeries.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;txtbox_MajorSeries.Name" xml:space="preserve">
-    <value>txtbox_MajorSeries</value>
+  <data name="&gt;&gt;txtbox_BookMajorSeries.Name" xml:space="preserve">
+    <value>txtbox_BookMajorSeries</value>
   </data>
-  <data name="&gt;&gt;txtbox_MajorSeries.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookMajorSeries.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_MajorSeries.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookMajorSeries.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_MajorSeries.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookMajorSeries.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
-  <data name="txtbox_ID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 24</value>
+  <data name="txtbox_BookID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 22</value>
   </data>
-  <data name="txtbox_ID.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtbox_BookID.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="txtbox_ID.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtbox_BookID.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;txtbox_ID.Name" xml:space="preserve">
-    <value>txtbox_ID</value>
+  <data name="&gt;&gt;txtbox_BookID.Name" xml:space="preserve">
+    <value>txtbox_BookID</value>
   </data>
-  <data name="&gt;&gt;txtbox_ID.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookID.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtbox_ID.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookID.Parent" xml:space="preserve">
     <value>grpbox_BookInfo</value>
   </data>
-  <data name="&gt;&gt;txtbox_ID.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtbox_BookID.ZOrder" xml:space="preserve">
     <value>33</value>
+  </data>
+  <data name="grpbox_BookInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 0</value>
+  </data>
+  <data name="grpbox_BookInfo.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>373, 400</value>
+  </data>
+  <data name="grpbox_BookInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 401</value>
+  </data>
+  <data name="grpbox_BookInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="grpbox_BookInfo.Text" xml:space="preserve">
+    <value>Информация о книге</value>
+  </data>
+  <data name="&gt;&gt;grpbox_BookInfo.Name" xml:space="preserve">
+    <value>grpbox_BookInfo</value>
+  </data>
+  <data name="&gt;&gt;grpbox_BookInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpbox_BookInfo.Parent" xml:space="preserve">
+    <value>tabPage_Book</value>
+  </data>
+  <data name="&gt;&gt;grpbox_BookInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tw_Book.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1970,29 +1427,956 @@
   <data name="&gt;&gt;tw_Book.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="tabPage_Book.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage_Book.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage_Book.Size" type="System.Drawing.Size, System.Drawing">
+    <value>626, 402</value>
+  </data>
+  <data name="tabPage_Book.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage_Book.Text" xml:space="preserve">
+    <value>Книги</value>
+  </data>
+  <data name="&gt;&gt;tabPage_Book.Name" xml:space="preserve">
+    <value>tabPage_Book</value>
+  </data>
+  <data name="&gt;&gt;tabPage_Book.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage_Book.Parent" xml:space="preserve">
+    <value>tc_Info</value>
+  </data>
+  <data name="&gt;&gt;tabPage_Book.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_FilmNotes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmNotes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmNotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 270</value>
+  </data>
+  <data name="lbl_FilmNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="lbl_FilmNotes.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="lbl_FilmNotes.Text" xml:space="preserve">
+    <value>Заметки</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmNotes.Name" xml:space="preserve">
+    <value>lbl_FilmNotes</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmNotes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmNotes.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmNotes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_FilmGrosses.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmGrosses.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmGrosses.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmGrosses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 376</value>
+  </data>
+  <data name="lbl_FilmGrosses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="lbl_FilmGrosses.TabIndex" type="System.Int32, mscorlib">
+    <value>141</value>
+  </data>
+  <data name="lbl_FilmGrosses.Text" xml:space="preserve">
+    <value>Сборы</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmGrosses.Name" xml:space="preserve">
+    <value>lbl_FilmGrosses</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmGrosses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmGrosses.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmGrosses.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_FilmCriticsRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmCriticsRating.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmCriticsRating.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmCriticsRating.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 349</value>
+  </data>
+  <data name="lbl_FilmCriticsRating.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 13</value>
+  </data>
+  <data name="lbl_FilmCriticsRating.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="lbl_FilmCriticsRating.Text" xml:space="preserve">
+    <value>Рейтинг критиков</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmCriticsRating.Name" xml:space="preserve">
+    <value>lbl_FilmCriticsRating</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmCriticsRating.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmCriticsRating.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmCriticsRating.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbl_FilmMPAA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmMPAA.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmMPAA.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmMPAA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>264, 322</value>
+  </data>
+  <data name="lbl_FilmMPAA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="lbl_FilmMPAA.TabIndex" type="System.Int32, mscorlib">
+    <value>139</value>
+  </data>
+  <data name="lbl_FilmMPAA.Text" xml:space="preserve">
+    <value>MPAA</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmMPAA.Name" xml:space="preserve">
+    <value>lbl_FilmMPAA</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmMPAA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmMPAA.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmMPAA.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_FilmPremiere.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmPremiere.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmPremiere.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmPremiere.Location" type="System.Drawing.Point, System.Drawing">
+    <value>242, 295</value>
+  </data>
+  <data name="lbl_FilmPremiere.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="lbl_FilmPremiere.TabIndex" type="System.Int32, mscorlib">
+    <value>138</value>
+  </data>
+  <data name="lbl_FilmPremiere.Text" xml:space="preserve">
+    <value>Премьера</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmPremiere.Name" xml:space="preserve">
+    <value>lbl_FilmPremiere</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmPremiere.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmPremiere.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmPremiere.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbl_FilmCountry.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmCountry.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmCountry.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmCountry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 268</value>
+  </data>
+  <data name="lbl_FilmCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="lbl_FilmCountry.TabIndex" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="lbl_FilmCountry.Text" xml:space="preserve">
+    <value>Страна</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmCountry.Name" xml:space="preserve">
+    <value>lbl_FilmCountry</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmCountry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmCountry.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmCountry.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbl_FilmLength.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmLength.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmLength.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 241</value>
+  </data>
+  <data name="lbl_FilmLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 13</value>
+  </data>
+  <data name="lbl_FilmLength.TabIndex" type="System.Int32, mscorlib">
+    <value>136</value>
+  </data>
+  <data name="lbl_FilmLength.Text" xml:space="preserve">
+    <value>Продолжительность</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmLength.Name" xml:space="preserve">
+    <value>lbl_FilmLength</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmLength.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmLength.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtbox_FilmNotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 286</value>
+  </data>
+  <data name="txtbox_FilmNotes.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtbox_FilmNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 107</value>
+  </data>
+  <data name="txtbox_FilmNotes.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmNotes.Name" xml:space="preserve">
+    <value>txtbox_FilmNotes</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmNotes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmNotes.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmNotes.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txtbox_FilmGrosses.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmGrosses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 373</value>
+  </data>
+  <data name="txtbox_FilmGrosses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmGrosses.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmGrosses.Name" xml:space="preserve">
+    <value>txtbox_FilmGrosses</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmGrosses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmGrosses.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmGrosses.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="txtbox_FilmCriticsRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmCriticsRating.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 346</value>
+  </data>
+  <data name="txtbox_FilmCriticsRating.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmCriticsRating.TabIndex" type="System.Int32, mscorlib">
+    <value>124</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmCriticsRating.Name" xml:space="preserve">
+    <value>txtbox_FilmCriticsRating</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmCriticsRating.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmCriticsRating.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmCriticsRating.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txtbox_FilmMPAA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmMPAA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 319</value>
+  </data>
+  <data name="txtbox_FilmMPAA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmMPAA.TabIndex" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmMPAA.Name" xml:space="preserve">
+    <value>txtbox_FilmMPAA</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmMPAA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmMPAA.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmMPAA.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtbox_FilmPremiere.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmPremiere.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 292</value>
+  </data>
+  <data name="txtbox_FilmPremiere.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmPremiere.TabIndex" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmPremiere.Name" xml:space="preserve">
+    <value>txtbox_FilmPremiere</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmPremiere.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmPremiere.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmPremiere.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtbox_FilmCountry.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmCountry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 265</value>
+  </data>
+  <data name="txtbox_FilmCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmCountry.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmCountry.Name" xml:space="preserve">
+    <value>txtbox_FilmCountry</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmCountry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmCountry.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmCountry.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txtbox_FilmLength.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 238</value>
+  </data>
+  <data name="txtbox_FilmLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmLength.TabIndex" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmLength.Name" xml:space="preserve">
+    <value>txtbox_FilmLength</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmLength.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmLength.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 251</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 238</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 225</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="picBox_FilmPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picBox_FilmPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="picBox_FilmPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 200</value>
+  </data>
+  <data name="picBox_FilmPreview.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="picBox_FilmPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>127</value>
+  </data>
+  <data name="&gt;&gt;picBox_FilmPreview.Name" xml:space="preserve">
+    <value>picBox_FilmPreview</value>
+  </data>
+  <data name="&gt;&gt;picBox_FilmPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picBox_FilmPreview.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;picBox_FilmPreview.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="lbl_FilmActors.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmActors.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmActors.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmActors.Location" type="System.Drawing.Point, System.Drawing">
+    <value>256, 133</value>
+  </data>
+  <data name="lbl_FilmActors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="lbl_FilmActors.TabIndex" type="System.Int32, mscorlib">
+    <value>135</value>
+  </data>
+  <data name="lbl_FilmActors.Text" xml:space="preserve">
+    <value>Актеры</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmActors.Name" xml:space="preserve">
+    <value>lbl_FilmActors</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmActors.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmActors.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmActors.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="txtbox_FilmActors.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmActors.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 130</value>
+  </data>
+  <data name="txtbox_FilmActors.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtbox_FilmActors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 102</value>
+  </data>
+  <data name="txtbox_FilmActors.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmActors.Name" xml:space="preserve">
+    <value>txtbox_FilmActors</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmActors.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmActors.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmActors.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="lbl_FilmProducer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmProducer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmProducer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmProducer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>242, 106</value>
+  </data>
+  <data name="lbl_FilmProducer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="lbl_FilmProducer.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="lbl_FilmProducer.Text" xml:space="preserve">
+    <value>Продюсер</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmProducer.Name" xml:space="preserve">
+    <value>lbl_FilmProducer</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmProducer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmProducer.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmProducer.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="lbl_FilmGenre.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmGenre.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmGenre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>264, 79</value>
+  </data>
+  <data name="lbl_FilmGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="lbl_FilmGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>133</value>
+  </data>
+  <data name="lbl_FilmGenre.Text" xml:space="preserve">
+    <value>Жанр</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmGenre.Name" xml:space="preserve">
+    <value>lbl_FilmGenre</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmGenre.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmGenre.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="lbl_FilmTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 52</value>
+  </data>
+  <data name="lbl_FilmTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="lbl_FilmTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="lbl_FilmTitle.Text" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmTitle.Name" xml:space="preserve">
+    <value>lbl_FilmTitle</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmTitle.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmTitle.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="lbl_FilmID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_FilmID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_FilmID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_FilmID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 25</value>
+  </data>
+  <data name="lbl_FilmID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 13</value>
+  </data>
+  <data name="lbl_FilmID.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
+  </data>
+  <data name="lbl_FilmID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmID.Name" xml:space="preserve">
+    <value>lbl_FilmID</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmID.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;lbl_FilmID.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="txtbox_FilmProducer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmProducer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 103</value>
+  </data>
+  <data name="txtbox_FilmProducer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmProducer.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmProducer.Name" xml:space="preserve">
+    <value>txtbox_FilmProducer</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmProducer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmProducer.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmProducer.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="txtbox_FilmGenre.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 76</value>
+  </data>
+  <data name="txtbox_FilmGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmGenre.Name" xml:space="preserve">
+    <value>txtbox_FilmGenre</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmGenre.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmGenre.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="txtbox_FilmTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 49</value>
+  </data>
+  <data name="txtbox_FilmTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmTitle.Name" xml:space="preserve">
+    <value>txtbox_FilmTitle</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmTitle.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmTitle.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="txtbox_FilmID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtbox_FilmID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 22</value>
+  </data>
+  <data name="txtbox_FilmID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtbox_FilmID.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmID.Name" xml:space="preserve">
+    <value>txtbox_FilmID</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmID.Parent" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;txtbox_FilmID.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="grpbox_FilmInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 0</value>
+  </data>
+  <data name="grpbox_FilmInfo.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>373, 400</value>
+  </data>
+  <data name="grpbox_FilmInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 401</value>
+  </data>
+  <data name="grpbox_FilmInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="grpbox_FilmInfo.Text" xml:space="preserve">
+    <value>Информация о фильме</value>
+  </data>
+  <data name="&gt;&gt;grpbox_FilmInfo.Name" xml:space="preserve">
+    <value>grpbox_FilmInfo</value>
+  </data>
+  <data name="&gt;&gt;grpbox_FilmInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpbox_FilmInfo.Parent" xml:space="preserve">
+    <value>tabPage_Film</value>
+  </data>
+  <data name="&gt;&gt;grpbox_FilmInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tw_Film.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 6</value>
+  </data>
+  <data name="tw_Film.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>200, 150</value>
+  </data>
+  <data name="tw_Film.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 395</value>
+  </data>
+  <data name="tw_Film.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tw_Film.Name" xml:space="preserve">
+    <value>tw_Film</value>
+  </data>
+  <data name="&gt;&gt;tw_Film.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tw_Film.Parent" xml:space="preserve">
+    <value>tabPage_Film</value>
+  </data>
+  <data name="&gt;&gt;tw_Film.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage_Film.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage_Film.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage_Film.Size" type="System.Drawing.Size, System.Drawing">
+    <value>626, 402</value>
+  </data>
+  <data name="tabPage_Film.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage_Film.Text" xml:space="preserve">
+    <value>Фильмы</value>
+  </data>
+  <data name="&gt;&gt;tabPage_Film.Name" xml:space="preserve">
+    <value>tabPage_Film</value>
+  </data>
+  <data name="&gt;&gt;tabPage_Film.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage_Film.Parent" xml:space="preserve">
+    <value>tc_Info</value>
+  </data>
+  <data name="&gt;&gt;tabPage_Film.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tc_Info.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="tc_Info.Size" type="System.Drawing.Size, System.Drawing">
+    <value>634, 428</value>
+  </data>
+  <data name="tc_Info.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tc_Info.Name" xml:space="preserve">
+    <value>tc_Info</value>
+  </data>
+  <data name="&gt;&gt;tc_Info.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tc_Info.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tc_Info.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="imgLst_BookPreview.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
+    <value>259, 17</value>
   </metadata>
   <data name="imgLst_BookPreview.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
   </data>
-  <metadata name="timer_BookPreview.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>319, 17</value>
+  <metadata name="timer_Preview.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="ofd_LoadXmlFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>474, 17</value>
+    <value>421, 17</value>
   </metadata>
   <metadata name="sfd_SaveXmlFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>615, 17</value>
+    <value>562, 17</value>
   </metadata>
   <metadata name="print_Doc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>753, 17</value>
+    <value>700, 17</value>
   </metadata>
   <metadata name="print_Dialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>857, 17</value>
+    <value>804, 17</value>
   </metadata>
   <metadata name="print_PreviewDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>975, 17</value>
+    <value>922, 17</value>
   </metadata>
   <data name="print_PreviewDialog.AutoScrollMargin" type="System.Drawing.Size, System.Drawing">
     <value>0, 0</value>
@@ -2188,23 +2572,29 @@
   <data name="&gt;&gt;print_PreviewDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.PrintPreviewDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <metadata name="imgLst_FilmPreview.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <data name="imgLst_FilmPreview.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>28</value>
+    <value>53</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>594, 452</value>
+    <value>634, 451</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>610, 490</value>
+    <value>650, 490</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>610, 490</value>
+    <value>650, 490</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Каталогизатор</value>
@@ -2273,6 +2663,18 @@
     <value>CreateToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;CreateToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CreateBookToolStripMenuItem.Name" xml:space="preserve">
+    <value>CreateBookToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;CreateBookToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CreateFilmToolStripMenuItem.Name" xml:space="preserve">
+    <value>CreateFilmToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;CreateFilmToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;RemoveToolStripMenuItem.Name" xml:space="preserve">
@@ -2389,10 +2791,10 @@
   <data name="&gt;&gt;imgLst_BookPreview.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;timer_BookPreview.Name" xml:space="preserve">
-    <value>timer_BookPreview</value>
+  <data name="&gt;&gt;timer_Preview.Name" xml:space="preserve">
+    <value>timer_Preview</value>
   </data>
-  <data name="&gt;&gt;timer_BookPreview.Type" xml:space="preserve">
+  <data name="&gt;&gt;timer_Preview.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ofd_LoadXmlFile.Name" xml:space="preserve">
@@ -2418,6 +2820,12 @@
   </data>
   <data name="&gt;&gt;print_Dialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imgLst_FilmPreview.Name" xml:space="preserve">
+    <value>imgLst_FilmPreview</value>
+  </data>
+  <data name="&gt;&gt;imgLst_FilmPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>form_Catalog</value>

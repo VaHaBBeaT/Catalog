@@ -19,11 +19,12 @@ namespace Catalog
         public string filmMPAARating;
         public string filmCriticsRating;
         public int filmGrosses;
+        public string filmNotes;
         public List<string> picturesPath;
 
         public Film (int id, string title, string genre, string producer, string actors,
                      int length, string country, DateTime premiere, string mpaaRating,
-                     string criticsRating, int gross, List<string> picPath)
+                     string criticsRating, int gross, string notes, List<string> picPath)
         {
             filmID = id;
             filmTitle = title;
@@ -36,6 +37,7 @@ namespace Catalog
             filmMPAARating = mpaaRating;
             filmCriticsRating = criticsRating;
             filmGrosses = gross;
+            filmNotes = notes;
             picturesPath = picPath;
         }
 

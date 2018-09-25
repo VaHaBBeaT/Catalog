@@ -13,7 +13,6 @@ namespace Catalog
 {
     public class FileOPs
     {
-        #region Save block
         public static void SaveXmlFile(List<Book> books, string filename)
         {
             if (!File.Exists(filename)) using (File.Create(filename))
@@ -25,9 +24,7 @@ namespace Catalog
             if (!File.Exists(filename)) using (File.Create(filename))
                     ParseListToXml(films).Save(filename);
         }
-        #endregion
 
-        #region Load block
         public static XDocument LoadXmlFile(string filename)
         {
             try
@@ -41,9 +38,7 @@ namespace Catalog
                 return null;
             }
         }
-        #endregion
 
-        #region Edit block
         public static void EditXmlFile (Book bookEdit, string filename)
         {
             XDocument bookDoc = LoadXmlFile(filename);
@@ -83,19 +78,18 @@ namespace Catalog
             if (film.Element("Actors").Value != filmEdit.filmActors) film.Element("Actors").Value = filmEdit.filmActors;
             if (film.Element("Length").Value != filmEdit.filmLengthInMinutes.ToString()) film.Element("Length").Value = filmEdit.filmLengthInMinutes.ToString();
             if (film.Element("Country").Value != filmEdit.filmCountry) film.Element("Country").Value = filmEdit.filmCountry;
-            if (film.Element("Premiere").Value != filmEdit.filmPremiere.ToString()) film.Element("Premiere").Value = filmEdit.filmPremiere.ToString();
+            if (film.Element("Premiere").Value != filmEdit.filmPremiere.ToString()) film.Element("Premiere").Value = filmEdit.filmPremiere.ToShortDateString();
             if (film.Element("MPAARating").Value != filmEdit.filmMPAARating) film.Element("MPAARating").Value = filmEdit.filmMPAARating;
             if (film.Element("CriticsRating").Value != filmEdit.filmCriticsRating) film.Element("CriticsRating").Value = filmEdit.filmCriticsRating;
             if (film.Element("Grosses").Value != filmEdit.filmGrosses.ToString()) film.Element("Grosses").Value = filmEdit.filmGrosses.ToString();
-            
+            if (film.Element("Notes").Value != filmEdit.filmNotes) film.Element("Notes").Value = filmEdit.filmNotes;
+
             film.Element("picPath").Value = "";
             foreach (var fE in filmEdit.picturesPath) film.Element("picPath").Value += "@" + fE;
 
             filmDoc.Save(filename);
         }
-        #endregion
 
-        #region Append block
         public static void AppendToXmlFile(Book bookAppend, string filename)
         {
             XDocument bookDoc = LoadXmlFile(filename);
@@ -109,19 +103,17 @@ namespace Catalog
         {
             XDocument filmDoc = LoadXmlFile(filename);
 
-            filmDoc.Descendants("Films").First().Add(ParseToXml(filmAppend));
+            filmDoc.Descendants("Filmography").First().Add(ParseToXml(filmAppend));
 
             filmDoc.Save(filename);
         }
-        #endregion
 
-        #region Remove block
         public static void RemoveFromXmlFile(Book bookRemove, string filename)
         {
             XDocument bookDoc = LoadXmlFile(filename);
 
-            DirectoryInfo bookDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + bookRemove.bookAuthor + @"\" + bookRemove.bookTitle);
-            DirectoryInfo authorDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + bookRemove.bookAuthor);
+            DirectoryInfo bookDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books" + bookRemove.bookAuthor + @"\" + bookRemove.bookTitle);
+            DirectoryInfo authorDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books" + bookRemove.bookAuthor);
 
             bookDoc.Descendants("Book").Where(b => b.Attribute("ID").Value == bookRemove.bookID.ToString()).Remove();
 
@@ -133,40 +125,38 @@ namespace Catalog
 
         public static void RemoveFromXmlFile(Film filmRemove, string filename)
         {
-            XDocument bookDoc = LoadXmlFile(filename);
+            XDocument filmDoc = LoadXmlFile(filename);
 
-            DirectoryInfo filmDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + filmRemove.filmProducer + @"\" + filmRemove.filmTitle);
-            DirectoryInfo producerDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\" + filmRemove.filmProducer);
+            DirectoryInfo filmDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Films" + filmRemove.filmProducer + @"\" + filmRemove.filmTitle);
+            DirectoryInfo producerDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Films" + filmRemove.filmProducer);
 
-            bookDoc.Descendants("Film").Where(f => f.Attribute("ID").Value == filmRemove.filmID.ToString()).Remove();
+            filmDoc.Descendants("Film").Where(f => f.Attribute("ID").Value == filmRemove.filmID.ToString()).Remove();
 
             filmDir.Delete(true);
             if (producerDir.GetDirectories().Length == 0 && producerDir.GetFiles().Length == 0) producerDir.Delete(true);
 
-            bookDoc.Save(filename);
+            filmDoc.Save(filename);
         }
-        #endregion
 
-        #region Parse To List
         public static List<Book> ParseBookXmlToList (string filename)
         {
             XDocument bookDoc = LoadXmlFile(filename);
             List<Book> bookList = bookDoc.Descendants("Book").Select(b => new Book {
                                                 bookID = int.Parse(b.Attribute("ID").Value),
-                                                bookMajorSeries = b.Element("MajorSeries").Value.ToString(),
-                                                bookAuthor = b.Element("Author").Value.ToString(),
-                                                bookTitle = b.Element("Title").Value.ToString(),
-                                                bookSeries = b.Element("Series").Value.ToString(),
+                                                bookMajorSeries = b.Element("MajorSeries").Value,
+                                                bookAuthor = b.Element("Author").Value,
+                                                bookTitle = b.Element("Title").Value,
+                                                bookSeries = b.Element("Series").Value,
                                                 bookNumberInSeries = int.Parse(b.Element("NumberInSeries").Value),
-                                                bookGenre = b.Element("Genre").Value.ToString(),
+                                                bookGenre = b.Element("Genre").Value,
                                                 bookPagesCount = int.Parse(b.Element("PagesCount").Value),
-                                                bookPublisher = b.Element("Publisher").Value.ToString(),
+                                                bookPublisher = b.Element("Publisher").Value,
                                                 bookPrintYear = int.Parse(b.Element("PrintYear").Value),
-                                                bookPrintCity = b.Element("PrintCity").Value.ToString(),
-                                                bookISBN = int.Parse(b.Element("ISBN").Value),
-                                                bookTranslator = b.Element("Translator").Value.ToString(),
-                                                bookArtist = b.Element("Artist").Value.ToString(),
-                                                bookNotes=b.Element("Notes").Value.ToString(),
+                                                bookPrintCity = b.Element("PrintCity").Value,
+                                                bookISBN = long.Parse(b.Element("ISBN").Value),
+                                                bookTranslator = b.Element("Translator").Value,
+                                                bookArtist = b.Element("Artist").Value,
+                                                bookNotes = b.Element("Notes").Value,
                                                 picturesPath = b.Element("picPath").Value.Split(new[] { "@" }, StringSplitOptions.RemoveEmptyEntries).ToList(),
                                             }).ToList();
 
@@ -184,17 +174,16 @@ namespace Catalog
                                                 filmActors = f.Element("Actors").Value,
                                                 filmLengthInMinutes = int.Parse(f.Element("Length").Value),
                                                 filmCountry = f.Element("Country").Value,
-                                                filmPremiere = DateTime.Parse(f.Element("Premiere").Value),
+                                                filmPremiere = DateTime.Parse(f.Element("Premiere").Value).Date,
                                                 filmMPAARating = f.Element("MPAARating").Value,
                                                 filmCriticsRating = f.Element("CriticsRating").Value,
                                                 filmGrosses = int.Parse(f.Element("Grosses").Value),
+                                                filmNotes = f.Element("Notes").Value,
                                                 picturesPath = f.Element("picPath").Value.Split(new[] { "@" }, StringSplitOptions.RemoveEmptyEntries).ToList(),
                                             }).ToList();
             return filmList;
         }
-        #endregion
 
-        #region Parse List To Xml
         public static XElement ParseListToXml (List<Book> books)
         {
             XElement bookDoc = new XElement("Bookshelf",
@@ -222,11 +211,11 @@ namespace Catalog
 
         public static XElement ParseListToXml(List<Film> films)
         {
-            XElement filmDoc = new XElement("Films",
+            XElement filmDoc = new XElement("Filmography",
                 from f in films
-                select new XElement("Book", new XAttribute("ID", f.filmID),
+                select new XElement("Film", new XAttribute("ID", f.filmID),
                                                 new XElement("Title", f.filmTitle),
-                                                new XElement("Genre", f.filmGenre,
+                                                new XElement("Genre", f.filmGenre),
                                                 new XElement("Producer", f.filmProducer),
                                                 new XElement("Actors", f.filmActors),
                                                 new XElement("Length", f.filmLengthInMinutes),
@@ -235,14 +224,13 @@ namespace Catalog
                                                 new XElement("MPAARating", f.filmMPAARating),
                                                 new XElement("CriticsRating", f.filmCriticsRating),
                                                 new XElement("Grosses", f.filmGrosses),
+                                                new XElement("Notes", f.filmNotes),
                                                 new XElement("picPath", f.picturesPath.Select(s => s = "@" + s))
                                                 ));
 
             return filmDoc;
         }
-        #endregion
 
-        #region Parse Base Class object
         public static XElement ParseToXml (Book book)
         {
             XElement newElement = new XElement("Book", new XAttribute("ID", book.bookID),
@@ -269,7 +257,7 @@ namespace Catalog
         {
             XElement newElement = new XElement("Film", new XAttribute("ID", film.filmID),
                                                             new XElement("Title", film.filmTitle),
-                                                            new XElement("Genre", film.filmGenre,
+                                                            new XElement("Genre", film.filmGenre),
                                                             new XElement("Producer", film.filmProducer),
                                                             new XElement("Actors", film.filmActors),
                                                             new XElement("Length", film.filmLengthInMinutes),
@@ -278,26 +266,40 @@ namespace Catalog
                                                             new XElement("MPAARating", film.filmMPAARating),
                                                             new XElement("CriticsRating", film.filmCriticsRating),
                                                             new XElement("Grosses", film.filmGrosses),
+                                                            new XElement("Notes", film.filmNotes),
                                                             new XElement("picPath", film.picturesPath.Select(s => s = "@" + s)
                                                             ));
             return newElement;
         }
-        #endregion
 
-        #region Set ID
         public static void SetBookLastID()
         {
             List<Book> book = ParseBookXmlToList(form_Catalog.bookFileName);
 
-            form_Catalog.lastID = book.Max(b => b.bookID);
+            form_Catalog.lastbookID = book.Max(b => b.bookID);
         }
 
         public static void SetFilmLastID()
         {
             List<Film> film = ParseFilmXmlToList(form_Catalog.filmFileName);
 
-            form_Catalog.lastID = film.Max(f => f.filmID);
+            form_Catalog.lastfilmID = film.Max(f => f.filmID);
         }
-        #endregion
+
+        public static void SetFileName()
+        {
+            if (!Directory.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data")))
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory.ToString() + "Data");
+
+            if (!File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data\Bookshelf.xml")))
+                File.Create(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data\Bookshelf.xml"));
+
+            form_Catalog.bookFileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data\Bookshelf.xml");
+
+            if (!File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data\Filmography.xml")))
+                File.Create(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data\Filmography.xml"));
+
+            form_Catalog.filmFileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data\Filmography.xml");
+        }
     }
 }

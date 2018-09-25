@@ -108,11 +108,11 @@
             this.lbl_MajorSeries.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_MajorSeries.AutoSize = true;
-            this.lbl_MajorSeries.Location = new System.Drawing.Point(35, 42);
+            this.lbl_MajorSeries.Location = new System.Drawing.Point(23, 42);
             this.lbl_MajorSeries.Name = "lbl_MajorSeries";
-            this.lbl_MajorSeries.Size = new System.Drawing.Size(62, 13);
+            this.lbl_MajorSeries.Size = new System.Drawing.Size(74, 13);
             this.lbl_MajorSeries.TabIndex = 5;
-            this.lbl_MajorSeries.Text = "MajorSeries";
+            this.lbl_MajorSeries.Text = "Серия изд-ва";
             // 
             // lbl_Author
             // 
@@ -121,9 +121,9 @@
             this.lbl_Author.AutoSize = true;
             this.lbl_Author.Location = new System.Drawing.Point(59, 69);
             this.lbl_Author.Name = "lbl_Author";
-            this.lbl_Author.Size = new System.Drawing.Size(38, 13);
+            this.lbl_Author.Size = new System.Drawing.Size(37, 13);
             this.lbl_Author.TabIndex = 6;
-            this.lbl_Author.Text = "Author";
+            this.lbl_Author.Text = "Автор";
             // 
             // btn_SaveBook
             // 
@@ -166,11 +166,11 @@
             this.lbl_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(70, 96);
+            this.lbl_Name.Location = new System.Drawing.Point(8, 96);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(27, 13);
+            this.lbl_Name.Size = new System.Drawing.Size(89, 13);
             this.lbl_Name.TabIndex = 7;
-            this.lbl_Name.Text = "Title";
+            this.lbl_Name.Text = "Название книги";
             // 
             // txtbox_Title
             // 
@@ -191,19 +191,19 @@
             this.lbl_Series.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Series.AutoSize = true;
-            this.lbl_Series.Location = new System.Drawing.Point(61, 123);
+            this.lbl_Series.Location = new System.Drawing.Point(59, 123);
             this.lbl_Series.Name = "lbl_Series";
-            this.lbl_Series.Size = new System.Drawing.Size(36, 13);
+            this.lbl_Series.Size = new System.Drawing.Size(38, 13);
             this.lbl_Series.TabIndex = 101;
-            this.lbl_Series.Text = "Series";
+            this.lbl_Series.Text = "Серия";
             // 
             // btn_AddFiles
             // 
-            this.btn_AddFiles.Location = new System.Drawing.Point(548, 381);
+            this.btn_AddFiles.Location = new System.Drawing.Point(467, 381);
             this.btn_AddFiles.Name = "btn_AddFiles";
-            this.btn_AddFiles.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddFiles.Size = new System.Drawing.Size(156, 23);
             this.btn_AddFiles.TabIndex = 57;
-            this.btn_AddFiles.Text = "Add Files";
+            this.btn_AddFiles.Text = "Добавить файлы";
             this.btn_AddFiles.UseVisualStyleBackColor = true;
             this.btn_AddFiles.Click += new System.EventHandler(this.btn_AddFiles_Click);
             // 
@@ -222,7 +222,7 @@
             this.textBox1.Size = new System.Drawing.Size(316, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = "Add preview files here";
+            this.textBox1.Text = "Список изображений";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtbox_NumberInSeries
@@ -301,11 +301,11 @@
             this.lbl_NumberInSeries.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_NumberInSeries.AutoSize = true;
-            this.lbl_NumberInSeries.Location = new System.Drawing.Point(18, 150);
+            this.lbl_NumberInSeries.Location = new System.Drawing.Point(14, 150);
             this.lbl_NumberInSeries.Name = "lbl_NumberInSeries";
-            this.lbl_NumberInSeries.Size = new System.Drawing.Size(82, 13);
+            this.lbl_NumberInSeries.Size = new System.Drawing.Size(83, 13);
             this.lbl_NumberInSeries.TabIndex = 115;
-            this.lbl_NumberInSeries.Text = "NumberInSeries";
+            this.lbl_NumberInSeries.Text = "Номер в серии";
             // 
             // lbl_Genre
             // 
@@ -316,51 +316,51 @@
             this.lbl_Genre.Name = "lbl_Genre";
             this.lbl_Genre.Size = new System.Drawing.Size(36, 13);
             this.lbl_Genre.TabIndex = 116;
-            this.lbl_Genre.Text = "Genre";
+            this.lbl_Genre.Text = "Жанр";
             // 
             // lbl_PagesCount
             // 
             this.lbl_PagesCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PagesCount.AutoSize = true;
-            this.lbl_PagesCount.Location = new System.Drawing.Point(32, 204);
+            this.lbl_PagesCount.Location = new System.Drawing.Point(12, 204);
             this.lbl_PagesCount.Name = "lbl_PagesCount";
-            this.lbl_PagesCount.Size = new System.Drawing.Size(65, 13);
+            this.lbl_PagesCount.Size = new System.Drawing.Size(85, 13);
             this.lbl_PagesCount.TabIndex = 117;
-            this.lbl_PagesCount.Text = "PagesCount";
+            this.lbl_PagesCount.Text = "Кол-во страниц";
             // 
             // lbl_Publisher
             // 
             this.lbl_Publisher.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Publisher.AutoSize = true;
-            this.lbl_Publisher.Location = new System.Drawing.Point(47, 231);
+            this.lbl_Publisher.Location = new System.Drawing.Point(41, 231);
             this.lbl_Publisher.Name = "lbl_Publisher";
-            this.lbl_Publisher.Size = new System.Drawing.Size(50, 13);
+            this.lbl_Publisher.Size = new System.Drawing.Size(56, 13);
             this.lbl_Publisher.TabIndex = 118;
-            this.lbl_Publisher.Text = "Publisher";
+            this.lbl_Publisher.Text = "Издатель";
             // 
             // lbl_PrintYear
             // 
             this.lbl_PrintYear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PrintYear.AutoSize = true;
-            this.lbl_PrintYear.Location = new System.Drawing.Point(47, 258);
+            this.lbl_PrintYear.Location = new System.Drawing.Point(26, 258);
             this.lbl_PrintYear.Name = "lbl_PrintYear";
-            this.lbl_PrintYear.Size = new System.Drawing.Size(50, 13);
+            this.lbl_PrintYear.Size = new System.Drawing.Size(71, 13);
             this.lbl_PrintYear.TabIndex = 119;
-            this.lbl_PrintYear.Text = "PrintYear";
+            this.lbl_PrintYear.Text = "Год выпуска";
             // 
             // lbl_PrintCity
             // 
             this.lbl_PrintCity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PrintCity.AutoSize = true;
-            this.lbl_PrintCity.Location = new System.Drawing.Point(52, 285);
+            this.lbl_PrintCity.Location = new System.Drawing.Point(23, 285);
             this.lbl_PrintCity.Name = "lbl_PrintCity";
-            this.lbl_PrintCity.Size = new System.Drawing.Size(45, 13);
+            this.lbl_PrintCity.Size = new System.Drawing.Size(74, 13);
             this.lbl_PrintCity.TabIndex = 120;
-            this.lbl_PrintCity.Text = "PrintCity";
+            this.lbl_PrintCity.Text = "Город печати";
             // 
             // lbl_ISBN
             // 
@@ -378,33 +378,33 @@
             this.lbl_Translator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Translator.AutoSize = true;
-            this.lbl_Translator.Location = new System.Drawing.Point(43, 339);
+            this.lbl_Translator.Location = new System.Drawing.Point(29, 339);
             this.lbl_Translator.Name = "lbl_Translator";
-            this.lbl_Translator.Size = new System.Drawing.Size(54, 13);
+            this.lbl_Translator.Size = new System.Drawing.Size(68, 13);
             this.lbl_Translator.TabIndex = 122;
-            this.lbl_Translator.Text = "Translator";
+            this.lbl_Translator.Text = "Переводчик";
             // 
             // lbl_Artist
             // 
             this.lbl_Artist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Artist.AutoSize = true;
-            this.lbl_Artist.Location = new System.Drawing.Point(67, 365);
+            this.lbl_Artist.Location = new System.Drawing.Point(40, 365);
             this.lbl_Artist.Name = "lbl_Artist";
-            this.lbl_Artist.Size = new System.Drawing.Size(30, 13);
+            this.lbl_Artist.Size = new System.Drawing.Size(57, 13);
             this.lbl_Artist.TabIndex = 123;
-            this.lbl_Artist.Text = "Artist";
+            this.lbl_Artist.Text = "Художник";
             // 
             // lbl_Notes
             // 
             this.lbl_Notes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Notes.AutoSize = true;
-            this.lbl_Notes.Location = new System.Drawing.Point(62, 392);
+            this.lbl_Notes.Location = new System.Drawing.Point(46, 392);
             this.lbl_Notes.Name = "lbl_Notes";
-            this.lbl_Notes.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Notes.Size = new System.Drawing.Size(51, 13);
             this.lbl_Notes.TabIndex = 124;
-            this.lbl_Notes.Text = "Notes";
+            this.lbl_Notes.Text = "Заметки";
             // 
             // form_CreateBook
             // 

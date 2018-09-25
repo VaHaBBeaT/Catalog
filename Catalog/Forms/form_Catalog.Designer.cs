@@ -42,6 +42,8 @@
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CloneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,57 +65,88 @@
             this.tc_Info = new System.Windows.Forms.TabControl();
             this.tabPage_Book = new System.Windows.Forms.TabPage();
             this.grpbox_BookInfo = new System.Windows.Forms.GroupBox();
-            this.msktxtbox_ISBN = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_Notes = new System.Windows.Forms.Label();
-            this.lbl_Artist = new System.Windows.Forms.Label();
-            this.lbl_Translator = new System.Windows.Forms.Label();
-            this.lbl_ISBN = new System.Windows.Forms.Label();
-            this.lbl_PrintCity = new System.Windows.Forms.Label();
-            this.lbl_PrintYear = new System.Windows.Forms.Label();
-            this.lbl_Publisher = new System.Windows.Forms.Label();
-            this.lbl_PagesCount = new System.Windows.Forms.Label();
-            this.lbl_Genre = new System.Windows.Forms.Label();
-            this.lbl_NumberInSeries = new System.Windows.Forms.Label();
-            this.txtbox_Notes = new System.Windows.Forms.TextBox();
-            this.txtbox_Artist = new System.Windows.Forms.TextBox();
-            this.txtbox_Translator = new System.Windows.Forms.TextBox();
-            this.txtbox_PrintCity = new System.Windows.Forms.TextBox();
-            this.txtbox_PrintYear = new System.Windows.Forms.TextBox();
-            this.txtbox_Publisher = new System.Windows.Forms.TextBox();
-            this.txtbox_PagesCount = new System.Windows.Forms.TextBox();
-            this.txtbox_Genre = new System.Windows.Forms.TextBox();
-            this.txtbox_NumberInSeries = new System.Windows.Forms.TextBox();
+            this.msktxtbox_BookISBN = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_BookNotes = new System.Windows.Forms.Label();
+            this.lbl_BookArtist = new System.Windows.Forms.Label();
+            this.lbl_BookTranslator = new System.Windows.Forms.Label();
+            this.lbl_BookISBN = new System.Windows.Forms.Label();
+            this.lbl_BookPrintCity = new System.Windows.Forms.Label();
+            this.lbl_BookPrintYear = new System.Windows.Forms.Label();
+            this.lbl_BookPublisher = new System.Windows.Forms.Label();
+            this.lbl_BookPagesCount = new System.Windows.Forms.Label();
+            this.lbl_BookGenre = new System.Windows.Forms.Label();
+            this.lbl_BookNumberInSeries = new System.Windows.Forms.Label();
+            this.txtbox_BookNotes = new System.Windows.Forms.TextBox();
+            this.txtbox_BookArtist = new System.Windows.Forms.TextBox();
+            this.txtbox_BookTranslator = new System.Windows.Forms.TextBox();
+            this.txtbox_BookPrintCity = new System.Windows.Forms.TextBox();
+            this.txtbox_BookPrintYear = new System.Windows.Forms.TextBox();
+            this.txtbox_BookPublisher = new System.Windows.Forms.TextBox();
+            this.txtbox_BookPagesCount = new System.Windows.Forms.TextBox();
+            this.txtbox_BookGenre = new System.Windows.Forms.TextBox();
+            this.txtbox_BookNumberInSeries = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picBox_BookPreview = new System.Windows.Forms.PictureBox();
-            this.lbl_Series = new System.Windows.Forms.Label();
-            this.txtbox_Series = new System.Windows.Forms.TextBox();
-            this.lbl_Name = new System.Windows.Forms.Label();
-            this.lbl_Author = new System.Windows.Forms.Label();
-            this.lbl_MajorSeries = new System.Windows.Forms.Label();
-            this.lbl_ID = new System.Windows.Forms.Label();
-            this.txtbox_Title = new System.Windows.Forms.TextBox();
-            this.txtbox_Author = new System.Windows.Forms.TextBox();
-            this.txtbox_MajorSeries = new System.Windows.Forms.TextBox();
-            this.txtbox_ID = new System.Windows.Forms.TextBox();
+            this.lbl_BookSeries = new System.Windows.Forms.Label();
+            this.txtbox_BookSeries = new System.Windows.Forms.TextBox();
+            this.lbl_BookTitle = new System.Windows.Forms.Label();
+            this.lbl_BookAuthor = new System.Windows.Forms.Label();
+            this.lbl_BookMajorSeries = new System.Windows.Forms.Label();
+            this.lbl_BookID = new System.Windows.Forms.Label();
+            this.txtbox_BookTitle = new System.Windows.Forms.TextBox();
+            this.txtbox_BookAuthor = new System.Windows.Forms.TextBox();
+            this.txtbox_BookMajorSeries = new System.Windows.Forms.TextBox();
+            this.txtbox_BookID = new System.Windows.Forms.TextBox();
             this.tw_Book = new System.Windows.Forms.TreeView();
             this.tabPage_Film = new System.Windows.Forms.TabPage();
-            this.FilmInfo = new System.Windows.Forms.GroupBox();
+            this.grpbox_FilmInfo = new System.Windows.Forms.GroupBox();
+            this.lbl_FilmNotes = new System.Windows.Forms.Label();
+            this.lbl_FilmGrosses = new System.Windows.Forms.Label();
+            this.lbl_FilmCriticsRating = new System.Windows.Forms.Label();
+            this.lbl_FilmMPAA = new System.Windows.Forms.Label();
+            this.lbl_FilmPremiere = new System.Windows.Forms.Label();
+            this.lbl_FilmCountry = new System.Windows.Forms.Label();
+            this.lbl_FilmLength = new System.Windows.Forms.Label();
+            this.txtbox_FilmNotes = new System.Windows.Forms.TextBox();
+            this.txtbox_FilmGrosses = new System.Windows.Forms.TextBox();
+            this.txtbox_FilmCriticsRating = new System.Windows.Forms.TextBox();
+            this.txtbox_FilmMPAA = new System.Windows.Forms.TextBox();
+            this.txtbox_FilmPremiere = new System.Windows.Forms.TextBox();
+            this.txtbox_FilmCountry = new System.Windows.Forms.TextBox();
+            this.txtbox_FilmLength = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.picBox_FilmPreview = new System.Windows.Forms.PictureBox();
+            this.lbl_FilmActors = new System.Windows.Forms.Label();
+            this.txtbox_FilmActors = new System.Windows.Forms.TextBox();
+            this.lbl_FilmProducer = new System.Windows.Forms.Label();
+            this.lbl_FilmGenre = new System.Windows.Forms.Label();
+            this.lbl_FilmTitle = new System.Windows.Forms.Label();
+            this.lbl_FilmID = new System.Windows.Forms.Label();
+            this.txtbox_FilmProducer = new System.Windows.Forms.TextBox();
+            this.txtbox_FilmGenre = new System.Windows.Forms.TextBox();
+            this.txtbox_FilmTitle = new System.Windows.Forms.TextBox();
+            this.txtbox_FilmID = new System.Windows.Forms.TextBox();
             this.tw_Film = new System.Windows.Forms.TreeView();
             this.imgLst_BookPreview = new System.Windows.Forms.ImageList(this.components);
-            this.timer_BookPreview = new System.Windows.Forms.Timer(this.components);
+            this.timer_Preview = new System.Windows.Forms.Timer(this.components);
             this.ofd_LoadXmlFile = new System.Windows.Forms.OpenFileDialog();
             this.sfd_SaveXmlFile = new System.Windows.Forms.SaveFileDialog();
             this.print_Doc = new System.Drawing.Printing.PrintDocument();
             this.print_Dialog = new System.Windows.Forms.PrintDialog();
             this.print_PreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
+            this.imgLst_FilmPreview = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.tc_Info.SuspendLayout();
             this.tabPage_Book.SuspendLayout();
             this.grpbox_BookInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_BookPreview)).BeginInit();
             this.tabPage_Film.SuspendLayout();
+            this.grpbox_FilmInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_FilmPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -202,9 +235,24 @@
             // 
             // CreateToolStripMenuItem
             // 
+            this.CreateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CreateBookToolStripMenuItem,
+            this.CreateFilmToolStripMenuItem});
             resources.ApplyResources(this.CreateToolStripMenuItem, "CreateToolStripMenuItem");
             this.CreateToolStripMenuItem.Name = "CreateToolStripMenuItem";
             this.CreateToolStripMenuItem.Click += new System.EventHandler(this.CreateToolStripMenuItem_Click);
+            // 
+            // CreateBookToolStripMenuItem
+            // 
+            this.CreateBookToolStripMenuItem.Name = "CreateBookToolStripMenuItem";
+            resources.ApplyResources(this.CreateBookToolStripMenuItem, "CreateBookToolStripMenuItem");
+            this.CreateBookToolStripMenuItem.Click += new System.EventHandler(this.CreateBookToolStripMenuItem_Click);
+            // 
+            // CreateFilmToolStripMenuItem
+            // 
+            this.CreateFilmToolStripMenuItem.Name = "CreateFilmToolStripMenuItem";
+            resources.ApplyResources(this.CreateFilmToolStripMenuItem, "CreateFilmToolStripMenuItem");
+            this.CreateFilmToolStripMenuItem.Click += new System.EventHandler(this.CreateFilmToolStripMenuItem_Click);
             // 
             // RemoveToolStripMenuItem
             // 
@@ -333,152 +381,152 @@
             // grpbox_BookInfo
             // 
             resources.ApplyResources(this.grpbox_BookInfo, "grpbox_BookInfo");
-            this.grpbox_BookInfo.Controls.Add(this.msktxtbox_ISBN);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_Notes);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_Artist);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_Translator);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_ISBN);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_PrintCity);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_PrintYear);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_Publisher);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_PagesCount);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_Genre);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_NumberInSeries);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_Notes);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_Artist);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_Translator);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_PrintCity);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_PrintYear);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_Publisher);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_PagesCount);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_Genre);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_NumberInSeries);
+            this.grpbox_BookInfo.Controls.Add(this.msktxtbox_BookISBN);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookNotes);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookArtist);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookTranslator);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookISBN);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookPrintCity);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookPrintYear);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookPublisher);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookPagesCount);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookGenre);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookNumberInSeries);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookNotes);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookArtist);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookTranslator);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookPrintCity);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookPrintYear);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookPublisher);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookPagesCount);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookGenre);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookNumberInSeries);
             this.grpbox_BookInfo.Controls.Add(this.label3);
             this.grpbox_BookInfo.Controls.Add(this.label2);
             this.grpbox_BookInfo.Controls.Add(this.label1);
             this.grpbox_BookInfo.Controls.Add(this.picBox_BookPreview);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_Series);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_Series);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_Name);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_Author);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_MajorSeries);
-            this.grpbox_BookInfo.Controls.Add(this.lbl_ID);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_Title);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_Author);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_MajorSeries);
-            this.grpbox_BookInfo.Controls.Add(this.txtbox_ID);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookSeries);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookSeries);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookTitle);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookAuthor);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookMajorSeries);
+            this.grpbox_BookInfo.Controls.Add(this.lbl_BookID);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookTitle);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookAuthor);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookMajorSeries);
+            this.grpbox_BookInfo.Controls.Add(this.txtbox_BookID);
             this.grpbox_BookInfo.Name = "grpbox_BookInfo";
             this.grpbox_BookInfo.TabStop = false;
             // 
-            // msktxtbox_ISBN
+            // msktxtbox_BookISBN
             // 
-            resources.ApplyResources(this.msktxtbox_ISBN, "msktxtbox_ISBN");
-            this.msktxtbox_ISBN.Name = "msktxtbox_ISBN";
-            this.msktxtbox_ISBN.ReadOnly = true;
+            resources.ApplyResources(this.msktxtbox_BookISBN, "msktxtbox_BookISBN");
+            this.msktxtbox_BookISBN.Name = "msktxtbox_BookISBN";
+            this.msktxtbox_BookISBN.ReadOnly = true;
             // 
-            // lbl_Notes
+            // lbl_BookNotes
             // 
-            resources.ApplyResources(this.lbl_Notes, "lbl_Notes");
-            this.lbl_Notes.Name = "lbl_Notes";
+            resources.ApplyResources(this.lbl_BookNotes, "lbl_BookNotes");
+            this.lbl_BookNotes.Name = "lbl_BookNotes";
             // 
-            // lbl_Artist
+            // lbl_BookArtist
             // 
-            resources.ApplyResources(this.lbl_Artist, "lbl_Artist");
-            this.lbl_Artist.Name = "lbl_Artist";
+            resources.ApplyResources(this.lbl_BookArtist, "lbl_BookArtist");
+            this.lbl_BookArtist.Name = "lbl_BookArtist";
             // 
-            // lbl_Translator
+            // lbl_BookTranslator
             // 
-            resources.ApplyResources(this.lbl_Translator, "lbl_Translator");
-            this.lbl_Translator.Name = "lbl_Translator";
+            resources.ApplyResources(this.lbl_BookTranslator, "lbl_BookTranslator");
+            this.lbl_BookTranslator.Name = "lbl_BookTranslator";
             // 
-            // lbl_ISBN
+            // lbl_BookISBN
             // 
-            resources.ApplyResources(this.lbl_ISBN, "lbl_ISBN");
-            this.lbl_ISBN.Name = "lbl_ISBN";
+            resources.ApplyResources(this.lbl_BookISBN, "lbl_BookISBN");
+            this.lbl_BookISBN.Name = "lbl_BookISBN";
             // 
-            // lbl_PrintCity
+            // lbl_BookPrintCity
             // 
-            resources.ApplyResources(this.lbl_PrintCity, "lbl_PrintCity");
-            this.lbl_PrintCity.Name = "lbl_PrintCity";
+            resources.ApplyResources(this.lbl_BookPrintCity, "lbl_BookPrintCity");
+            this.lbl_BookPrintCity.Name = "lbl_BookPrintCity";
             // 
-            // lbl_PrintYear
+            // lbl_BookPrintYear
             // 
-            resources.ApplyResources(this.lbl_PrintYear, "lbl_PrintYear");
-            this.lbl_PrintYear.Name = "lbl_PrintYear";
+            resources.ApplyResources(this.lbl_BookPrintYear, "lbl_BookPrintYear");
+            this.lbl_BookPrintYear.Name = "lbl_BookPrintYear";
             // 
-            // lbl_Publisher
+            // lbl_BookPublisher
             // 
-            resources.ApplyResources(this.lbl_Publisher, "lbl_Publisher");
-            this.lbl_Publisher.Name = "lbl_Publisher";
+            resources.ApplyResources(this.lbl_BookPublisher, "lbl_BookPublisher");
+            this.lbl_BookPublisher.Name = "lbl_BookPublisher";
             // 
-            // lbl_PagesCount
+            // lbl_BookPagesCount
             // 
-            resources.ApplyResources(this.lbl_PagesCount, "lbl_PagesCount");
-            this.lbl_PagesCount.Name = "lbl_PagesCount";
+            resources.ApplyResources(this.lbl_BookPagesCount, "lbl_BookPagesCount");
+            this.lbl_BookPagesCount.Name = "lbl_BookPagesCount";
             // 
-            // lbl_Genre
+            // lbl_BookGenre
             // 
-            resources.ApplyResources(this.lbl_Genre, "lbl_Genre");
-            this.lbl_Genre.Name = "lbl_Genre";
+            resources.ApplyResources(this.lbl_BookGenre, "lbl_BookGenre");
+            this.lbl_BookGenre.Name = "lbl_BookGenre";
             // 
-            // lbl_NumberInSeries
+            // lbl_BookNumberInSeries
             // 
-            resources.ApplyResources(this.lbl_NumberInSeries, "lbl_NumberInSeries");
-            this.lbl_NumberInSeries.Name = "lbl_NumberInSeries";
+            resources.ApplyResources(this.lbl_BookNumberInSeries, "lbl_BookNumberInSeries");
+            this.lbl_BookNumberInSeries.Name = "lbl_BookNumberInSeries";
             // 
-            // txtbox_Notes
+            // txtbox_BookNotes
             // 
-            resources.ApplyResources(this.txtbox_Notes, "txtbox_Notes");
-            this.txtbox_Notes.Name = "txtbox_Notes";
-            this.txtbox_Notes.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookNotes, "txtbox_BookNotes");
+            this.txtbox_BookNotes.Name = "txtbox_BookNotes";
+            this.txtbox_BookNotes.ReadOnly = true;
             // 
-            // txtbox_Artist
+            // txtbox_BookArtist
             // 
-            resources.ApplyResources(this.txtbox_Artist, "txtbox_Artist");
-            this.txtbox_Artist.Name = "txtbox_Artist";
-            this.txtbox_Artist.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookArtist, "txtbox_BookArtist");
+            this.txtbox_BookArtist.Name = "txtbox_BookArtist";
+            this.txtbox_BookArtist.ReadOnly = true;
             // 
-            // txtbox_Translator
+            // txtbox_BookTranslator
             // 
-            resources.ApplyResources(this.txtbox_Translator, "txtbox_Translator");
-            this.txtbox_Translator.Name = "txtbox_Translator";
-            this.txtbox_Translator.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookTranslator, "txtbox_BookTranslator");
+            this.txtbox_BookTranslator.Name = "txtbox_BookTranslator";
+            this.txtbox_BookTranslator.ReadOnly = true;
             // 
-            // txtbox_PrintCity
+            // txtbox_BookPrintCity
             // 
-            resources.ApplyResources(this.txtbox_PrintCity, "txtbox_PrintCity");
-            this.txtbox_PrintCity.Name = "txtbox_PrintCity";
-            this.txtbox_PrintCity.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookPrintCity, "txtbox_BookPrintCity");
+            this.txtbox_BookPrintCity.Name = "txtbox_BookPrintCity";
+            this.txtbox_BookPrintCity.ReadOnly = true;
             // 
-            // txtbox_PrintYear
+            // txtbox_BookPrintYear
             // 
-            resources.ApplyResources(this.txtbox_PrintYear, "txtbox_PrintYear");
-            this.txtbox_PrintYear.Name = "txtbox_PrintYear";
-            this.txtbox_PrintYear.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookPrintYear, "txtbox_BookPrintYear");
+            this.txtbox_BookPrintYear.Name = "txtbox_BookPrintYear";
+            this.txtbox_BookPrintYear.ReadOnly = true;
             // 
-            // txtbox_Publisher
+            // txtbox_BookPublisher
             // 
-            resources.ApplyResources(this.txtbox_Publisher, "txtbox_Publisher");
-            this.txtbox_Publisher.Name = "txtbox_Publisher";
-            this.txtbox_Publisher.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookPublisher, "txtbox_BookPublisher");
+            this.txtbox_BookPublisher.Name = "txtbox_BookPublisher";
+            this.txtbox_BookPublisher.ReadOnly = true;
             // 
-            // txtbox_PagesCount
+            // txtbox_BookPagesCount
             // 
-            resources.ApplyResources(this.txtbox_PagesCount, "txtbox_PagesCount");
-            this.txtbox_PagesCount.Name = "txtbox_PagesCount";
-            this.txtbox_PagesCount.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookPagesCount, "txtbox_BookPagesCount");
+            this.txtbox_BookPagesCount.Name = "txtbox_BookPagesCount";
+            this.txtbox_BookPagesCount.ReadOnly = true;
             // 
-            // txtbox_Genre
+            // txtbox_BookGenre
             // 
-            resources.ApplyResources(this.txtbox_Genre, "txtbox_Genre");
-            this.txtbox_Genre.Name = "txtbox_Genre";
-            this.txtbox_Genre.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookGenre, "txtbox_BookGenre");
+            this.txtbox_BookGenre.Name = "txtbox_BookGenre";
+            this.txtbox_BookGenre.ReadOnly = true;
             // 
-            // txtbox_NumberInSeries
+            // txtbox_BookNumberInSeries
             // 
-            resources.ApplyResources(this.txtbox_NumberInSeries, "txtbox_NumberInSeries");
-            this.txtbox_NumberInSeries.Name = "txtbox_NumberInSeries";
-            this.txtbox_NumberInSeries.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookNumberInSeries, "txtbox_BookNumberInSeries");
+            this.txtbox_BookNumberInSeries.Name = "txtbox_BookNumberInSeries";
+            this.txtbox_BookNumberInSeries.ReadOnly = true;
             // 
             // label3
             // 
@@ -501,60 +549,60 @@
             this.picBox_BookPreview.Name = "picBox_BookPreview";
             this.picBox_BookPreview.TabStop = false;
             // 
-            // lbl_Series
+            // lbl_BookSeries
             // 
-            resources.ApplyResources(this.lbl_Series, "lbl_Series");
-            this.lbl_Series.Name = "lbl_Series";
+            resources.ApplyResources(this.lbl_BookSeries, "lbl_BookSeries");
+            this.lbl_BookSeries.Name = "lbl_BookSeries";
             // 
-            // txtbox_Series
+            // txtbox_BookSeries
             // 
-            resources.ApplyResources(this.txtbox_Series, "txtbox_Series");
-            this.txtbox_Series.Name = "txtbox_Series";
-            this.txtbox_Series.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookSeries, "txtbox_BookSeries");
+            this.txtbox_BookSeries.Name = "txtbox_BookSeries";
+            this.txtbox_BookSeries.ReadOnly = true;
             // 
-            // lbl_Name
+            // lbl_BookTitle
             // 
-            resources.ApplyResources(this.lbl_Name, "lbl_Name");
-            this.lbl_Name.Name = "lbl_Name";
+            resources.ApplyResources(this.lbl_BookTitle, "lbl_BookTitle");
+            this.lbl_BookTitle.Name = "lbl_BookTitle";
             // 
-            // lbl_Author
+            // lbl_BookAuthor
             // 
-            resources.ApplyResources(this.lbl_Author, "lbl_Author");
-            this.lbl_Author.Name = "lbl_Author";
+            resources.ApplyResources(this.lbl_BookAuthor, "lbl_BookAuthor");
+            this.lbl_BookAuthor.Name = "lbl_BookAuthor";
             // 
-            // lbl_MajorSeries
+            // lbl_BookMajorSeries
             // 
-            resources.ApplyResources(this.lbl_MajorSeries, "lbl_MajorSeries");
-            this.lbl_MajorSeries.Name = "lbl_MajorSeries";
+            resources.ApplyResources(this.lbl_BookMajorSeries, "lbl_BookMajorSeries");
+            this.lbl_BookMajorSeries.Name = "lbl_BookMajorSeries";
             // 
-            // lbl_ID
+            // lbl_BookID
             // 
-            resources.ApplyResources(this.lbl_ID, "lbl_ID");
-            this.lbl_ID.Name = "lbl_ID";
+            resources.ApplyResources(this.lbl_BookID, "lbl_BookID");
+            this.lbl_BookID.Name = "lbl_BookID";
             // 
-            // txtbox_Title
+            // txtbox_BookTitle
             // 
-            resources.ApplyResources(this.txtbox_Title, "txtbox_Title");
-            this.txtbox_Title.Name = "txtbox_Title";
-            this.txtbox_Title.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookTitle, "txtbox_BookTitle");
+            this.txtbox_BookTitle.Name = "txtbox_BookTitle";
+            this.txtbox_BookTitle.ReadOnly = true;
             // 
-            // txtbox_Author
+            // txtbox_BookAuthor
             // 
-            resources.ApplyResources(this.txtbox_Author, "txtbox_Author");
-            this.txtbox_Author.Name = "txtbox_Author";
-            this.txtbox_Author.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookAuthor, "txtbox_BookAuthor");
+            this.txtbox_BookAuthor.Name = "txtbox_BookAuthor";
+            this.txtbox_BookAuthor.ReadOnly = true;
             // 
-            // txtbox_MajorSeries
+            // txtbox_BookMajorSeries
             // 
-            resources.ApplyResources(this.txtbox_MajorSeries, "txtbox_MajorSeries");
-            this.txtbox_MajorSeries.Name = "txtbox_MajorSeries";
-            this.txtbox_MajorSeries.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookMajorSeries, "txtbox_BookMajorSeries");
+            this.txtbox_BookMajorSeries.Name = "txtbox_BookMajorSeries";
+            this.txtbox_BookMajorSeries.ReadOnly = true;
             // 
-            // txtbox_ID
+            // txtbox_BookID
             // 
-            resources.ApplyResources(this.txtbox_ID, "txtbox_ID");
-            this.txtbox_ID.Name = "txtbox_ID";
-            this.txtbox_ID.ReadOnly = true;
+            resources.ApplyResources(this.txtbox_BookID, "txtbox_BookID");
+            this.txtbox_BookID.Name = "txtbox_BookID";
+            this.txtbox_BookID.ReadOnly = true;
             // 
             // tw_Book
             // 
@@ -564,22 +612,204 @@
             // 
             // tabPage_Film
             // 
-            this.tabPage_Film.Controls.Add(this.FilmInfo);
+            this.tabPage_Film.Controls.Add(this.grpbox_FilmInfo);
             this.tabPage_Film.Controls.Add(this.tw_Film);
             resources.ApplyResources(this.tabPage_Film, "tabPage_Film");
             this.tabPage_Film.Name = "tabPage_Film";
             this.tabPage_Film.UseVisualStyleBackColor = true;
             // 
-            // FilmInfo
+            // grpbox_FilmInfo
             // 
-            resources.ApplyResources(this.FilmInfo, "FilmInfo");
-            this.FilmInfo.Name = "FilmInfo";
-            this.FilmInfo.TabStop = false;
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmNotes);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmGrosses);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmCriticsRating);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmMPAA);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmPremiere);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmCountry);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmLength);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmNotes);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmGrosses);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmCriticsRating);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmMPAA);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmPremiere);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmCountry);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmLength);
+            this.grpbox_FilmInfo.Controls.Add(this.label11);
+            this.grpbox_FilmInfo.Controls.Add(this.label12);
+            this.grpbox_FilmInfo.Controls.Add(this.label13);
+            this.grpbox_FilmInfo.Controls.Add(this.picBox_FilmPreview);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmActors);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmActors);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmProducer);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmGenre);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmTitle);
+            this.grpbox_FilmInfo.Controls.Add(this.lbl_FilmID);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmProducer);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmGenre);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmTitle);
+            this.grpbox_FilmInfo.Controls.Add(this.txtbox_FilmID);
+            resources.ApplyResources(this.grpbox_FilmInfo, "grpbox_FilmInfo");
+            this.grpbox_FilmInfo.Name = "grpbox_FilmInfo";
+            this.grpbox_FilmInfo.TabStop = false;
+            // 
+            // lbl_FilmNotes
+            // 
+            resources.ApplyResources(this.lbl_FilmNotes, "lbl_FilmNotes");
+            this.lbl_FilmNotes.Name = "lbl_FilmNotes";
+            // 
+            // lbl_FilmGrosses
+            // 
+            resources.ApplyResources(this.lbl_FilmGrosses, "lbl_FilmGrosses");
+            this.lbl_FilmGrosses.Name = "lbl_FilmGrosses";
+            // 
+            // lbl_FilmCriticsRating
+            // 
+            resources.ApplyResources(this.lbl_FilmCriticsRating, "lbl_FilmCriticsRating");
+            this.lbl_FilmCriticsRating.Name = "lbl_FilmCriticsRating";
+            // 
+            // lbl_FilmMPAA
+            // 
+            resources.ApplyResources(this.lbl_FilmMPAA, "lbl_FilmMPAA");
+            this.lbl_FilmMPAA.Name = "lbl_FilmMPAA";
+            // 
+            // lbl_FilmPremiere
+            // 
+            resources.ApplyResources(this.lbl_FilmPremiere, "lbl_FilmPremiere");
+            this.lbl_FilmPremiere.Name = "lbl_FilmPremiere";
+            // 
+            // lbl_FilmCountry
+            // 
+            resources.ApplyResources(this.lbl_FilmCountry, "lbl_FilmCountry");
+            this.lbl_FilmCountry.Name = "lbl_FilmCountry";
+            // 
+            // lbl_FilmLength
+            // 
+            resources.ApplyResources(this.lbl_FilmLength, "lbl_FilmLength");
+            this.lbl_FilmLength.Name = "lbl_FilmLength";
+            // 
+            // txtbox_FilmNotes
+            // 
+            resources.ApplyResources(this.txtbox_FilmNotes, "txtbox_FilmNotes");
+            this.txtbox_FilmNotes.Name = "txtbox_FilmNotes";
+            this.txtbox_FilmNotes.ReadOnly = true;
+            // 
+            // txtbox_FilmGrosses
+            // 
+            resources.ApplyResources(this.txtbox_FilmGrosses, "txtbox_FilmGrosses");
+            this.txtbox_FilmGrosses.Name = "txtbox_FilmGrosses";
+            this.txtbox_FilmGrosses.ReadOnly = true;
+            // 
+            // txtbox_FilmCriticsRating
+            // 
+            resources.ApplyResources(this.txtbox_FilmCriticsRating, "txtbox_FilmCriticsRating");
+            this.txtbox_FilmCriticsRating.Name = "txtbox_FilmCriticsRating";
+            this.txtbox_FilmCriticsRating.ReadOnly = true;
+            // 
+            // txtbox_FilmMPAA
+            // 
+            resources.ApplyResources(this.txtbox_FilmMPAA, "txtbox_FilmMPAA");
+            this.txtbox_FilmMPAA.Name = "txtbox_FilmMPAA";
+            this.txtbox_FilmMPAA.ReadOnly = true;
+            // 
+            // txtbox_FilmPremiere
+            // 
+            resources.ApplyResources(this.txtbox_FilmPremiere, "txtbox_FilmPremiere");
+            this.txtbox_FilmPremiere.Name = "txtbox_FilmPremiere";
+            this.txtbox_FilmPremiere.ReadOnly = true;
+            // 
+            // txtbox_FilmCountry
+            // 
+            resources.ApplyResources(this.txtbox_FilmCountry, "txtbox_FilmCountry");
+            this.txtbox_FilmCountry.Name = "txtbox_FilmCountry";
+            this.txtbox_FilmCountry.ReadOnly = true;
+            // 
+            // txtbox_FilmLength
+            // 
+            resources.ApplyResources(this.txtbox_FilmLength, "txtbox_FilmLength");
+            this.txtbox_FilmLength.Name = "txtbox_FilmLength";
+            this.txtbox_FilmLength.ReadOnly = true;
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // picBox_FilmPreview
+            // 
+            resources.ApplyResources(this.picBox_FilmPreview, "picBox_FilmPreview");
+            this.picBox_FilmPreview.Name = "picBox_FilmPreview";
+            this.picBox_FilmPreview.TabStop = false;
+            // 
+            // lbl_FilmActors
+            // 
+            resources.ApplyResources(this.lbl_FilmActors, "lbl_FilmActors");
+            this.lbl_FilmActors.Name = "lbl_FilmActors";
+            // 
+            // txtbox_FilmActors
+            // 
+            resources.ApplyResources(this.txtbox_FilmActors, "txtbox_FilmActors");
+            this.txtbox_FilmActors.Name = "txtbox_FilmActors";
+            this.txtbox_FilmActors.ReadOnly = true;
+            // 
+            // lbl_FilmProducer
+            // 
+            resources.ApplyResources(this.lbl_FilmProducer, "lbl_FilmProducer");
+            this.lbl_FilmProducer.Name = "lbl_FilmProducer";
+            // 
+            // lbl_FilmGenre
+            // 
+            resources.ApplyResources(this.lbl_FilmGenre, "lbl_FilmGenre");
+            this.lbl_FilmGenre.Name = "lbl_FilmGenre";
+            // 
+            // lbl_FilmTitle
+            // 
+            resources.ApplyResources(this.lbl_FilmTitle, "lbl_FilmTitle");
+            this.lbl_FilmTitle.Name = "lbl_FilmTitle";
+            // 
+            // lbl_FilmID
+            // 
+            resources.ApplyResources(this.lbl_FilmID, "lbl_FilmID");
+            this.lbl_FilmID.Name = "lbl_FilmID";
+            // 
+            // txtbox_FilmProducer
+            // 
+            resources.ApplyResources(this.txtbox_FilmProducer, "txtbox_FilmProducer");
+            this.txtbox_FilmProducer.Name = "txtbox_FilmProducer";
+            this.txtbox_FilmProducer.ReadOnly = true;
+            // 
+            // txtbox_FilmGenre
+            // 
+            resources.ApplyResources(this.txtbox_FilmGenre, "txtbox_FilmGenre");
+            this.txtbox_FilmGenre.Name = "txtbox_FilmGenre";
+            this.txtbox_FilmGenre.ReadOnly = true;
+            // 
+            // txtbox_FilmTitle
+            // 
+            resources.ApplyResources(this.txtbox_FilmTitle, "txtbox_FilmTitle");
+            this.txtbox_FilmTitle.Name = "txtbox_FilmTitle";
+            this.txtbox_FilmTitle.ReadOnly = true;
+            // 
+            // txtbox_FilmID
+            // 
+            resources.ApplyResources(this.txtbox_FilmID, "txtbox_FilmID");
+            this.txtbox_FilmID.Name = "txtbox_FilmID";
+            this.txtbox_FilmID.ReadOnly = true;
             // 
             // tw_Film
             // 
             resources.ApplyResources(this.tw_Film, "tw_Film");
             this.tw_Film.Name = "tw_Film";
+            this.tw_Film.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tw_Film_AfterSelect);
             // 
             // imgLst_BookPreview
             // 
@@ -587,11 +817,11 @@
             resources.ApplyResources(this.imgLst_BookPreview, "imgLst_BookPreview");
             this.imgLst_BookPreview.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // timer_BookPreview
+            // timer_Preview
             // 
-            this.timer_BookPreview.Enabled = true;
-            this.timer_BookPreview.Interval = 2000;
-            this.timer_BookPreview.Tick += new System.EventHandler(this.timer_BookPreview_Tick);
+            this.timer_Preview.Enabled = true;
+            this.timer_Preview.Interval = 2000;
+            this.timer_Preview.Tick += new System.EventHandler(this.timer_Preview_Tick);
             // 
             // print_Doc
             // 
@@ -605,6 +835,12 @@
             // 
             resources.ApplyResources(this.print_PreviewDialog, "print_PreviewDialog");
             this.print_PreviewDialog.Name = "print_PreviewDialog";
+            // 
+            // imgLst_FilmPreview
+            // 
+            this.imgLst_FilmPreview.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            resources.ApplyResources(this.imgLst_FilmPreview, "imgLst_FilmPreview");
+            this.imgLst_FilmPreview.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // form_Catalog
             // 
@@ -622,6 +858,9 @@
             this.grpbox_BookInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_BookPreview)).EndInit();
             this.tabPage_Film.ResumeLayout(false);
+            this.grpbox_FilmInfo.ResumeLayout(false);
+            this.grpbox_FilmInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_FilmPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,47 +892,45 @@
         private System.Windows.Forms.ToolStripMenuItem поискToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.TabControl tc_Info;
-        private System.Windows.Forms.TabPage tabPage_Book;
         private System.Windows.Forms.GroupBox grpbox_BookInfo;
         private System.Windows.Forms.TabPage tabPage_Film;
-        private System.Windows.Forms.GroupBox FilmInfo;
+        private System.Windows.Forms.GroupBox grpbox_FilmInfo;
         private System.Windows.Forms.TreeView tw_Film;
-        private System.Windows.Forms.Label lbl_Name;
-        private System.Windows.Forms.Label lbl_Author;
-        private System.Windows.Forms.Label lbl_MajorSeries;
-        private System.Windows.Forms.Label lbl_ID;
-        private System.Windows.Forms.TextBox txtbox_Title;
-        private System.Windows.Forms.TextBox txtbox_Author;
-        private System.Windows.Forms.TextBox txtbox_MajorSeries;
-        private System.Windows.Forms.TextBox txtbox_ID;
-        private System.Windows.Forms.TextBox txtbox_Series;
-        private System.Windows.Forms.Label lbl_Series;
+        private System.Windows.Forms.Label lbl_BookTitle;
+        private System.Windows.Forms.Label lbl_BookAuthor;
+        private System.Windows.Forms.Label lbl_BookMajorSeries;
+        private System.Windows.Forms.Label lbl_BookID;
+        private System.Windows.Forms.TextBox txtbox_BookTitle;
+        private System.Windows.Forms.TextBox txtbox_BookAuthor;
+        private System.Windows.Forms.TextBox txtbox_BookMajorSeries;
+        private System.Windows.Forms.TextBox txtbox_BookID;
+        private System.Windows.Forms.TextBox txtbox_BookSeries;
+        private System.Windows.Forms.Label lbl_BookSeries;
         private System.Windows.Forms.ImageList imgLst_BookPreview;
-        private System.Windows.Forms.Timer timer_BookPreview;
+        private System.Windows.Forms.Timer timer_Preview;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_Notes;
-        private System.Windows.Forms.Label lbl_Artist;
-        private System.Windows.Forms.Label lbl_Translator;
-        private System.Windows.Forms.Label lbl_ISBN;
-        private System.Windows.Forms.Label lbl_PrintCity;
-        private System.Windows.Forms.Label lbl_PrintYear;
-        private System.Windows.Forms.Label lbl_Publisher;
-        private System.Windows.Forms.Label lbl_PagesCount;
-        private System.Windows.Forms.Label lbl_Genre;
-        private System.Windows.Forms.Label lbl_NumberInSeries;
-        private System.Windows.Forms.TextBox txtbox_Notes;
-        private System.Windows.Forms.TextBox txtbox_Artist;
-        private System.Windows.Forms.TextBox txtbox_Translator;
-        private System.Windows.Forms.TextBox txtbox_PrintCity;
-        private System.Windows.Forms.TextBox txtbox_PrintYear;
-        private System.Windows.Forms.TextBox txtbox_Publisher;
-        private System.Windows.Forms.TextBox txtbox_PagesCount;
-        private System.Windows.Forms.TextBox txtbox_Genre;
-        private System.Windows.Forms.TextBox txtbox_NumberInSeries;
-        private System.Windows.Forms.MaskedTextBox msktxtbox_ISBN;
+        private System.Windows.Forms.Label lbl_BookNotes;
+        private System.Windows.Forms.Label lbl_BookArtist;
+        private System.Windows.Forms.Label lbl_BookTranslator;
+        private System.Windows.Forms.Label lbl_BookISBN;
+        private System.Windows.Forms.Label lbl_BookPrintCity;
+        private System.Windows.Forms.Label lbl_BookPrintYear;
+        private System.Windows.Forms.Label lbl_BookPublisher;
+        private System.Windows.Forms.Label lbl_BookPagesCount;
+        private System.Windows.Forms.Label lbl_BookGenre;
+        private System.Windows.Forms.Label lbl_BookNumberInSeries;
+        private System.Windows.Forms.TextBox txtbox_BookNotes;
+        private System.Windows.Forms.TextBox txtbox_BookArtist;
+        private System.Windows.Forms.TextBox txtbox_BookTranslator;
+        private System.Windows.Forms.TextBox txtbox_BookPrintCity;
+        private System.Windows.Forms.TextBox txtbox_BookPrintYear;
+        private System.Windows.Forms.TextBox txtbox_BookPublisher;
+        private System.Windows.Forms.TextBox txtbox_BookPagesCount;
+        private System.Windows.Forms.TextBox txtbox_BookGenre;
+        private System.Windows.Forms.TextBox txtbox_BookNumberInSeries;
+        private System.Windows.Forms.MaskedTextBox msktxtbox_BookISBN;
         private System.Windows.Forms.OpenFileDialog ofd_LoadXmlFile;
         private System.Windows.Forms.TreeView tw_Book;
         private System.Windows.Forms.PictureBox picBox_BookPreview;
@@ -707,6 +944,39 @@
         private System.Windows.Forms.ToolStripMenuItem ViewXMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ChangeLanguageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EditToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CreateBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CreateFilmToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage_Book;
+        private System.Windows.Forms.TabControl tc_Info;
+        private System.Windows.Forms.Label lbl_FilmNotes;
+        private System.Windows.Forms.Label lbl_FilmGrosses;
+        private System.Windows.Forms.Label lbl_FilmCriticsRating;
+        private System.Windows.Forms.Label lbl_FilmMPAA;
+        private System.Windows.Forms.Label lbl_FilmPremiere;
+        private System.Windows.Forms.Label lbl_FilmCountry;
+        private System.Windows.Forms.Label lbl_FilmLength;
+        private System.Windows.Forms.TextBox txtbox_FilmNotes;
+        private System.Windows.Forms.TextBox txtbox_FilmGrosses;
+        private System.Windows.Forms.TextBox txtbox_FilmCriticsRating;
+        private System.Windows.Forms.TextBox txtbox_FilmMPAA;
+        private System.Windows.Forms.TextBox txtbox_FilmPremiere;
+        private System.Windows.Forms.TextBox txtbox_FilmCountry;
+        private System.Windows.Forms.TextBox txtbox_FilmLength;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox picBox_FilmPreview;
+        private System.Windows.Forms.Label lbl_FilmActors;
+        private System.Windows.Forms.TextBox txtbox_FilmActors;
+        private System.Windows.Forms.Label lbl_FilmProducer;
+        private System.Windows.Forms.Label lbl_FilmGenre;
+        private System.Windows.Forms.Label lbl_FilmTitle;
+        private System.Windows.Forms.Label lbl_FilmID;
+        private System.Windows.Forms.TextBox txtbox_FilmProducer;
+        private System.Windows.Forms.TextBox txtbox_FilmGenre;
+        private System.Windows.Forms.TextBox txtbox_FilmTitle;
+        private System.Windows.Forms.TextBox txtbox_FilmID;
+        private System.Windows.Forms.ImageList imgLst_FilmPreview;
     }
 }
 

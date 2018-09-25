@@ -51,26 +51,20 @@ namespace Catalog
             List<Film> parse = FileOPs.ParseFilmXmlToList(form_Catalog.filmFileName);
             List<Film> noDupesProducer = parse.GroupBy(a => a.filmProducer).Select(grp => grp.FirstOrDefault()).OrderBy(a => a.filmProducer).ToList();
 
-            //foreach (Film nDP in noDupesProducer)
-            //{
-            //    tree.Nodes[0].Nodes.Add(nDP.filmProducer);
-            //    List<Book> bookSeries = parse.FindAll(x => x.filmProducer.Equals(nDP.filmProducer)).GroupBy(s => s.bookSeries).Select(grp => grp.FirstOrDefault()).OrderBy(s => s.bookSeries).ToList();
+            foreach (Film nDP in noDupesProducer)
+            {
+                tree.Nodes[0].Nodes.Add(nDP.filmProducer);
+                List<Film> filmTitle = parse.FindAll(x => x.filmProducer.Equals(nDP.filmProducer)).OrderBy(s => s.filmTitle).ToList();
 
-            //    foreach (var bs in bookSeries)
-            //    {
-            //        tree.Nodes[0].Nodes[noDupesProducer.IndexOf(nDP)].Nodes.Add(bs.bookSeries);
-            //        List<Book> bookTitle = parse.FindAll(x => x.filmProducer.Equals(nDP.filmProducer) && x.bookSeries.Equals(bs.bookSeries));
-
-            //        foreach (var bn in bookTitle)
-            //        {
-            //            tree.Nodes[0].Nodes[noDupesProducer.IndexOf(nDP)].Nodes[bookSeries.IndexOf(bs)].Nodes.Add(bn.bookTitle);
-            //        }
-            //    }
-            //}
+                foreach (var ft in filmTitle)
+                {
+                    tree.Nodes[0].Nodes[noDupesProducer.IndexOf(nDP)].Nodes.Add(ft.filmTitle);
+                }
+            }
 
             tree.ExpandAll();
 
-            FileOPs.SetBookLastID();
+            FileOPs.SetFilmLastID();
         }
 
         public static void LoadBookNextImage(TreeNode node, ref PictureBox picBox)
@@ -121,7 +115,7 @@ namespace Catalog
                     //MessageBox.Show(string.Format("Cloning book:\nAuthor: {0}\nSeries: {1}\nBook: {2}", cloneBook.bookAuthor, cloneBook.bookSeries, cloneBook.bookTitle));
 
                     form_CreateBook form = new form_CreateBook();
-                    form.txtbox_ID.Text = form_Catalog.lastID++.ToString();
+                    form.txtbox_ID.Text = form_Catalog.lastbookID++.ToString();
                     form.txtbox_MajorSeries.Text = cloneBook.bookMajorSeries;
                     form.txtbox_Author.Text = cloneBook.bookAuthor;
                     form.txtbox_Title.Text = cloneBook.bookTitle;
@@ -160,7 +154,7 @@ namespace Catalog
                     //MessageBox.Show(string.Format("Cloning book:\nAuthor: {0}\nSeries: {1}\nBook: {2}", cloneBook.bookAuthor, cloneBook.bookSeries, cloneBook.bookTitle));
 
                     form_CreateBook form = new form_CreateBook();
-                    form.txtbox_ID.Text = form_Catalog.lastID++.ToString();
+                    form.txtbox_ID.Text = form_Catalog.lastbookID++.ToString();
                     form.txtbox_MajorSeries.Text = cloneBook.bookMajorSeries;
                     form.txtbox_Author.Text = cloneBook.bookAuthor;
                     form.txtbox_Title.Text = cloneBook.bookTitle;
@@ -184,7 +178,7 @@ namespace Catalog
                 }
                 catch (Exception ex) { MessageBox.Show(ex.ToString()); }
             }
-            else MessageBox.Show("Select 'Book' node");
+            else MessageBox.Show("Select 'Film' node");
         }
     }
 }
