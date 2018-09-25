@@ -25,10 +25,12 @@ namespace Catalog
         public string bookTranslator;
         public string bookArtist;
         public string bookNotes;
-        public List<string> picPath;
+        public List<string> picturesPath;
 
-        public Book(int id, string majorseries, string author, string title, string series, int numberinseries, string genre, int pagescount, string publisher,
-                    int printyear, string printcity, long isbn, string translator, string artist, string notes, List<string> picpath)
+        public Book(int id, string majorseries, string author, string title, string series,
+                    int numberinseries, string genre, int pagescount, string publisher,
+                    int printyear, string printcity, long isbn, string translator,
+                    string artist, string notes, List<string> picpath)
         {
             bookID = id;
             bookMajorSeries = majorseries;
@@ -45,7 +47,7 @@ namespace Catalog
             bookTranslator = translator;
             bookArtist = artist;
             bookNotes = notes;
-            picPath = picpath;
+            picturesPath = picpath;
         }
 
         public Book() { }

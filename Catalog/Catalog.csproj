@@ -80,6 +80,18 @@
     <Compile Include="Forms\form_EditBook.Designer.cs">
       <DependentUpon>form_EditBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\form_CreateFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\form_CreateFilm.Designer.cs">
+      <DependentUpon>form_CreateFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\form_EditFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\form_EditFilm.Designer.cs">
+      <DependentUpon>form_EditFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\TreeViewOPs.cs" />
@@ -88,12 +100,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\form_Catalog.resx">
       <DependentUpon>form_Catalog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\form_About.resx">
       <DependentUpon>form_About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\form_CreateFilm.resx">
+      <DependentUpon>form_CreateFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\form_EditBook.resx">
       <DependentUpon>form_EditBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\form_EditFilm.resx">
+      <DependentUpon>form_EditFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\form_ViewXML.resx">
       <DependentUpon>form_ViewXML.cs</DependentUpon>
