@@ -112,13 +112,13 @@ namespace Catalog
         {
             XDocument bookDoc = LoadXmlFile(filename);
 
-            DirectoryInfo bookDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books" + bookRemove.bookAuthor + @"\" + bookRemove.bookTitle);
-            DirectoryInfo authorDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books" + bookRemove.bookAuthor);
+            DirectoryInfo bookDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books\" + bookRemove.bookAuthor + @"\" + bookRemove.bookTitle);
+            DirectoryInfo authorDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books\" + bookRemove.bookAuthor);
 
             bookDoc.Descendants("Book").Where(b => b.Attribute("ID").Value == bookRemove.bookID.ToString()).Remove();
 
-            bookDir.Delete(true);
-            if (authorDir.GetDirectories().Length == 0 && authorDir.GetFiles().Length == 0) authorDir.Delete(true);
+            if (Directory.Exists(bookDir.ToString())) bookDir.Delete(true);
+            if (Directory.Exists(authorDir.ToString()) && authorDir.GetDirectories().Length == 0 && authorDir.GetFiles().Length == 0) authorDir.Delete(true);
 
             bookDoc.Save(filename);
         }
@@ -127,13 +127,13 @@ namespace Catalog
         {
             XDocument filmDoc = LoadXmlFile(filename);
 
-            DirectoryInfo filmDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Films" + filmRemove.filmProducer + @"\" + filmRemove.filmTitle);
-            DirectoryInfo producerDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Films" + filmRemove.filmProducer);
+            DirectoryInfo filmDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Films\" + filmRemove.filmProducer + @"\" + filmRemove.filmTitle);
+            DirectoryInfo producerDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Films\" + filmRemove.filmProducer);
 
             filmDoc.Descendants("Film").Where(f => f.Attribute("ID").Value == filmRemove.filmID.ToString()).Remove();
 
-            filmDir.Delete(true);
-            if (producerDir.GetDirectories().Length == 0 && producerDir.GetFiles().Length == 0) producerDir.Delete(true);
+            if (Directory.Exists(filmDir.ToString())) filmDir.Delete(true);
+            if (Directory.Exists(producerDir.ToString()) && producerDir.GetDirectories().Length == 0 && producerDir.GetFiles().Length == 0) producerDir.Delete(true);
 
             filmDoc.Save(filename);
         }

@@ -182,7 +182,7 @@ namespace Catalog
             sfd_SaveXmlFile.Filter = "XML (*.Xml)|*.Xml|" + "All files (*.*)|*.*";
             sfd_SaveXmlFile.SupportMultiDottedExtensions = true;
             sfd_SaveXmlFile.Title = "My Data file Browser";
-
+            
             //TBD refactor
             if (tc_Info.SelectedTab == tabPage_Book)
             {
@@ -320,7 +320,7 @@ namespace Catalog
                     txtbox_FilmActors.Text = parse.Find(f => f.filmProducer == e.Node.Parent.Text && f.filmTitle == e.Node.Text).filmActors;
                     txtbox_FilmLength.Text = parse.Find(f => f.filmProducer == e.Node.Parent.Text && f.filmTitle == e.Node.Text).filmLengthInMinutes.ToString();
                     txtbox_FilmCountry.Text = parse.Find(f => f.filmProducer == e.Node.Parent.Text && f.filmTitle == e.Node.Text).filmCountry;
-                    txtbox_FilmPremiere.Text = parse.Find(f => f.filmProducer == e.Node.Parent.Text && f.filmTitle == e.Node.Text).filmPremiere.ToString();
+                    txtbox_FilmPremiere.Text = parse.Find(f => f.filmProducer == e.Node.Parent.Text && f.filmTitle == e.Node.Text).filmPremiere.ToShortDateString();
                     txtbox_FilmMPAA.Text = parse.Find(f => f.filmProducer == e.Node.Parent.Text && f.filmTitle == e.Node.Text).filmMPAARating;
                     txtbox_FilmCriticsRating.Text = parse.Find(f => f.filmProducer == e.Node.Parent.Text && f.filmTitle == e.Node.Text).filmCriticsRating;
                     txtbox_FilmGrosses.Text = parse.Find(f => f.filmProducer == e.Node.Parent.Text && f.filmTitle == e.Node.Text).filmGrosses.ToString();
@@ -405,7 +405,7 @@ namespace Catalog
             {
                 List<Film> parse = FileOPs.ParseFilmXmlToList(filmFileName);
                 Image image = Image.FromFile(parse.Find(f => f.filmProducer == tw_Film.SelectedNode.Parent.Text && f.filmTitle == tw_Film.SelectedNode.Text).picturesPath[0]);
-
+                
                 PrivateFontCollection fontColl = new PrivateFontCollection();
                 fontColl.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Header.TTF");
                 fontColl.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Text.TTF");
@@ -427,7 +427,7 @@ namespace Catalog
                 e.Graphics.DrawString("Актеры: " + txtbox_FilmActors.Text, myTextFont, Brushes.Black, 100, 60);
                 e.Graphics.DrawString("Продолжительность: " + txtbox_FilmLength.Text + ", " + txtbox_BookPrintCity.Text + ", " + txtbox_BookPrintYear.Text, myTextFont, Brushes.Black, 100, 70);
                 e.Graphics.DrawString("Страна: " + txtbox_FilmCountry.Text, myTextFont, Brushes.Black, 100, 80);
-                e.Graphics.DrawString("Премьера: " + txtbox_FilmPremiere.Text, myTextFont, Brushes.Black, 100, 90);
+                e.Graphics.DrawString("Премьера: " + DateTime.Parse(txtbox_FilmPremiere.Text).ToShortDateString(), myTextFont, Brushes.Black, 100, 90);
                 e.Graphics.DrawString("Рейтинг MPAA: " + txtbox_FilmMPAA.Text, myTextFont, Brushes.Black, 100, 100);
                 e.Graphics.DrawString("Рейтинг критиков: " + txtbox_FilmCriticsRating.Text, myTextFont, Brushes.Black, 100, 110);
                 e.Graphics.DrawString("Сборы ($): " + txtbox_FilmGrosses.Text, myTextFont, Brushes.Black, 100, 120);
@@ -447,8 +447,8 @@ namespace Catalog
                 try
                 {
                     print_PreviewDialog.Document = print_Doc;
-                    //print_PreviewDialog.Height = 700;
-                    //print_PreviewDialog.Width = 500;
+                    print_PreviewDialog.Height = 700;
+                    print_PreviewDialog.Width = 500;
                     print_PreviewDialog.ShowDialog();
                 }
                 catch (Exception ex) { MessageBox.Show(ex.ToString()); }
@@ -554,7 +554,7 @@ namespace Catalog
 
         private void ChangeLanguageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Changing language in progress...");
+            throw new NotImplementedException();
             //Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
         }
 
@@ -572,11 +572,13 @@ namespace Catalog
 
                         timer_Preview.Stop();
                         picBox_BookPreview.Image = null;
+                        picBox_BookPreview.ImageLocation = null;
 
                         form_EditBook formEdit = new form_EditBook(bookToEdit);
                         formEdit.Show();
 
                         TreeViewOPs.CreateBookTree(tw_Book);
+                        tw_Book.ExpandAll();
                     }
                     catch (Exception ex) { MessageBox.Show(ex.ToString()); }
                 }
@@ -600,6 +602,7 @@ namespace Catalog
                         formEdit.Show();
 
                         TreeViewOPs.CreateFilmTree(tw_Film);
+                        tw_Film.ExpandAll();
                     }
                     catch (Exception ex) { MessageBox.Show(ex.ToString()); }
                 }

@@ -67,9 +67,9 @@ namespace Catalog
 
         private void btn_AddFiles_Click(object sender, EventArgs e)
         {
-            ofd_FileSelector.Filter = "Images (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|" + "All files (*.*)|*.*";
+            ofd_FileSelector.Filter = "Изображения (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|" + "All files (*.*)|*.*";
             ofd_FileSelector.Multiselect = true;
-            ofd_FileSelector.Title = "My Image Browser";
+            ofd_FileSelector.Title = "Поиск изображений";
 
             if (ofd_FileSelector.ShowDialog() == DialogResult.OK)
             {
@@ -84,14 +84,14 @@ namespace Catalog
                         flp_FileSelector.Controls.Add(tb);
 
                         Button button_Delete = new Button();
-                        button_Delete.Name = "Delete";
+                        button_Delete.Name = "Удалить";
                         button_Delete.Width = 40;
                         button_Delete.Height = tb.Height;
                         button_Delete.Image = new Bitmap(Image.FromFile(@".\Icons\Delete.png"), new Size(16, 16));
                         button_Delete.Click += new EventHandler(btn_Delete_Click);
                         flp_FileSelector.Controls.Add(button_Delete);
 
-                        tssl_StatusBookEdit.Text = "File Added!";
+                        tssl_StatusBookEdit.Text = "Файл добавлен!";
                     }
                     catch (SecurityException ex)
                     {
@@ -131,15 +131,15 @@ namespace Catalog
             {
                 try
                 {
-                    Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books" + txtbox_Author.Text + @"\" + txtbox_Title.Text);
+                    Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books\" + txtbox_Author.Text + @"\" + txtbox_Title.Text);
                     string extension = Path.GetExtension(file);
                     string path = string.Format(@".\Pics\Books\" + txtbox_Author.Text + @"\" + txtbox_Title.Text + @"\");
                     string tempFileName = string.Format("{0}-{1}", txtbox_Title.Text, count++);
 
                     string fullPath = Path.Combine(path, tempFileName + extension);
                     
-                    FileInfo newFile = new FileInfo(file).CopyTo(fullPath, true);
                     filePath.Add(fullPath);
+                    if (!File.Exists(fullPath)) File.Copy(file, fullPath, true);
                 }
                 catch (Exception ex) { MessageBox.Show(ex.Message); }
             }
@@ -173,14 +173,14 @@ namespace Catalog
 
                 flp_FileSelector.Controls.Clear();
 
-                tssl_StatusBookEdit.Text = "Success!";
+                tssl_StatusBookEdit.Text = "Успешно!";
 
                 Close();
             }
             catch (FileNotFoundException ex)
             {
                 MessageBox.Show(ex.Message);
-                tssl_StatusBookEdit.Text = "Error!";
+                tssl_StatusBookEdit.Text = "Ошибка!";
             }
         }
     }

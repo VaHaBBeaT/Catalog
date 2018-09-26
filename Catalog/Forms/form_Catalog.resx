@@ -1028,6 +1028,9 @@
   <data name="label3.Text" xml:space="preserve">
     <value>label3</value>
   </data>
+  <data name="label3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
   </data>
@@ -1055,6 +1058,9 @@
   <data name="label2.Text" xml:space="preserve">
     <value>label2</value>
   </data>
+  <data name="label2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
   </data>
@@ -1081,6 +1087,9 @@
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>label1</value>
+  </data>
+  <data name="label1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -1868,6 +1877,9 @@
   <data name="label11.Text" xml:space="preserve">
     <value>label11</value>
   </data>
+  <data name="label11.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;label11.Name" xml:space="preserve">
     <value>label11</value>
   </data>
@@ -1898,6 +1910,9 @@
   <data name="label12.Text" xml:space="preserve">
     <value>label12</value>
   </data>
+  <data name="label12.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
   </data>
@@ -1927,6 +1942,9 @@
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>label13</value>
+  </data>
+  <data name="label13.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;label13.Name" xml:space="preserve">
     <value>label13</value>
@@ -2037,16 +2055,16 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_FilmProducer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>242, 106</value>
+    <value>243, 106</value>
   </data>
   <data name="lbl_FilmProducer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 13</value>
+    <value>58, 13</value>
   </data>
   <data name="lbl_FilmProducer.TabIndex" type="System.Int32, mscorlib">
     <value>134</value>
   </data>
   <data name="lbl_FilmProducer.Text" xml:space="preserve">
-    <value>Продюсер</value>
+    <value>Режиссер</value>
   </data>
   <data name="&gt;&gt;lbl_FilmProducer.Name" xml:space="preserve">
     <value>lbl_FilmProducer</value>
@@ -2588,7 +2606,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>634, 451</value>
+    <value>634, 452</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>650, 490</value>

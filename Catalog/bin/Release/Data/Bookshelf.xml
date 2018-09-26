@@ -136,4 +136,21 @@
     <Notes>sfkdjbhlsdkjv</Notes>
     <picPath>@.\Pics\Rice\Lestat 6\Lestat 6-1.jpg@.\Pics\Rice\Lestat 6\Lestat 6-2.jpg@.\Pics\Rice\Lestat 6\Lestat 6-3.jpg</picPath>
   </Book>
+  <Book ID="9">
+    <MajorSeries>Фантастический боевик</MajorSeries>
+    <Author>Пехов, Турчанинова</Author>
+    <Title>Ветер полыни</Title>
+    <Series>Без серии</Series>
+    <NumberInSeries>0</NumberInSeries>
+    <Genre>Фэнтэзи</Genre>
+    <PagesCount>345</PagesCount>
+    <Publisher>Альфа-книга</Publisher>
+    <PrintYear>2000</PrintYear>
+    <PrintCity>Москва</PrintCity>
+    <ISBN>1234567890123</ISBN>
+    <Translator>Переводчик</Translator>
+    <Artist>Бондарь</Artist>
+    <Notes>Подарена</Notes>
+    <picPath>@.\Pics\Books\Пехов, Турчанинова\Ветер полыни\Ветер полыни-1.jpg</picPath>
+  </Book>
 </Bookshelf>

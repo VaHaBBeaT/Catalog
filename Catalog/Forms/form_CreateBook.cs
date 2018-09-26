@@ -19,17 +19,16 @@ namespace Catalog
         public form_CreateBook()
         {
             InitializeComponent();
-            //InitializeOpenFileDialog();
             flp_FileSelector.BorderStyle = BorderStyle.FixedSingle;
-
-            txtbox_ID.Text = form_Catalog.lastbookID++.ToString();
+            
+            txtbox_ID.Text = (++form_Catalog.lastbookID).ToString();
         }
 
         private void btn_SaveBook_Click(object sender, EventArgs e)
         {
             List<Book> parse = FileOPs.ParseBookXmlToList(form_Catalog.bookFileName);
 
-            Book book = parse.Find(b => b.bookAuthor == txtbox_Author.Text && b.bookTitle == txtbox_Title.Text);
+            Book book = parse.Find(b => b.bookAuthor == txtbox_Author.Text && b.bookTitle == txtbox_Title.Text && b.bookTitle == txtbox_PrintYear.Text);
 
             if (book == null)
             {
@@ -37,11 +36,13 @@ namespace Catalog
 
                 int count = 1;
 
+                if (fileNames.Count == 0) fileNames.Add(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Pics\no-image.jpg"));
+
                 foreach (string file in fileNames)
                 {
                     try
                     {
-                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books" + txtbox_Author.Text + @"\" + txtbox_Title.Text);
+                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"Pics\Books\" + txtbox_Author.Text + @"\" + txtbox_Title.Text);
                         string extension = Path.GetExtension(file);
                         string path = string.Format(@".\Pics\Books\" + txtbox_Author.Text + @"\" + txtbox_Title.Text + @"\");
                         string tempFileName = string.Format("{0}-{1}", txtbox_Title.Text, count++);
@@ -82,7 +83,7 @@ namespace Catalog
                     
                     flp_FileSelector.Controls.Clear();
 
-                    tssl_StatusBookCreate.Text = "Success!";
+                    tssl_StatusBookCreate.Text = "Книга успешно добавлена!";
 
                     form_Catalog.lastbookID++;
                     txtbox_ID.Text = form_Catalog.lastbookID.ToString();
@@ -91,12 +92,12 @@ namespace Catalog
                 catch (FileNotFoundException ex)
                 {
                     MessageBox.Show(ex.Message);
-                    tssl_StatusBookCreate.Text = "Error!";
+                    tssl_StatusBookCreate.Text = "Ошибка!";
                 }
             }
             else
             {
-                MessageBox.Show(string.Format("Authors {0} book '{1}' already exist, please edit bookinfo", txtbox_Author.Text, txtbox_Title.Text));
+                MessageBox.Show(string.Format("Книга {0} автора '{1}' уже существует, необходимо исправить информацию", txtbox_Title.Text, txtbox_Author.Text));
             }
         }
 
@@ -107,9 +108,9 @@ namespace Catalog
 
         private void btn_AddFiles_Click(object sender, EventArgs e)
         {
-            ofd_FileSelector.Filter = "Images (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|" + "All files (*.*)|*.*";
+            ofd_FileSelector.Filter = "Изображения (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|" + "All files (*.*)|*.*";
             ofd_FileSelector.Multiselect = true;
-            ofd_FileSelector.Title = "My Image Browser";
+            ofd_FileSelector.Title = "Поиск изображений";
 
             if (ofd_FileSelector.ShowDialog() == DialogResult.OK)
             {
@@ -124,14 +125,14 @@ namespace Catalog
                         flp_FileSelector.Controls.Add(tb);
 
                         Button button_Delete = new Button();
-                        button_Delete.Name = "Delete";
+                        button_Delete.Name = "Удалить";
                         button_Delete.Width = 40;
                         button_Delete.Height = tb.Height;
                         button_Delete.Image = new Bitmap(Image.FromFile(@".\Icons\Delete.png"), new Size(16, 16));
                         button_Delete.Click += new EventHandler(btn_Delete_Click);
                         flp_FileSelector.Controls.Add(button_Delete);
 
-                        tssl_StatusBookCreate.Text = "File Added!";
+                        tssl_StatusBookCreate.Text = "Файл добавлен!";
                     }
                     catch (SecurityException ex)
                     {

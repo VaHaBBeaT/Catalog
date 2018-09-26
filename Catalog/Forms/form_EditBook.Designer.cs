@@ -71,7 +71,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(307, 9);
+            this.textBox1.Location = new System.Drawing.Point(325, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(316, 20);
@@ -85,7 +85,7 @@
             this.lbl_Notes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Notes.AutoSize = true;
-            this.lbl_Notes.Location = new System.Drawing.Point(46, 389);
+            this.lbl_Notes.Location = new System.Drawing.Point(64, 389);
             this.lbl_Notes.Name = "lbl_Notes";
             this.lbl_Notes.Size = new System.Drawing.Size(51, 13);
             this.lbl_Notes.TabIndex = 159;
@@ -96,7 +96,7 @@
             this.lbl_Artist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Artist.AutoSize = true;
-            this.lbl_Artist.Location = new System.Drawing.Point(40, 362);
+            this.lbl_Artist.Location = new System.Drawing.Point(58, 362);
             this.lbl_Artist.Name = "lbl_Artist";
             this.lbl_Artist.Size = new System.Drawing.Size(57, 13);
             this.lbl_Artist.TabIndex = 158;
@@ -107,7 +107,7 @@
             this.lbl_Translator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Translator.AutoSize = true;
-            this.lbl_Translator.Location = new System.Drawing.Point(29, 336);
+            this.lbl_Translator.Location = new System.Drawing.Point(47, 336);
             this.lbl_Translator.Name = "lbl_Translator";
             this.lbl_Translator.Size = new System.Drawing.Size(68, 13);
             this.lbl_Translator.TabIndex = 157;
@@ -118,7 +118,7 @@
             this.lbl_ISBN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ISBN.AutoSize = true;
-            this.lbl_ISBN.Location = new System.Drawing.Point(65, 309);
+            this.lbl_ISBN.Location = new System.Drawing.Point(83, 309);
             this.lbl_ISBN.Name = "lbl_ISBN";
             this.lbl_ISBN.Size = new System.Drawing.Size(32, 13);
             this.lbl_ISBN.TabIndex = 156;
@@ -129,7 +129,7 @@
             this.lbl_PrintCity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PrintCity.AutoSize = true;
-            this.lbl_PrintCity.Location = new System.Drawing.Point(23, 282);
+            this.lbl_PrintCity.Location = new System.Drawing.Point(41, 282);
             this.lbl_PrintCity.Name = "lbl_PrintCity";
             this.lbl_PrintCity.Size = new System.Drawing.Size(74, 13);
             this.lbl_PrintCity.TabIndex = 155;
@@ -140,7 +140,7 @@
             this.lbl_PrintYear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PrintYear.AutoSize = true;
-            this.lbl_PrintYear.Location = new System.Drawing.Point(26, 255);
+            this.lbl_PrintYear.Location = new System.Drawing.Point(44, 255);
             this.lbl_PrintYear.Name = "lbl_PrintYear";
             this.lbl_PrintYear.Size = new System.Drawing.Size(71, 13);
             this.lbl_PrintYear.TabIndex = 154;
@@ -151,7 +151,7 @@
             this.lbl_Publisher.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Publisher.AutoSize = true;
-            this.lbl_Publisher.Location = new System.Drawing.Point(41, 228);
+            this.lbl_Publisher.Location = new System.Drawing.Point(59, 228);
             this.lbl_Publisher.Name = "lbl_Publisher";
             this.lbl_Publisher.Size = new System.Drawing.Size(56, 13);
             this.lbl_Publisher.TabIndex = 153;
@@ -162,7 +162,7 @@
             this.lbl_PagesCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PagesCount.AutoSize = true;
-            this.lbl_PagesCount.Location = new System.Drawing.Point(12, 201);
+            this.lbl_PagesCount.Location = new System.Drawing.Point(30, 201);
             this.lbl_PagesCount.Name = "lbl_PagesCount";
             this.lbl_PagesCount.Size = new System.Drawing.Size(85, 13);
             this.lbl_PagesCount.TabIndex = 152;
@@ -173,7 +173,7 @@
             this.lbl_Genre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Genre.AutoSize = true;
-            this.lbl_Genre.Location = new System.Drawing.Point(61, 174);
+            this.lbl_Genre.Location = new System.Drawing.Point(79, 174);
             this.lbl_Genre.Name = "lbl_Genre";
             this.lbl_Genre.Size = new System.Drawing.Size(36, 13);
             this.lbl_Genre.TabIndex = 151;
@@ -184,7 +184,7 @@
             this.lbl_NumberInSeries.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_NumberInSeries.AutoSize = true;
-            this.lbl_NumberInSeries.Location = new System.Drawing.Point(14, 147);
+            this.lbl_NumberInSeries.Location = new System.Drawing.Point(32, 147);
             this.lbl_NumberInSeries.Name = "lbl_NumberInSeries";
             this.lbl_NumberInSeries.Size = new System.Drawing.Size(83, 13);
             this.lbl_NumberInSeries.TabIndex = 150;
@@ -192,7 +192,7 @@
             // 
             // txtbox_Notes
             // 
-            this.txtbox_Notes.Location = new System.Drawing.Point(103, 386);
+            this.txtbox_Notes.Location = new System.Drawing.Point(121, 386);
             this.txtbox_Notes.Multiline = true;
             this.txtbox_Notes.Name = "txtbox_Notes";
             this.txtbox_Notes.Size = new System.Drawing.Size(198, 82);
@@ -200,77 +200,77 @@
             // 
             // txtbox_Artist
             // 
-            this.txtbox_Artist.Location = new System.Drawing.Point(103, 359);
+            this.txtbox_Artist.Location = new System.Drawing.Point(121, 359);
             this.txtbox_Artist.Name = "txtbox_Artist";
             this.txtbox_Artist.Size = new System.Drawing.Size(198, 20);
             this.txtbox_Artist.TabIndex = 142;
             // 
             // txtbox_Translator
             // 
-            this.txtbox_Translator.Location = new System.Drawing.Point(103, 333);
+            this.txtbox_Translator.Location = new System.Drawing.Point(121, 333);
             this.txtbox_Translator.Name = "txtbox_Translator";
             this.txtbox_Translator.Size = new System.Drawing.Size(198, 20);
             this.txtbox_Translator.TabIndex = 141;
             // 
             // txtbox_ISBN
             // 
-            this.txtbox_ISBN.Location = new System.Drawing.Point(103, 306);
+            this.txtbox_ISBN.Location = new System.Drawing.Point(121, 306);
             this.txtbox_ISBN.Name = "txtbox_ISBN";
             this.txtbox_ISBN.Size = new System.Drawing.Size(198, 20);
             this.txtbox_ISBN.TabIndex = 140;
             // 
             // txtbox_PrintCity
             // 
-            this.txtbox_PrintCity.Location = new System.Drawing.Point(103, 279);
+            this.txtbox_PrintCity.Location = new System.Drawing.Point(121, 279);
             this.txtbox_PrintCity.Name = "txtbox_PrintCity";
             this.txtbox_PrintCity.Size = new System.Drawing.Size(198, 20);
             this.txtbox_PrintCity.TabIndex = 139;
             // 
             // txtbox_PrintYear
             // 
-            this.txtbox_PrintYear.Location = new System.Drawing.Point(103, 252);
+            this.txtbox_PrintYear.Location = new System.Drawing.Point(121, 252);
             this.txtbox_PrintYear.Name = "txtbox_PrintYear";
             this.txtbox_PrintYear.Size = new System.Drawing.Size(198, 20);
             this.txtbox_PrintYear.TabIndex = 138;
             // 
             // txtbox_Publisher
             // 
-            this.txtbox_Publisher.Location = new System.Drawing.Point(103, 225);
+            this.txtbox_Publisher.Location = new System.Drawing.Point(121, 225);
             this.txtbox_Publisher.Name = "txtbox_Publisher";
             this.txtbox_Publisher.Size = new System.Drawing.Size(198, 20);
             this.txtbox_Publisher.TabIndex = 137;
             // 
             // txtbox_PagesCount
             // 
-            this.txtbox_PagesCount.Location = new System.Drawing.Point(103, 198);
+            this.txtbox_PagesCount.Location = new System.Drawing.Point(121, 198);
             this.txtbox_PagesCount.Name = "txtbox_PagesCount";
             this.txtbox_PagesCount.Size = new System.Drawing.Size(198, 20);
             this.txtbox_PagesCount.TabIndex = 135;
             // 
             // txtbox_Genre
             // 
-            this.txtbox_Genre.Location = new System.Drawing.Point(103, 171);
+            this.txtbox_Genre.Location = new System.Drawing.Point(121, 171);
             this.txtbox_Genre.Name = "txtbox_Genre";
             this.txtbox_Genre.Size = new System.Drawing.Size(198, 20);
             this.txtbox_Genre.TabIndex = 134;
             // 
             // txtbox_NumberInSeries
             // 
-            this.txtbox_NumberInSeries.Location = new System.Drawing.Point(103, 144);
+            this.txtbox_NumberInSeries.Location = new System.Drawing.Point(121, 144);
             this.txtbox_NumberInSeries.Name = "txtbox_NumberInSeries";
             this.txtbox_NumberInSeries.Size = new System.Drawing.Size(198, 20);
             this.txtbox_NumberInSeries.TabIndex = 132;
             // 
             // flp_FileSelector
             // 
-            this.flp_FileSelector.Location = new System.Drawing.Point(307, 36);
+            this.flp_FileSelector.Location = new System.Drawing.Point(325, 36);
             this.flp_FileSelector.Name = "flp_FileSelector";
             this.flp_FileSelector.Size = new System.Drawing.Size(316, 336);
             this.flp_FileSelector.TabIndex = 144;
             // 
             // btn_AddFiles
             // 
-            this.btn_AddFiles.Location = new System.Drawing.Point(467, 378);
+            this.btn_AddFiles.Location = new System.Drawing.Point(485, 378);
             this.btn_AddFiles.Name = "btn_AddFiles";
             this.btn_AddFiles.Size = new System.Drawing.Size(151, 23);
             this.btn_AddFiles.TabIndex = 145;
@@ -283,7 +283,7 @@
             this.lbl_Series.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Series.AutoSize = true;
-            this.lbl_Series.Location = new System.Drawing.Point(59, 120);
+            this.lbl_Series.Location = new System.Drawing.Point(77, 120);
             this.lbl_Series.Name = "lbl_Series";
             this.lbl_Series.Size = new System.Drawing.Size(38, 13);
             this.lbl_Series.TabIndex = 149;
@@ -291,14 +291,14 @@
             // 
             // txtbox_Series
             // 
-            this.txtbox_Series.Location = new System.Drawing.Point(103, 117);
+            this.txtbox_Series.Location = new System.Drawing.Point(121, 117);
             this.txtbox_Series.Name = "txtbox_Series";
             this.txtbox_Series.Size = new System.Drawing.Size(198, 20);
             this.txtbox_Series.TabIndex = 130;
             // 
             // txtbox_Title
             // 
-            this.txtbox_Title.Location = new System.Drawing.Point(103, 90);
+            this.txtbox_Title.Location = new System.Drawing.Point(121, 90);
             this.txtbox_Title.Name = "txtbox_Title";
             this.txtbox_Title.Size = new System.Drawing.Size(198, 20);
             this.txtbox_Title.TabIndex = 128;
@@ -308,7 +308,7 @@
             this.lbl_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(8, 93);
+            this.lbl_Name.Location = new System.Drawing.Point(26, 93);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(89, 13);
             this.lbl_Name.TabIndex = 136;
@@ -318,9 +318,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssl_StatusBookEdit});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 489);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 490);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(631, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(649, 22);
             this.statusStrip1.TabIndex = 148;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -332,7 +332,7 @@
             // 
             // btn_Close
             // 
-            this.btn_Close.Location = new System.Drawing.Point(548, 458);
+            this.btn_Close.Location = new System.Drawing.Point(566, 458);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(75, 23);
             this.btn_Close.TabIndex = 147;
@@ -342,7 +342,7 @@
             // 
             // btn_SaveBook
             // 
-            this.btn_SaveBook.Location = new System.Drawing.Point(467, 458);
+            this.btn_SaveBook.Location = new System.Drawing.Point(485, 458);
             this.btn_SaveBook.Name = "btn_SaveBook";
             this.btn_SaveBook.Size = new System.Drawing.Size(75, 23);
             this.btn_SaveBook.TabIndex = 146;
@@ -355,7 +355,7 @@
             this.lbl_Author.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Author.AutoSize = true;
-            this.lbl_Author.Location = new System.Drawing.Point(60, 66);
+            this.lbl_Author.Location = new System.Drawing.Point(78, 66);
             this.lbl_Author.Name = "lbl_Author";
             this.lbl_Author.Size = new System.Drawing.Size(37, 13);
             this.lbl_Author.TabIndex = 133;
@@ -366,18 +366,18 @@
             this.lbl_MajorSeries.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_MajorSeries.AutoSize = true;
-            this.lbl_MajorSeries.Location = new System.Drawing.Point(23, 39);
+            this.lbl_MajorSeries.Location = new System.Drawing.Point(4, 39);
             this.lbl_MajorSeries.Name = "lbl_MajorSeries";
-            this.lbl_MajorSeries.Size = new System.Drawing.Size(74, 13);
+            this.lbl_MajorSeries.Size = new System.Drawing.Size(111, 13);
             this.lbl_MajorSeries.TabIndex = 131;
-            this.lbl_MajorSeries.Text = "Серия изд-ва";
+            this.lbl_MajorSeries.Text = "Серия издательства";
             // 
             // lbl_ID
             // 
             this.lbl_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ID.AutoSize = true;
-            this.lbl_ID.Location = new System.Drawing.Point(79, 12);
+            this.lbl_ID.Location = new System.Drawing.Point(97, 12);
             this.lbl_ID.Name = "lbl_ID";
             this.lbl_ID.Size = new System.Drawing.Size(18, 13);
             this.lbl_ID.TabIndex = 129;
@@ -385,21 +385,21 @@
             // 
             // txtbox_Author
             // 
-            this.txtbox_Author.Location = new System.Drawing.Point(103, 63);
+            this.txtbox_Author.Location = new System.Drawing.Point(121, 63);
             this.txtbox_Author.Name = "txtbox_Author";
             this.txtbox_Author.Size = new System.Drawing.Size(198, 20);
             this.txtbox_Author.TabIndex = 127;
             // 
             // txtbox_MajorSeries
             // 
-            this.txtbox_MajorSeries.Location = new System.Drawing.Point(103, 36);
+            this.txtbox_MajorSeries.Location = new System.Drawing.Point(121, 36);
             this.txtbox_MajorSeries.Name = "txtbox_MajorSeries";
             this.txtbox_MajorSeries.Size = new System.Drawing.Size(198, 20);
             this.txtbox_MajorSeries.TabIndex = 126;
             // 
             // txtbox_ID
             // 
-            this.txtbox_ID.Location = new System.Drawing.Point(103, 9);
+            this.txtbox_ID.Location = new System.Drawing.Point(121, 9);
             this.txtbox_ID.Name = "txtbox_ID";
             this.txtbox_ID.ReadOnly = true;
             this.txtbox_ID.Size = new System.Drawing.Size(198, 20);
@@ -410,7 +410,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 511);
+            this.ClientSize = new System.Drawing.Size(649, 512);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lbl_Notes);
             this.Controls.Add(this.lbl_Artist);
@@ -447,6 +447,8 @@
             this.Controls.Add(this.txtbox_Author);
             this.Controls.Add(this.txtbox_MajorSeries);
             this.Controls.Add(this.txtbox_ID);
+            this.MaximumSize = new System.Drawing.Size(665, 550);
+            this.MinimumSize = new System.Drawing.Size(665, 550);
             this.Name = "form_EditBook";
             this.Text = "form_EditBook";
             this.statusStrip1.ResumeLayout(false);
